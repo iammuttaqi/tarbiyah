@@ -9,7 +9,7 @@
     <link href="/src/style.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="font-montserrat">
     <!-- Navigation -->
     <nav class="fixed top-0 z-50 w-full py-2">
       <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm">
@@ -30,7 +30,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative flex h-screen items-center justify-center bg-linear-to-br from-teal-700 via-orange-400 to-pink-300 px-6 text-center bg-no-repeat bg-cover" style="background-image: url('1.jpg');">
+    <section class="relative flex h-screen items-center justify-center bg-linear-to-br from-teal-700 via-orange-400 to-pink-300 bg-cover bg-no-repeat px-6 text-center" style="background-image: url(&quot;1.jpg&quot;)">
       <!-- <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url(&quot;1.jpg&quot;)"></div> -->
       <div class="relative z-10 max-w-4xl">
         <div class="mb-6 inline-block rounded-full bg-white px-2 py-1 text-sm text-white backdrop-blur-sm">
@@ -41,7 +41,7 @@
             <span>Coming Soon</span>
           </div>
         </div>
-        <h1 class="font-montserrat mb-6 text-5xl font-medium text-white md:text-6xl">A disciplined path to Islamic knowledge and character.</h1>
+        <h1 class="mb-6 text-5xl font-medium text-white md:text-6xl">A disciplined path to Islamic knowledge and character.</h1>
         <p class="font-sora mx-auto mb-8 text-lg text-white/90">Tarbiya is a structured learning platform rooted in the Qur'an and Sunnah, designed to nurture understanding, practice, and character in every stage of life.</p>
 
         <a class="inline-flex items-center rounded-full bg-gray-800 px-2 py-2 font-semibold text-white transition-all hover:bg-gray-700" href="#">
@@ -53,162 +53,164 @@
       </div>
     </section>
 
-    <!-- Who Tarbiya Is For -->
-    <section class="mx-auto max-w-7xl px-6 py-20">
-      <div class="grid items-center gap-12 md:grid-cols-2">
-        <div class="overflow-hidden rounded-3xl shadow-xl">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23" alt="Peaceful doorway" class="h-96 w-full object-cover" />
+    <main class="container mx-auto">
+      <!-- Who Tarbiya Is For -->
+      <section class="mx-auto px-6 py-20">
+        <div class="grid items-center gap-12 md:grid-cols-5">
+          <div class="col-span-2 overflow-hidden rounded-4xl shadow-xl">
+            <img src="2.jpg" alt="Peaceful doorway" class="w-full aspect-square" />
+          </div>
+          <div class="col-span-3">
+            <h2 class="mb-6 text-6xl font-medium text-gray-900">Who Tarbiya Is For</h2>
+            <p class="text-3xl leading-relaxed text-gray-600">
+              Tarbiya is for
+              <span class="font-semibold">children learning the basics of Islam</span>
+              and for
+              <span class="font-semibold">new Muslims seeking a clear, gentle starting point</span>, focused on understanding, character, and learning <span class="font-semibold">without pressure</span>.
+            </p>
+          </div>
         </div>
-        <div>
-          <h2 class="mb-6 text-4xl font-bold text-gray-900">Who Tarbiya Is For</h2>
+      </section>
+
+      <!-- Why Tarbiya Exists -->
+      <section class="bg-white py-20">
+        <div class="mx-auto max-w-4xl px-6 text-center">
+          <h2 class="mb-8 text-4xl font-bold text-gray-900">Why Tarbiya Exists</h2>
           <p class="text-lg leading-relaxed text-gray-600">
-            Tarbiya is for
-            <span class="font-semibold">children learning the basics of Islam</span>
-            and for
-            <span class="font-semibold">new Muslims seeking a clear, gentle starting point</span>, focused on understanding, character, and learning <span class="font-semibold">without pressure</span>.
+            Learning Islam often feels overwhelming, especially for children and for those new to the faith.
+            <span class="font-semibold">Tarbiya exists to offer a calmer path</span>, one that focuses on clear understanding, character, and steady growth without pressure, noise, or confusion.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Why Tarbiya Exists -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <h2 class="mb-8 text-4xl font-bold text-gray-900">Why Tarbiya Exists</h2>
-        <p class="text-lg leading-relaxed text-gray-600">
-          Learning Islam often feels overwhelming, especially for children and for those new to the faith.
-          <span class="font-semibold">Tarbiya exists to offer a calmer path</span>, one that focuses on clear understanding, character, and steady growth without pressure, noise, or confusion.
-        </p>
-      </div>
-    </section>
+      <!-- What You Will Learn -->
+      <section class="mx-auto max-w-7xl px-6 py-20">
+        <h2 class="mb-12 text-center text-4xl font-bold text-gray-900">What You Will Learn</h2>
 
-    <!-- What You Will Learn -->
-    <section class="mx-auto max-w-7xl px-6 py-20">
-      <h2 class="mb-12 text-center text-4xl font-bold text-gray-900">What You Will Learn</h2>
-
-      <div class="mb-12 flex flex-wrap justify-center gap-4">
-        <button class="rounded-full bg-gray-900 px-6 py-2 font-medium text-white">Aqeedah</button>
-        <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Manhaj</button>
-        <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Sunnah</button>
-        <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Akhlaaq</button>
-        <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Seerah</button>
-        <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Tarekh</button>
-      </div>
-
-      <div class="mx-auto max-w-2xl rounded-2xl bg-white p-8 text-center shadow-lg">
-        <h3 class="mb-4 text-2xl font-bold text-gray-900">Understanding what we believe and why</h3>
-        <p class="text-gray-600">Learn the core beliefs of Islam in a clear and simple way, without confusion or debate.</p>
-      </div>
-    </section>
-
-    <!-- How Knowledge is Approached -->
-    <section class="bg-gray-50 py-20">
-      <div class="mx-auto max-w-7xl px-6">
-        <h2 class="mb-16 text-center text-4xl font-bold text-gray-900">How knowledge is approached</h2>
-
-        <div class="grid gap-12 md:grid-cols-3">
-          <div class="text-center">
-            <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-900">
-              <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-bold text-gray-900">Rooted in revelation</h3>
-            <p class="text-sm text-gray-600">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
-          </div>
-
-          <div class="text-center">
-            <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-900">
-              <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-bold text-gray-900">Structured, not scattered</h3>
-            <p class="text-sm text-gray-600">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
-          </div>
-
-          <div class="text-center">
-            <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-900">
-              <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-bold text-gray-900">Knowledge with practice</h3>
-            <p class="text-sm text-gray-600">Learning is tied to reflection and action, not memorization alone.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section class="py-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <div class="mb-6 text-8xl text-gray-900">"</div>
-        <blockquote class="mb-2 text-3xl font-medium text-gray-900">
-          "A calm and clear beginning to learning Islam,
-          <span class="text-gray-600">built on understanding and care</span>"
-        </blockquote>
-      </div>
-      <div class="mx-auto mt-12 max-w-2xl px-6">
-        <div class="h-64 overflow-hidden rounded-full bg-linear-to-br from-orange-300 to-pink-300">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="Peaceful landscape" class="h-full w-full object-cover opacity-70" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="mx-auto max-w-7xl px-6 py-20">
-      <div class="grid items-center gap-12 md:grid-cols-2">
-        <div>
-          <h2 class="mb-4 text-4xl font-bold text-gray-900">Be the first to know</h2>
-          <p class="mb-8 text-gray-600">
-            Join our community of learners
-            <span class="font-semibold">waiting for a better way</span> to understand their faith
-          </p>
-
-          <form class="mb-6 space-y-4">
-            <div class="flex items-center border-b border-gray-300 py-2">
-              <svg class="mr-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-              </svg>
-              <input type="text" placeholder="Your full name" class="flex-1 bg-transparent outline-none" />
-            </div>
-
-            <div class="flex items-center border-b border-gray-300 py-2">
-              <svg class="mr-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-              <input type="email" placeholder="Your email address" class="flex-1 bg-transparent outline-none" />
-            </div>
-
-            <button class="flex w-full items-center justify-center rounded-full bg-gray-900 py-3 font-semibold text-white hover:bg-gray-800">
-              Join Now
-              <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </form>
-
-          <div class="mb-4 flex items-center space-x-2">
-            <div class="flex -space-x-2">
-              <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-300"></div>
-              <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-400"></div>
-              <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-500"></div>
-            </div>
-            <span class="text-sm text-gray-600">100+ people have joined</span>
-          </div>
-
-          <p class="text-xs text-gray-500">
-            By joining, you agree to the
-            <a href="#" class="underline">Terms & Conditions</a> and <a href="#" class="underline">Privacy Policy</a>.
-          </p>
+        <div class="mb-12 flex flex-wrap justify-center gap-4">
+          <button class="rounded-full bg-gray-900 px-6 py-2 font-medium text-white">Aqeedah</button>
+          <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Manhaj</button>
+          <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Sunnah</button>
+          <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Akhlaaq</button>
+          <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Seerah</button>
+          <button class="rounded-full bg-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-300">Tarekh</button>
         </div>
 
-        <div class="overflow-hidden rounded-3xl shadow-xl">
-          <img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84" alt="Decorative archway" class="h-96 w-full object-cover" />
+        <div class="mx-auto max-w-2xl rounded-2xl bg-white p-8 text-center shadow-lg">
+          <h3 class="mb-4 text-2xl font-bold text-gray-900">Understanding what we believe and why</h3>
+          <p class="text-gray-600">Learn the core beliefs of Islam in a clear and simple way, without confusion or debate.</p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- How Knowledge is Approached -->
+      <section class="bg-gray-50 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="mb-16 text-center text-4xl font-bold text-gray-900">How knowledge is approached</h2>
+
+          <div class="grid gap-12 md:grid-cols-3">
+            <div class="text-center">
+              <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-900">
+                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Rooted in revelation</h3>
+              <p class="text-sm text-gray-600">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-900">
+                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                </svg>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Structured, not scattered</h3>
+              <p class="text-sm text-gray-600">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-900">
+                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Knowledge with practice</h3>
+              <p class="text-sm text-gray-600">Learning is tied to reflection and action, not memorization alone.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Section -->
+      <section class="py-20">
+        <div class="mx-auto max-w-4xl px-6 text-center">
+          <div class="mb-6 text-8xl text-gray-900">"</div>
+          <blockquote class="mb-2 text-3xl font-medium text-gray-900">
+            "A calm and clear beginning to learning Islam,
+            <span class="text-gray-600">built on understanding and care</span>"
+          </blockquote>
+        </div>
+        <div class="mx-auto mt-12 max-w-2xl px-6">
+          <div class="h-64 overflow-hidden rounded-full bg-linear-to-br from-orange-300 to-pink-300">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="Peaceful landscape" class="h-full w-full object-cover opacity-70" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="mx-auto max-w-7xl px-6 py-20">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 class="mb-4 text-4xl font-bold text-gray-900">Be the first to know</h2>
+            <p class="mb-8 text-gray-600">
+              Join our community of learners
+              <span class="font-semibold">waiting for a better way</span> to understand their faith
+            </p>
+
+            <form class="mb-6 space-y-4">
+              <div class="flex items-center border-b border-gray-300 py-2">
+                <svg class="mr-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <input type="text" placeholder="Your full name" class="flex-1 bg-transparent outline-none" />
+              </div>
+
+              <div class="flex items-center border-b border-gray-300 py-2">
+                <svg class="mr-3 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <input type="email" placeholder="Your email address" class="flex-1 bg-transparent outline-none" />
+              </div>
+
+              <button class="flex w-full items-center justify-center rounded-full bg-gray-900 py-3 font-semibold text-white hover:bg-gray-800">
+                Join Now
+                <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </form>
+
+            <div class="mb-4 flex items-center space-x-2">
+              <div class="flex -space-x-2">
+                <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-300"></div>
+                <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-400"></div>
+                <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-500"></div>
+              </div>
+              <span class="text-sm text-gray-600">100+ people have joined</span>
+            </div>
+
+            <p class="text-xs text-gray-500">
+              By joining, you agree to the
+              <a href="#" class="underline">Terms & Conditions</a> and <a href="#" class="underline">Privacy Policy</a>.
+            </p>
+          </div>
+
+          <div class="overflow-hidden rounded-3xl shadow-xl">
+            <img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84" alt="Decorative archway" class="h-96 w-full object-cover" />
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 py-12 text-white">
