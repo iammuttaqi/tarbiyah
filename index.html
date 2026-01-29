@@ -7,6 +7,7 @@
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link href="/src/style.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
   <body class="font-montserrat">
@@ -16,7 +17,9 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-2 rounded-full px-4 py-2">
             <!-- <div class="w-6 h-6 bg-orange-400 rounded-full"></div> -->
-            <a href="/" class="font-semibold text-white">Tarbiya.me</a>
+            <a href="/" class="font-semibold text-white">
+              <img src="logo.png" alt="Tarbiya Logo" class="h-8 w-auto" />
+            </a>
           </div>
           <div class="hidden items-center space-x-8 text-white md:flex">
             <a href="/" class="hover:text-gray-200">Home</a>
@@ -32,7 +35,7 @@
     <!-- Hero Section -->
     <section class="relative flex min-h-screen items-center justify-center bg-linear-to-br from-teal-700 via-orange-400 to-pink-300 bg-cover bg-no-repeat px-4 pt-20 pb-10 text-center sm:px-6" style="background-image: url(&quot;1.jpg&quot;)">
       <!-- <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url(&quot;1.jpg&quot;)"></div> -->
-      <div class="relative z-10 w-full max-w-4xl">
+      <div class="relative z-10 w-full max-w-7xl">
         <div class="mb-6 inline-block rounded-full bg-white px-2 py-1 text-sm text-white backdrop-blur-sm">
           <div class="flex items-center gap-1 text-black">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
@@ -41,8 +44,8 @@
             <span>Coming Soon</span>
           </div>
         </div>
-        <h1 class="mb-4 text-3xl leading-tight font-medium text-white sm:text-4xl md:mb-6 md:text-5xl lg:text-6xl">A disciplined path to Islamic knowledge and character.</h1>
-        <p class="font-sora mx-auto mb-6 px-2 text-base text-white/90 sm:text-lg md:mb-8 md:text-xl">Tarbiya is a structured learning platform rooted in the Qur'an and Sunnah, designed to nurture understanding, practice, and character in every stage of life.</p>
+        <h1 class="mb-4 text-3xl leading-tight font-medium text-white sm:text-4xl md:mb-6 md:text-5xl lg:text-6xl">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
+        <p class="font-sora mx-auto mb-6 px-2 text-base text-white/90 sm:text-lg md:mb-8 md:text-xl">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
 
         <a class="inline-flex items-center rounded-full bg-gray-800 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-700 md:text-base" href="#">
           <span class="px-3 md:px-4">Join the Waiting List</span>
@@ -61,12 +64,12 @@
             <img src="2.jpg" alt="Peaceful doorway" class="aspect-square w-full" />
           </div>
           <div class="col-span-3">
-            <h2 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl md:mb-6 md:text-4xl">Who Tarbiya Is For</h2>
+            <h2 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl md:mb-6 md:text-4xl">Who is Tarbiya For</h2>
             <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">
               Tarbiya is for
-              <span class="font-semibold">children learning the basics of Islam</span>
+              <span class="font-semibold">every Muslim home, child, parent</span>
               and for
-              <span class="font-semibold">new Muslims seeking a clear, gentle starting point</span>, focused on understanding, character, and learning <span class="font-semibold">without pressure</span>.
+              <span class="font-semibold">and revert that wants to learn everything about Islam in small</span>, easy to understand lessons.
             </p>
           </div>
         </div>
@@ -75,30 +78,86 @@
       <!-- Why Tarbiya Exists -->
       <section class="bg-white py-10 md:py-16 lg:py-20">
         <div class="mx-auto px-4 text-center sm:px-6">
-          <h2 class="mb-6 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-8 md:text-4xl">Why Tarbiya Exists</h2>
-          <p class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">
-            Learning Islam often feels overwhelming, especially for children and for those new to the faith.
-            <span class="text-gray-700">Tarbiya exists to offer a calmer path, one that focuses on clear understanding, character, and steady growth without pressure, noise, or confusion.</span>
-          </p>
+          <h2 class="mb-6 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-8 md:text-4xl">Why Tarbiya?</h2>
+          <ul class="mx-auto max-w-5xl list-disc text-start *:my-2">
+            <li class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">When it was time for my children to start learning Islam, I was lost.</li>
+            <li class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">I did not know where to start, and how to approach educating my children on Islam.</li>
+            <li class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day.</li>
+            <li class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">And, like most parents, I did not want my children being raised on Youtube and social media.</li>
+            <li class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background.</li>
+            <li class="text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">What I love for my children, I want for every Muslim child in the world too.</li>
+          </ul>
         </div>
       </section>
 
       <!-- What You Will Learn -->
-      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20">
+      <section
+        class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
+        x-data="{
+        active_tab: 0,
+        categories: [
+          {
+            title: 'Aqeedah',
+            description: 'Learn the firm and unwavering beliefs of Islam, centered on Tawheed, belief in Allah, His Names and Attributes as affirmed in revelation, without distortion or philosophical interpretation.'
+          },
+          {
+            title: 'Manhaj',
+            description: 'The correct methodology for understanding and practicing Islam, based on following the Quran and Sunnah upon the understanding of the Salaf, with clarity in belief, worship, behavior, and dealing with trials and differences.'
+          },
+          {
+            title: 'Quran',
+            description: 'Study the Quran gradually with detailed explanation from the most authentic tafseer.'
+          },
+          {
+            title: 'Sunnah',
+            description: 'Discover the authentic Sunnah explained with clarity and all your questions answered.'
+          },
+          {
+            title: 'Ibaadah',
+            description: 'Understand how to worhship Allah with inward and outward actions and statements that Allah loves and is pleased with, performed with sincerity for His Sake alone and in accordance with the Sunnah.'
+          },
+          {
+            title: 'Akhlaaq',
+            description: 'Emulate and build noble character and conduct rooted in faith, such as honesty, patience, humility, mercy, and justice, shaped by obedience to Allah and the example of the Prophet صلى الله عليه وسلم.'
+          },
+          {
+            title: 'Seerah',
+            description: 'The life and biography of the Prophet Muhammad صلى الله عليه وسلم, studied to understand his character, leadership, patience, worship, and application of Islam in real life.'
+          },
+          {
+            title: 'Fiqh',
+            description: 'Learn the understanding of Islamic rulings derived from the Quran and authentic Sunnah, as understood by the early scholars, governing acts of worship and daily transactions.'
+          },
+          {
+            title: 'Tareekh',
+            description: 'Study Islamic history with authenticity and balance, focusing on lessons, preservation of truth, and honoring the Companions and early generations without exaggeration or distortion.'
+          },
+          {
+            title: 'Family & Society',
+            description: 'Islamic guidance on marriage, parenting, rights, responsibilities, and social conduct, built on justice, mercy, modesty, and obedience to Allah.'
+          },
+          {
+            title: 'Arabic Language',
+            description: 'Learn the language of the final revelation step by step, and build your knowledge to correctly understand Islamic texts, and the meanings intended by Allah and His Messenger صلى الله عليه وسلم.'
+          },
+          {
+            title: 'Everyday Life',
+            description: 'Applying Islam in daily affairs such as work, behavior, intentions, and interactions, ensuring actions align with correct belief, lawful conduct, and good character.'
+          }
+        ]
+      }"
+      >
         <h2 class="mb-8 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl">What You Will Learn</h2>
 
         <div class="mb-8 flex flex-wrap justify-center gap-2 text-base font-light sm:gap-3 sm:text-lg md:mb-12 md:gap-4 md:text-xl lg:text-2xl">
-          <button type="button" class="rounded-full bg-gray-900 px-4 py-2 text-white md:px-6">Aqeedah</button>
-          <button type="button" class="rounded-full border border-gray-400 px-4 py-2 text-gray-700 md:px-6">Manhaj</button>
-          <button type="button" class="rounded-full border border-gray-400 px-4 py-2 text-gray-700 md:px-6">Sunnah</button>
-          <button type="button" class="rounded-full border border-gray-400 px-4 py-2 text-gray-700 md:px-6">Akhlaaq</button>
-          <button type="button" class="rounded-full border border-gray-400 px-4 py-2 text-gray-700 md:px-6">Seerah</button>
-          <button type="button" class="rounded-full border border-gray-400 px-4 py-2 text-gray-700 md:px-6">Tarekh</button>
+          <template x-for="(category, index) in categories" :key="index">
+            <button type="button" @click="active_tab = index" :class="active_tab === index ? 'bg-gray-900 text-white' : 'border border-gray-400 text-gray-700 hover:border-gray-600'" class="rounded-full px-4 py-2 transition-colors md:px-6" x-text="category.title"></button>
+          </template>
         </div>
 
-        <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
-          <h3 class="mb-4 text-xl text-gray-900 sm:text-2xl md:mb-6 md:text-3xl">Understanding what we believe and why</h3>
-          <p class="text-lg text-gray-600 sm:text-xl md:text-2xl">Learn the core beliefs of Islam in a clear and simple way, without confusion or debate.</p>
+        <div class="mx-auto rounded-2xl p-4 text-center md:p-8" x-show="active_tab !== null" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+          <!-- <h3 class="mb-4 text-xl text-gray-900 sm:text-2xl md:mb-6 md:text-3xl" x-text="categories[active_tab].title"></h3> -->
+          <p class="text-lg text-gray-600 sm:text-xl md:text-2xl" x-text="categories[active_tab].description"></p>
         </div>
       </section>
 
@@ -259,7 +318,7 @@
 
         <div class="border-t border-gray-700 pt-6 md:pt-8">
           <div class="flex flex-col items-center justify-between gap-3 md:gap-4">
-            <p class="text-sm text-gray-400 md:text-base">&copy; Tarbiya 2025</p>
+            <p class="text-sm text-gray-400 md:text-base">&copy; Tarbiya <span x-text="new Date().getFullYear()" x-data></span></p>
             <div class="flex space-x-3 md:space-x-4">
               <a href="#" class="rounded-full border border-gray-600 p-2 text-gray-400 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook size-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
