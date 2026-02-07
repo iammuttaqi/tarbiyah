@@ -10,6 +10,7 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "~5.9.3",
@@ -17,6 +18,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "aos": "^2.3.4",
+    "swiper": "^12.1.0",
     "tailwindcss": "^4.1.18"
   },
   "prettier": {

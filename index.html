@@ -13,11 +13,10 @@
 
   <body class="font-montserrat">
     <!-- Navigation -->
-    <nav class="fixed top-0 z-50 w-full px-4 py-2">
-      <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm">
-        <div class="flex items-center justify-between">
+    <nav class="fixed top-0 z-50 w-full px-4 py-2 transition-all duration-300">
+      <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm transition-all duration-300">
+        <div class="flex items-center justify-between px-2">
           <div class="flex items-center space-x-2 rounded-full px-4 py-2">
-            <!-- <div class="w-6 h-6 bg-orange-400 rounded-full"></div> -->
             <a href="/" class="font-semibold text-white">
               <img src="logo.png" alt="Tarbiya Logo" class="h-8 w-auto" />
             </a>
@@ -26,7 +25,8 @@
             <a href="/" class="hover:text-gray-200">Home</a>
             <a href="/" class="hover:text-gray-200">Product</a>
             <a href="/" class="hover:text-gray-200">Pricing</a>
-            <a href="/" class="hover:text-gray-200">About us</a>
+            <a href="/about.html" class="hover:text-gray-200">About Us</a>
+            <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <a href="#newsletter-section" class="rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:px-6 md:text-base">Join Waitlist</a>
         </div>
@@ -34,23 +34,48 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative flex min-h-screen items-center justify-center bg-linear-to-br from-teal-700 via-orange-400 to-pink-300 bg-cover bg-no-repeat px-4 pt-20 pb-10 text-center sm:px-6" style="background-image: url(&quot;1.jpg&quot;)">
-      <!-- <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url(&quot;1.jpg&quot;)"></div> -->
-      <div class="relative z-10 w-full max-w-7xl">
-        <div class="mb-6 inline-block rounded-full bg-white px-4 py-1 text-sm text-white backdrop-blur-sm">
-          <div class="flex items-center gap-1 text-black">
-            <i class="ri-arrow-right-circle-fill text-lg"></i>
-            <span>Coming Soon</span>
+    <section class="relative min-h-screen overflow-hidden">
+      <!-- Hero Swiper -->
+      <div class="hero-swiper absolute inset-0">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-1.jpg')"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-2.jpg')"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-3.jpg')"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-4.jpg')"></div>
           </div>
         </div>
+        <!-- Navigation -->
+        <div class="swiper-button-prev text-white!"></div>
+        <div class="swiper-button-next text-white!"></div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
 
-        <h1 class="mb-4 text-3xl leading-tight font-medium text-white sm:text-4xl md:mb-6 md:text-5xl lg:text-6xl">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
-        <p class="font-sora mx-auto mb-6 px-2 text-base text-white/90 sm:text-lg md:mb-8 md:text-xl">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
+      <!-- Hero Content Overlay -->
+      <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
+        <div class="w-full max-w-7xl space-y-8">
+          <div class="inline-block rounded-full bg-white px-4 py-1 text-sm">
+            <div class="flex items-center gap-1 text-black">
+              <i class="ri-arrow-right-circle-fill text-lg"></i>
+              <span>Coming Soon</span>
+            </div>
+          </div>
 
-        <a href="#newsletter-section" class="inline-flex items-center rounded-full bg-gray-800 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-700 md:text-base">
-          <span class="px-2 md:px-4">Join the Waiting List</span>
-          <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
-        </a>
+          <h1 class="text-3xl leading-tight font-medium text-white sm:text-4xl md:text-5xl lg:text-6xl">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
+          <p class="font-sora mx-auto px-2 text-base text-white/90 sm:text-lg md:text-xl">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
+
+          <a href="#newsletter-section" class="inline-flex items-center rounded-full bg-gray-800 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-700 md:text-base">
+            <span class="px-2 md:px-4">Join the Waiting List</span>
+            <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -62,7 +87,7 @@
             <img src="2.jpg" alt="Peaceful doorway" class="aspect-square w-full" />
           </div>
           <div class="col-span-3">
-            <h2 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl md:mb-6 md:text-4xl">Who is Tarbiya For</h2>
+            <h2 class="mb-4 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">Built For Your Journey</h2>
             <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">
               Tarbiya is for
               <span class="font-semibold">every Muslim home, child, parent</span>
@@ -82,8 +107,8 @@
       </section>
 
       <!-- What You Will Learn -->
-      <section
-        class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
+      <!-- What You Will Learn -->
+      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
         x-data="{
         active_tab: 0,
         categories: [
@@ -138,85 +163,24 @@
         ]
       }"
       >
-        <h2 class="mb-8 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl">What You Will Learn</h2>
+        <h2 class="mb-8 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:text-5xl" data-aos="fade-up">What You Will Learn</h2>
 
         <div class="mb-8 flex flex-wrap justify-center gap-2 text-base font-light sm:gap-3 sm:text-lg md:mb-12 md:gap-4 md:text-xl lg:text-2xl">
           <template x-for="(category, index) in categories" :key="index">
-            <button type="button" @click="active_tab = index" :class="active_tab === index ? 'bg-gray-900 text-white' : 'border border-gray-400 text-gray-700 hover:border-gray-600'" class="rounded-full px-4 py-2 transition-colors md:px-6" x-text="category.title"></button>
+            <button type="button" @click="active_tab = index" :class="active_tab === index ? 'bg-gray-900 text-white' : 'border border-gray-400 text-gray-700 hover:border-gray-600'" class="rounded-full px-4 py-2 transition-all duration-500 md:px-6" x-text="category.title" data-aos="zoom-in" :data-aos-delay="index * 50"></button>
           </template>
         </div>
 
         <div class="mx-auto rounded-2xl p-4 text-center md:p-8" x-show="active_tab !== null" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-          <!-- <h3 class="mb-4 text-xl text-gray-900 sm:text-2xl md:mb-6 md:text-3xl" x-text="categories[active_tab].title"></h3> -->
-          <p class="text-lg text-gray-600 sm:text-xl md:text-2xl" x-text="categories[active_tab].description"></p>
+          <p class="text-lg text-gray-600 sm:text-xl md:text-2xl" x-text="categories[active_tab].description" data-aos="fade-up" data-aos-delay="200"></p>
         </div>
       </section>
 
-      <!-- How Knowledge is Approached -->
-      <section class="bg-gray-50 py-10 md:py-16 lg:py-20">
-        <h2 class="mb-8 px-4 text-center text-2xl font-medium text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16">How knowledge is approached</h2>
-
-        <div class="grid gap-8 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
-          <div class="px-4 text-center md:px-8">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
-              <i class="ri-book-line text-2xl text-white"></i>
-            </div>
-            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
-            <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
-          </div>
-
-          <div class="px-4 text-center md:px-8">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
-              <i class="ri-list-check-3 text-2xl text-white"></i>
-            </div>
-            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
-            <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
-          </div>
-
-          <div class="px-4 text-center md:px-8">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
-              <i class="ri-graduation-cap-line text-2xl text-white"></i>
-            </div>
-            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
-            <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Learning That Feels Simple and Engaging -->
-      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20">
-        <div class="grid items-center gap-6 md:grid-cols-5 md:gap-12">
-          <div class="order-2 col-span-3 md:order-1">
-            <h2 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl md:mb-6 md:text-4xl">Learning That Feels Simple and Engaging</h2>
-            <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
-          </div>
-          <div class="order-1 col-span-2 aspect-square w-full content-center overflow-hidden rounded-4xl bg-orange-50 md:order-2">
-            <img src="3.png" alt="Peaceful doorway" class="mx-auto w-3/4 md:w-3/4" />
-          </div>
-        </div>
-      </section>
-
-      <!-- Quote Section -->
-      <!-- <section class="py-20">
-        <div class="mx-auto max-w-4xl px-6 text-center">
-          <div class="mb-6 text-8xl text-gray-900">"</div>
-          <blockquote class="mb-2 text-3xl font-medium text-gray-900">
-            "A calm and clear beginning to learning Islam,
-            <span class="text-gray-600">built on understanding and care</span>"
-          </blockquote>
-        </div>
-        <div class="mx-auto mt-12 max-w-2xl px-6">
-          <div class="h-64 overflow-hidden rounded-full bg-linear-to-br from-orange-300 to-pink-300">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="Peaceful landscape" class="h-full w-full object-cover opacity-70" />
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Newsletter Section -->
+      <!-- Newsletter Section (Moved up) -->
       <section class="mx-auto bg-white px-4 py-10 sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
         <div class="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-          <div class="max-w-xl">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-4 md:text-4xl">Be the first to know</h2>
+          <div class="max-w-xl" data-aos="fade-right">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-4 md:text-4xl lg:text-5xl">Be the first to know</h2>
             <p class="mb-6 text-base text-gray-600 sm:text-lg md:mb-8 md:text-xl">
               Join our community of learners
               <span class="font-semibold">waiting for a better way</span> to understand their faith
@@ -256,11 +220,96 @@
             </p>
           </div>
 
-          <div class="overflow-hidden rounded-3xl">
+          <div class="overflow-hidden rounded-3xl" data-aos="fade-left">
             <img src="4.png" alt="Decorative archway" class="ms-auto aspect-square w-full md:w-148" />
           </div>
         </div>
       </section>
+
+      <!-- How Knowledge is Approached -->
+      <section class="bg-gray-50 py-10 md:py-16 lg:py-20">
+        <h2 class="mb-8 px-4 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16 lg:text-5xl" data-aos="fade-up">Our Learning Philosophy</h2>
+
+        <div class="grid gap-8 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
+          <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
+              <i class="ri-book-line text-2xl text-white"></i>
+            </div>
+            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
+            <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
+          </div>
+
+          <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
+              <i class="ri-list-check-3 text-2xl text-white"></i>
+            </div>
+            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
+            <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
+          </div>
+
+          <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="300">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
+              <i class="ri-graduation-cap-line text-2xl text-white"></i>
+            </div>
+            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
+            <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning That Feels Simple and Engaging -->
+      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20">
+        <div class="grid items-center gap-6 md:grid-cols-5 md:gap-12">
+          <div class="order-2 col-span-3 md:order-1" data-aos="fade-right">
+            <h2 class="mb-4 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">Simple, Engaging Learning</h2>
+            <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
+          </div>
+          <div class="order-1 col-span-2 md:order-2">
+            <!-- Learning Swiper -->
+            <div class="learning-swiper relative aspect-square w-full overflow-hidden rounded-4xl bg-orange-50">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center justify-center">
+                  <img src="carousel-1.jpg" class="h-full w-full object-cover" />
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                  <img src="carousel-2.jpg" class="h-full w-full object-cover" />
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                  <img src="carousel-3.jpg" class="h-full w-full object-cover" />
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                  <img src="carousel-4.jpg" class="h-full w-full object-cover" />
+                </div>
+              </div>
+              <!-- Navigation -->
+              <div class="learning-button-prev flex justify-center items-center absolute size-10 top-1/2 left-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
+                <i class="ri-arrow-left-s-line text-2xl"></i>
+              </div>
+              <div class="learning-button-next flex justify-center items-center absolute size-10 top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
+                <i class="ri-arrow-right-s-line text-2xl"></i>
+              </div>
+              <!-- Pagination -->
+              <div class="learning-pagination absolute right-0 bottom-4 left-0 z-10 text-center"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Section -->
+      <!-- <section class="py-20">
+        <div class="mx-auto max-w-4xl px-6 text-center">
+          <div class="mb-6 text-8xl text-gray-900">"</div>
+          <blockquote class="mb-2 text-3xl font-medium text-gray-900">
+            "A calm and clear beginning to learning Islam,
+            <span class="text-gray-600">built on understanding and care</span>"
+          </blockquote>
+        </div>
+        <div class="mx-auto mt-12 max-w-2xl px-6">
+          <div class="h-64 overflow-hidden rounded-full bg-linear-to-br from-orange-300 to-pink-300">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="Peaceful landscape" class="h-full w-full object-cover opacity-70" />
+          </div>
+        </div>
+      </section> -->
     </main>
 
     <!-- Footer -->
@@ -324,21 +373,21 @@
 
           <div class="grid grid-cols-2 gap-8 lg:col-span-4">
             <div>
-              <h3 class="text-light-gray mb-4 font-medium">Company</h3>
+              <h3 class="mb-4 font-medium text-white">Company</h3>
               <ul class="space-y-3">
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">About Us</a></li>
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">How It Works</a></li>
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">Become Vendor</a></li>
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">Contact</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">About Us</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">How It Works</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Become Vendor</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Contact</a></li>
               </ul>
             </div>
             <div>
-              <h3 class="text-light-gray mb-4 font-medium">Useful Links</h3>
+              <h3 class="mb-4 font-medium text-white">Useful Links</h3>
               <ul class="space-y-3">
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">Terms of Use</a></li>
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">Privacy Policy</a></li>
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">Cookies and You</a></li>
-                <li><a class="text-light-gray/80 transition-colors hover:text-white" href="#">Takedown Policy</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Terms of Use</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Privacy Policy</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Cookies and You</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Takedown Policy</a></li>
               </ul>
             </div>
           </div>
