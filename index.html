@@ -39,16 +39,16 @@
       <div class="hero-swiper absolute inset-0">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-1.jpg')"></div>
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url(&quot;slider-1.jpg&quot;)"></div>
           </div>
           <div class="swiper-slide">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-2.jpg')"></div>
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url(&quot;slider-2.jpg&quot;)"></div>
           </div>
           <div class="swiper-slide">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-3.jpg')"></div>
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url(&quot;slider-3.jpg&quot;)"></div>
           </div>
           <div class="swiper-slide">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: url('slider-4.jpg')"></div>
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url(&quot;slider-4.jpg&quot;)"></div>
           </div>
         </div>
         <!-- Navigation -->
@@ -108,7 +108,8 @@
 
       <!-- What You Will Learn -->
       <!-- What You Will Learn -->
-      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
+      <section
+        class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
         x-data="{
         active_tab: 0,
         categories: [
@@ -282,10 +283,10 @@
                 </div>
               </div>
               <!-- Navigation -->
-              <div class="learning-button-prev flex justify-center items-center absolute size-10 top-1/2 left-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
+              <div class="learning-button-prev absolute top-1/2 left-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
                 <i class="ri-arrow-left-s-line text-2xl"></i>
               </div>
-              <div class="learning-button-next flex justify-center items-center absolute size-10 top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
+              <div class="learning-button-next absolute top-1/2 right-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
                 <i class="ri-arrow-right-s-line text-2xl"></i>
               </div>
               <!-- Pagination -->
