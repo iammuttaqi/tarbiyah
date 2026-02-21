@@ -50,9 +50,6 @@
           <div class="swiper-slide">
             <div class="h-full w-full bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;slider-3.jpg&quot;)"></div>
           </div>
-          <div class="swiper-slide">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;slider-4.jpg&quot;)"></div>
-          </div>
         </div>
         <!-- Navigation -->
         <div class="swiper-button-prev text-white!"></div>
@@ -101,14 +98,13 @@
       <!-- Why Tarbiya Exists -->
       <section class="bg-white py-10 md:py-16 lg:py-20">
         <div class="mx-auto px-4 sm:px-6">
-          <h2 class="mb-6 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-8 md:text-4xl">Why Tarbiya?</h2>
+          <h2 class="mb-6 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-8 md:text-5xl">Why Tarbiya?</h2>
           <p class="mx-auto text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day. And, like most parents, I did not want my children being raised on Youtube and social media.</p>
           <br />
           <p class="mx-auto text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background. What I love for my children, I want for every Muslim child in the world too.</p>
         </div>
       </section>
 
-      <!-- What You Will Learn -->
       <!-- What You Will Learn -->
       <section
         class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
@@ -176,7 +172,7 @@
 
         <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
           <template x-for="(category, index) in categories" :key="index">
-            <div x-show="active_tab === index" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0">
+            <div x-show="active_tab === index" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100">
               <p class="text-lg text-gray-600 sm:text-xl md:text-2xl" x-text="category.description"></p>
             </div>
           </template>
@@ -281,12 +277,6 @@
                 <div class="swiper-slide flex items-center justify-center">
                   <img src="carousel-2.jpg" class="h-full w-full object-cover" />
                 </div>
-                <div class="swiper-slide flex items-center justify-center">
-                  <img src="carousel-3.jpg" class="h-full w-full object-cover" />
-                </div>
-                <div class="swiper-slide flex items-center justify-center">
-                  <img src="carousel-4.jpg" class="h-full w-full object-cover" />
-                </div>
               </div>
               <!-- Navigation -->
               <div class="learning-button-prev absolute top-1/2 left-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
@@ -382,10 +372,11 @@
             <div>
               <h3 class="mb-4 font-medium text-white">Company</h3>
               <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">About Us</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">How It Works</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Become Vendor</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Contact</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">About Tarbiya</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">The Need</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Methodology</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Pricing</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Contact Us</a></li>
               </ul>
             </div>
             <div>
