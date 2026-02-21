@@ -16,7 +16,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
-  <body class="font-montserrat">
+  <body class="font-montserrat" x-data="{ showLegalModal: false, activeLegalTab: 'terms' }">
     <!-- Navigation -->
     <nav class="fixed top-0 z-50 w-full px-4 py-2 transition-all duration-300">
       <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm transition-all duration-300">
@@ -190,7 +190,7 @@
             </p>
 
             <form class="mb-4 space-y-3 md:mb-6 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
-              <!-- <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" /> -->
+              <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" />
 
               <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
                 <i class="ri-user-3-line me-2 text-xl text-gray-400"></i>
@@ -219,7 +219,7 @@
 
             <p class="text-xs text-gray-500 md:text-sm">
               By joining, you agree to the
-              <a href="#" class="underline">Terms & Conditions</a> and <a href="#" class="underline">Privacy Policy</a>.
+              <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="underline">Terms & Conditions</a> and <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'" class="underline">Privacy Policy</a>.
             </p>
           </div>
 
@@ -382,10 +382,10 @@
             <div>
               <h3 class="mb-4 font-medium text-white">Useful Links</h3>
               <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Terms of Use</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Privacy Policy</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Cookies and You</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Takedown Policy</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'">Terms of Use</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'cookies'">Cookie Policy</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'takedown'">Takedown Policy</a></li>
               </ul>
             </div>
           </div>
@@ -437,15 +437,304 @@
         <hr class="h-px w-full text-gray-600" />
 
         <div class="text-sm font-normal text-white">
-          <p>&copy; Tarbiya <span x-text="currentYear"></span>, All Rights Reserved to Tarbiya, Inc. Use of website constitutes acceptance of Tarbiya's <a href="#" class="text-red-100 underline">Terms Of Use</a> and <a class="text-red-100 underline" href="#">Privacy Policy</a>.</p>
+          <p>&copy; Tarbiya <span x-text="currentYear"></span>, All Rights Reserved to Tarbiya, Inc. Use of website constitutes acceptance of Tarbiya's <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="text-red-100 underline">Terms Of Use</a> and <a class="text-red-100 underline" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a>.</p>
         </div>
       </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div
+      x-data="{ showCookieBanner: !localStorage.getItem('cookieAccepted') }"
+      x-show="showCookieBanner"
+      x-transition:enter="transition ease-out duration-500"
+      x-transition:enter-start="opacity-0 translate-y-10"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-300"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 translate-y-10"
+      class="fixed bottom-4 left-4 right-4 z-50 md:bottom-6 md:left-6 md:right-auto md:max-w-sm rounded-3xl bg-white p-6 shadow-2xl border border-gray-100"
+      style="display: none;"
+    >
+      <div class="flex items-start gap-4">
+        <div class="text-2xl">🍪</div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">We use cookies</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <button @click="localStorage.setItem('cookieAccepted', 'true'); showCookieBanner = false" class="rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 transition-all">
+              Accept
+            </button>
+            <button @click="showCookieBanner = false" class="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all">
+              Decline
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Jump To Top Button -->
     <button id="jump_to_top" class="fixed right-6 bottom-6 z-50 hidden size-12 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-gray-700" aria-label="Jump to top">
       <i class="ri-arrow-up-line text-xl"></i>
     </button>
+
+    <!-- Legal Modal -->
+    <div x-show="showLegalModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6" style="display: none;">
+      <div x-show="showLegalModal" x-transition.opacity class="fixed inset-0 bg-black/60 backdrop-blur-sm" @click="showLegalModal = false"></div>
+      <div x-show="showLegalModal" x-transition.scale.95 class="relative z-10 flex w-full max-w-4xl max-h-[90vh] flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
+        
+        <!-- Modal Header & Tabs -->
+        <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 sm:px-10">
+          <div class="flex space-x-6">
+            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="pb-4 -mb-[17px] text-lg font-semibold transition-colors">Terms of Use</button>
+            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="pb-4 -mb-[17px] text-lg font-semibold transition-colors">Privacy Policy</button>
+            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="pb-4 -mb-[17px] text-lg font-semibold transition-colors">Cookie Policy</button>
+            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="pb-4 -mb-[17px] text-lg font-semibold transition-colors">Takedown Policy</button>
+          </div>
+          <button @click="showLegalModal = false" class="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200">
+            <i class="ri-close-line text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="overflow-y-auto p-6 sm:p-10">
+          
+          <!-- Terms Content -->
+          <div x-show="activeLegalTab === 'terms'" class="prose prose-sm sm:prose-base max-w-none text-gray-600">
+            <h2>TERMS OF USE: TARBIYA.ME</h2>
+            <p><strong>Effective Date: February 2026</strong></p>
+            
+            <p>These Terms of Use ("Terms") constitute a legally binding agreement between you and Tarbiya.me (operated by its parent entity, a Delaware Corporation). By accessing our website or mobile application (collectively, the "Service"), you agree to comply with and be bound by these Terms and the laws of the State of Delaware, USA.</p>
+
+            <h3>1. THE SERVICE & METHODOLOGY</h3>
+            <p>Tarbiya.me provides an online learning environment dedicated to imparting Islamic knowledge rooted in the Qur’an, the authentic Sunnah, and the methodology of the Salaf-us-Salih.</p>
+            <ul>
+              <li><strong>Educational Purpose:</strong> The Service is intended for educational use. While we strive for absolute accuracy according to the stated methodology, users are encouraged to apply knowledge under the guidance of qualified teachers.</li>
+              <li><strong>Manhaj Integrity:</strong> We reserve the right to remove any user-generated content or commentary that contradicts the methodology of the Salaf-us-Salih.</li>
+            </ul>
+
+            <h3>2. USER ACCOUNTS & ELIGIBILITY</h3>
+            <ul>
+              <li><strong>Delaware Compliance:</strong> In accordance with the Children's Online Privacy Protection Act (COPPA), users under 13 must have explicit parental consent.</li>
+              <li><strong>Account Responsibility:</strong> You are solely responsible for all activity under your account. You must notify us immediately of any unauthorized use.</li>
+              <li><strong>Account Sharing:</strong> Accounts are for individual or single-household use only. Sharing credentials to bypass subscription levels is a breach of these Terms.</li>
+            </ul>
+
+            <h3>3. SUBSCRIPTIONS, LEVELS, AND PAYMENTS</h3>
+            <ul>
+              <li><strong>Subscription Model:</strong> Access to the structured curriculum levels is granted via a paid subscription.</li>
+              <li><strong>Auto-Renewal:</strong> Unless canceled, subscriptions automatically renew at the then-current rate.</li>
+              <li><strong>Refund Policy:</strong> To the extent permitted by Delaware law, all sales are final. Since our curriculum is delivered digitally, access to the proprietary "Level-Based" content constitutes a completed service.</li>
+              <li><strong>Taxes:</strong> Users are responsible for any applicable sales or use taxes based on their location.</li>
+            </ul>
+
+            <h3>4. INTELLECTUAL PROPERTY RIGHTS (PROPRIETARY CONTENT)</h3>
+            <p>Tarbiya.me and its content are protected by United States and international copyright, trademark, and other intellectual property laws.</p>
+            <ul>
+              <li><strong>Ownership:</strong> All lesson plans, video content, quiz modules, and the "Level-Based Progression" algorithm are the exclusive property of Tarbiya.me.</li>
+              <li><strong>Strict Prohibition on Recording:</strong> Users are strictly prohibited from screen-recording, downloading (unless offline viewing is specifically enabled in-app), or redistributing our content.</li>
+              <li><strong>Copyright Infringement:</strong> We actively monitor for unauthorized distribution. Violation will result in immediate termination of access without refund and potential legal action under the DMCA.</li>
+            </ul>
+
+            <h3>5. PROHIBITED CONDUCT</h3>
+            <p>You agree not to:</p>
+            <ul>
+              <li>Use the Service for any commercial or public teaching purpose without a specific "Institutional License."</li>
+              <li>"Scrape" or use automated systems to extract data or content.</li>
+              <li>Post or transmit content that is sectarian, extremist, or inconsistent with the authentic Sunnah and the way of the Salaf.</li>
+            </ul>
+
+            <h3>6. DISCLAIMER OF WARRANTIES & LIMITATION OF LIABILITY</h3>
+            <ul>
+              <li><strong>"As Is" Basis:</strong> The Service is provided without warranties of any kind, either express or implied.</li>
+              <li><strong>Limitation of Liability:</strong> To the fullest extent permitted by Delaware law, Tarbiya.me shall not be liable for any indirect, incidental, special, or consequential damages. Our total liability for any claim shall not exceed the amount paid by you for the Service in the 12 months preceding the claim.</li>
+            </ul>
+
+            <h3>7. INDEMNIFICATION</h3>
+            <p>You agree to indemnify and hold harmless Tarbiya.me and its officers from any claims, damages, or expenses (including attorney's fees) arising from your use of the Service or your violation of these Terms.</p>
+
+            <h3>8. GOVERNING LAW & DISPUTE RESOLUTION</h3>
+            <ul>
+              <li><strong>Jurisdiction:</strong> These Terms are governed by the laws of the State of Delaware, USA, without regard to its conflict of law principles.</li>
+              <li><strong>Binding Arbitration:</strong> Any dispute arising out of or relating to these Terms shall be settled by binding arbitration in the State of Delaware, rather than in court, except that you may assert claims in small claims court if your claims qualify.</li>
+              <li><strong>Class Action Waiver:</strong> You agree that any dispute resolution will be conducted only on an individual basis and not in a class, consolidated, or representative action.</li>
+            </ul>
+
+            <h3>9. CHANGES TO TERMS</h3>
+            <p>We reserve the right to modify these Terms at any time. We will notify users of significant changes via the email associated with their account. Continued use of the Service after changes constitutes acceptance of the new Terms.</p>
+          </div>
+
+          <!-- Privacy Content -->
+          <div x-show="activeLegalTab === 'privacy'" class="prose prose-sm sm:prose-base max-w-none text-gray-600" style="display: none;">
+            <h2>PRIVACY POLICY: TARBIYA.ME</h2>
+            <p><strong>Effective Date: February 2026</strong></p>
+            
+            <p>Tarbiya.me (referred to as "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, use our mobile application, and interact with our advertising campaigns.</p>
+
+            <h3>1. INFORMATION WE COLLECT</h3>
+            <p>We collect information that you provide directly to us and information that is collected automatically through your use of the Service.</p>
+            <ul>
+              <li><strong>Personal Information:</strong> Name, email address, age (to determine curriculum level), and payment information (processed via secure third-party gateways).</li>
+              <li><strong>Usage Data:</strong> Your IP address, browser type, device information, and progress within the level-based curriculum.</li>
+              <li><strong>Children’s Data:</strong> We take the privacy of minors seriously. We do not knowingly collect personal data from children under 13 without verifiable parental consent. Parents are the primary account holders for minors.</li>
+            </ul>
+
+            <h3>2. THIRD-PARTY ADVERTISING & TRACKING</h3>
+            <p>To grow our community and reach new students, we use third-party advertising platforms. These platforms may use cookies, pixels, and web beacons to collect data about your interactions with our Service.</p>
+            <ul>
+              <li><strong>Google Ads & Analytics:</strong> We use Google tags to analyze user behavior and serve "Remarketing" ads. This means if you visit Tarbiya.me, you may see our ads on other Google-affiliated sites.</li>
+              <li><strong>Facebook (Meta) Pixel:</strong> We use the Facebook Pixel to measure the effectiveness of our social media ads and to create "Lookalike Audiences" to find new students interested in authentic Islamic learning.</li>
+              <li><strong>Conversion Tracking:</strong> We track when a user clicks an ad and subsequently signs up for a subscription to optimize our marketing spend.</li>
+            </ul>
+
+            <h3>3. HOW WE USE YOUR INFORMATION</h3>
+            <p>We use the collected data to:</p>
+            <ul>
+              <li>Deliver the structured curriculum based on your assigned level.</li>
+              <li>Process subscription payments and provide customer support.</li>
+              <li>Send platform updates, new lesson notifications, and newsletters (you may opt-out at any time).</li>
+              <li>Improve our website and app functionality based on user behavior.</li>
+            </ul>
+
+            <h3>4. DATA SHARING & DISCLOSURE</h3>
+            <p>We do not sell your personal information. We only share data with:</p>
+            <ul>
+              <li><strong>Service Providers:</strong> Cloud hosting (AWS/Google Cloud), payment processors (Stripe/PayPal), and email automation tools.</li>
+              <li><strong>Legal Requirements:</strong> If required by Delaware or Federal law, or to protect the methodology and intellectual property of Tarbiya.me.</li>
+            </ul>
+
+            <h3>5. YOUR PRIVACY RIGHTS</h3>
+            <p>Depending on your location (e.g., California or the EU), you may have the following rights:</p>
+            <ul>
+              <li><strong>Access & Portability:</strong> Request a copy of the data we hold about you.</li>
+              <li><strong>Correction/Deletion:</strong> Request that we fix or delete your personal information.</li>
+              <li><strong>Opt-Out of Tracking:</strong> You can set your browser to refuse cookies or use "Do Not Track" signals. You can also opt-out of Google’s use of cookies by visiting Google’s Ad Settings.</li>
+            </ul>
+
+            <h3>6. SECURITY</h3>
+            <p>We implement industry-standard security measures, including SSL encryption and secure database protocols, to protect your data. However, no electronic transmission over the internet is 100% secure; we cannot guarantee absolute security.</p>
+
+            <h3>7. INTERNATIONAL DATA TRANSFERS</h3>
+            <p>Tarbiya.me is operated in the United States. If you are accessing the Service from outside the USA, please be aware that your information will be transferred to, stored, and processed in the United States.</p>
+
+            <h3>8. COPPA COMPLIANCE (FOR CHILDREN)</h3>
+            <p>Our Service is designed for family use.</p>
+            <ul>
+              <li>Parents must create the account for any child under the age of 13.</li>
+              <li>We do not display behavioral advertising to users identified as children within the app.</li>
+              <li>Parents have the right to review or delete their child's progress data at any time.</li>
+            </ul>
+
+            <h3>9. CHANGES TO THIS POLICY</h3>
+            <p>We may update this Privacy Policy periodically. We will notify you of any changes by posting the new policy on this page and updating the "Effective Date."</p>
+
+            <h3>10. CONTACT US</h3>
+            <p>For any questions regarding this Privacy Policy or your data, please contact:<br>
+            Data Protection Officer<br>
+            Tarbiya.me (Delaware Corp.)<br>
+            Email: <a href="mailto:privacy@tarbiya.me">privacy@tarbiya.me</a></p>
+          </div>
+
+          <!-- Cookie Content -->
+          <div x-show="activeLegalTab === 'cookies'" class="prose prose-sm sm:prose-base max-w-none text-gray-600" style="display: none;">
+            <h2>COOKIE POLICY: TARBIYA.ME</h2>
+            <p><strong>Effective Date: February 2026</strong></p>
+            
+            <p>This Cookie Policy explains how Tarbiya.me uses cookies and similar technologies to recognize you when you visit our website or use our mobile application. It explains what these technologies are, why we use them, and your rights to control our use of them.</p>
+
+            <h3>1. WHAT ARE COOKIES?</h3>
+            <p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>
+
+            <h3>2. WHY DO WE USE COOKIES?</h3>
+            <p>We use first-party and third-party cookies for several reasons:</p>
+            <ul>
+              <li><strong>Essential Cookies:</strong> Required for the technical operation of our platform (e.g., to keep you logged into your specific learning level).</li>
+              <li><strong>Performance & Analytics:</strong> To help us understand how students use our app and website so we can improve the user interface.</li>
+              <li><strong>Advertising:</strong> To deliver relevant ads about our Islamic curriculum to you on other platforms (Remarketing).</li>
+            </ul>
+
+            <h3>3. TYPES OF COOKIES WE USE</h3>
+            <h4>A. Essential Website Cookies</h4>
+            <p>These cookies are strictly necessary to provide you with the services available through our Website and App.</p>
+            <ul>
+              <li><strong>Purpose:</strong> Authenticating your account, preventing fraud, and remembering your curriculum progress.</li>
+              <li><strong>Requirement:</strong> These cannot be turned off as the site will not function without them.</li>
+            </ul>
+
+            <h4>B. Analytics and Customization Cookies</h4>
+            <p>These cookies collect information in aggregate form to help us understand how effective our marketing campaigns are or to help us customize our Website for you.</p>
+            <ul>
+              <li><strong>Google Analytics:</strong> We use this to track which lessons are most popular and where our users are located.</li>
+            </ul>
+
+            <h4>C. Advertising and Targeting Cookies</h4>
+            <p>These cookies are used to make advertising messages more relevant to you and your interests in Islamic education.</p>
+            <ul>
+              <li><strong>Google Ads (Remarketing):</strong> These cookies allow us to show Tarbiya.me ads to users who have previously visited our site when they browse other websites.</li>
+              <li><strong>Facebook (Meta) Pixel:</strong> We use this to measure the conversion rate of our Facebook/Instagram ads and to ensure we are reaching families who value the methodology of the Salaf.</li>
+            </ul>
+
+            <h3>4. OTHER TRACKING TECHNOLOGIES</h3>
+            <p>We may also use "web beacons" or "pixels" in our emails. These allow us to know if an email has been opened or if a link has been clicked. This helps us ensure we aren't sending too many emails and that the content we send (such as new lesson alerts) is useful to our students.</p>
+
+            <h3>5. YOUR CONTROLS AND CHOICES</h3>
+            <p>You have the right to decide whether to accept or reject cookies.</p>
+            <ul>
+              <li><strong>Cookie Consent Banner:</strong> When you first visit Tarbiya.me, you can choose to "Accept All" or "Manage Settings" to disable non-essential cookies.</li>
+              <li><strong>Browser Settings:</strong> You can set your browser to refuse all cookies. Each browser is different, so check your browser's "Help" menu.</li>
+              <li><strong>Mobile Device Settings:</strong> On your iOS or Android device, you can control whether apps can track your activity for advertising purposes through your privacy settings.</li>
+              <li><strong>Google Opt-Out:</strong> You can opt-out of Google Analytics by installing Google's opt-out browser add-on.</li>
+            </ul>
+
+            <h3>6. UPDATES TO THIS POLICY</h3>
+            <p>We may update this Cookie Policy from time to time to reflect changes in the technologies we use or for legal reasons. Any changes will be posted here with an updated "Effective Date."</p>
+
+            <h3>7. CONTACT US</h3>
+            <p>If you have any questions about our use of cookies or other technologies, please email us at: <a href="mailto:legal@tarbiya.me">legal@tarbiya.me</a>.</p>
+          </div>
+
+          <!-- Takedown Content -->
+          <div x-show="activeLegalTab === 'takedown'" class="prose prose-sm sm:prose-base max-w-none text-gray-600" style="display: none;">
+            <h2>TAKEDOWN POLICY (DMCA): TARBIYA.ME</h2>
+            <p><strong>Effective Date: February 2026</strong></p>
+            
+            <p>Tarbiya.me respects the intellectual property rights of others and expects its users to do the same. In accordance with the Digital Millennium Copyright Act of 1998 (DMCA), we will respond expeditiously to claims of copyright infringement committed using the Tarbiya.me service that are reported to our Designated Copyright Agent.</p>
+
+            <h3>1. REPORTING COPYRIGHT INFRINGEMENT</h3>
+            <p>If you are a copyright owner, or are authorized to act on behalf of one, and you believe that any content on Tarbiya.me infringes upon your copyrights, please submit a notification containing the following information:</p>
+            <ul>
+              <li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+              <li>Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single notification, a representative list of such works at that site.</li>
+              <li>Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material (e.g., a specific URL).</li>
+              <li>Information reasonably sufficient to permit us to contact you, such as an address, telephone number, and, if available, an email address.</li>
+              <li>A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.</li>
+              <li>A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+            </ul>
+
+            <h3>2. DESIGNATED COPYRIGHT AGENT</h3>
+            <p>Please send your DMCA notice to our Designated Copyright Agent at:</p>
+            <p>
+              <strong>Copyright Agent</strong><br>
+              Tarbiya.me (Delaware Corp.)<br>
+              Email: <a href="mailto:legal@tarbiya.me">legal@tarbiya.me</a>
+            </p>
+
+            <h3>3. COUNTER-NOTIFICATION</h3>
+            <p>If you believe that your content that was removed (or to which access was disabled) is not infringing, or that you have the authorization from the copyright owner, the copyright owner's agent, or pursuant to the law, to post and use the material in your content, you may send a counter-notice containing the following information to the Copyright Agent:</p>
+            <ul>
+              <li>Your physical or electronic signature.</li>
+              <li>Identification of the content that has been removed or to which access has been disabled and the location at which the content appeared before it was removed or disabled.</li>
+              <li>A statement that you have a good faith belief that the content was removed or disabled as a result of mistake or a misidentification of the content.</li>
+              <li>Your name, address, telephone number, and email address, a statement that you consent to the jurisdiction of the federal court in Delaware, and a statement that you will accept service of process from the person who provided notification of the alleged infringement.</li>
+            </ul>
+
+            <h3>4. REPEAT INFRINGERS</h3>
+            <p>In accordance with the DMCA and other applicable law, Tarbiya.me has adopted a policy of terminating, in appropriate circumstances and at our sole discretion, users who are deemed to be repeat infringers. We may also at our sole discretion limit access to the Service and/or terminate the accounts of any users who infringe any intellectual property rights of others, whether or not there is any repeat infringement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -54,7 +56,7 @@ body {
   outline: none !important;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 20px;
 }
