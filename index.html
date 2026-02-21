@@ -186,58 +186,6 @@
         </div>
       </section>
 
-      <!-- Newsletter Section (Moved up) -->
-      <section class="mx-auto bg-white px-4 py-10 sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
-        <div class="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-          <div class="max-w-xl" data-aos="fade-right">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-4 md:text-4xl lg:text-5xl">Be the first to know</h2>
-            <p class="mb-6 text-base text-gray-600 sm:text-lg md:mb-8 md:text-xl">
-              Join our community of learners
-              <span class="font-semibold">waiting for a better way</span> to understand their faith
-            </p>
-
-            <form class="mb-4 space-y-3 md:mb-6 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" />
-
-              <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
-                <i class="ri-user-3-line me-2 text-xl text-gray-400"></i>
-                <input type="text" placeholder="Your full name" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="name" />
-              </div>
-
-              <div class="flex items-center rounded-full border border-gray-300 px-4 py-2">
-                <i class="ri-mail-line me-2 text-xl text-gray-400"></i>
-                <input type="email" placeholder="Your email address" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="email" />
-              </div>
-
-              <button class="inline-flex w-full items-center justify-center rounded-full bg-gray-800 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-700 md:text-base" type="submit">
-                <span class="px-2 md:px-4">Join Now</span>
-                <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
-              </button>
-            </form>
-
-            <div class="mb-3 flex items-center space-x-2 md:mb-4">
-              <div class="flex -space-x-2">
-                <div class="size-6 rounded-full border-2 border-white bg-gray-300 md:size-8"></div>
-                <div class="size-6 rounded-full border-2 border-white bg-gray-400 md:size-8"></div>
-                <div class="size-6 rounded-full border-2 border-white bg-gray-500 md:size-8"></div>
-              </div>
-              <span class="text-xs text-gray-600 md:text-sm">100+ people have joined</span>
-            </div>
-
-            <p class="text-xs text-gray-500 md:text-sm">
-              By joining, you agree to the
-              <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="underline">Terms & Conditions</a> and <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'" class="underline">Privacy Policy</a>.
-            </p>
-          </div>
-
-          <div data-aos="fade-left">
-            <div class="overflow-hidden rounded-3xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
-              <img src="4.png" alt="Decorative archway" class="ms-auto aspect-square w-full md:w-148" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- How Knowledge is Approached -->
       <section class="bg-gray-50 py-10 md:py-16 lg:py-20 relative overflow-hidden">
         <!-- Floating Animated SVG Background -->
@@ -338,6 +286,58 @@
                 <div class="h-2 rounded-full transition-all duration-300" :class="scroll < (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
                 <div class="h-2 rounded-full transition-all duration-300" :class="scroll >= (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section (Moved up) -->
+      <section class="mx-auto bg-white px-4 py-10 sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
+        <div class="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+          <div class="max-w-xl" data-aos="fade-right">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-4 md:text-4xl lg:text-5xl">Be the first to know</h2>
+            <p class="mb-6 text-base text-gray-600 sm:text-lg md:mb-8 md:text-xl">
+              Join our community of learners
+              <span class="font-semibold">waiting for a better way</span> to understand their faith
+            </p>
+
+            <form class="mb-4 space-y-3 md:mb-6 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" />
+
+              <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
+                <i class="ri-user-3-line me-2 text-xl text-gray-400"></i>
+                <input type="text" placeholder="Your full name" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="name" />
+              </div>
+
+              <div class="flex items-center rounded-full border border-gray-300 px-4 py-2">
+                <i class="ri-mail-line me-2 text-xl text-gray-400"></i>
+                <input type="email" placeholder="Your email address" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="email" />
+              </div>
+
+              <button class="inline-flex w-full items-center justify-center rounded-full bg-gray-800 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-700 md:text-base" type="submit">
+                <span class="px-2 md:px-4">Join Now</span>
+                <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
+              </button>
+            </form>
+
+            <div class="mb-3 flex items-center space-x-2 md:mb-4">
+              <div class="flex -space-x-2">
+                <div class="size-6 rounded-full border-2 border-white bg-gray-300 md:size-8"></div>
+                <div class="size-6 rounded-full border-2 border-white bg-gray-400 md:size-8"></div>
+                <div class="size-6 rounded-full border-2 border-white bg-gray-500 md:size-8"></div>
+              </div>
+              <span class="text-xs text-gray-600 md:text-sm">100+ people have joined</span>
+            </div>
+
+            <p class="text-xs text-gray-500 md:text-sm">
+              By joining, you agree to the
+              <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="underline">Terms & Conditions</a> and <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'" class="underline">Privacy Policy</a>.
+            </p>
+          </div>
+
+          <div data-aos="fade-left">
+            <div class="overflow-hidden rounded-3xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+              <img src="4.png" alt="Decorative archway" class="ms-auto aspect-square w-full md:w-148" />
             </div>
           </div>
         </div>
