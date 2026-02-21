@@ -7,9 +7,9 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 // New imports for interactivity
-import VanillaTilt from "vanilla-tilt";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import VanillaTilt from "vanilla-tilt";
 
 import "./style.css";
 
@@ -52,25 +52,7 @@ new Swiper(".hero-swiper", {
     prevEl: ".swiper-button-prev",
   },
   speed: 1000,
-});
-
-// Learning Section Swiper
-new Swiper(".learning-swiper", {
-  modules: [Navigation, Pagination, Autoplay],
-  loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".learning-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".learning-button-next",
-    prevEl: ".learning-button-prev",
-  },
-  speed: 800,
+  touchStartPreventDefault: false,
 });
 
 // Jump To Top Button Functionality
@@ -97,61 +79,64 @@ if (jumpToTopButton) {
   });
 }
 
-// Initialize vanilla-tilt
-const tiltElements = document.querySelectorAll<HTMLElement>("[data-tilt]");
-if (tiltElements.length > 0) {
-  // @ts-ignore
-  VanillaTilt.init(Array.from(tiltElements));
-}
+// Initialize vanilla-tilt and tsParticles only on larger screens (desktop/tablet)
+if (window.innerWidth >= 768) {
+  // Initialize vanilla-tilt
+  const tiltElements = document.querySelectorAll<HTMLElement>("[data-tilt]");
+  if (tiltElements.length > 0) {
+    // @ts-ignore
+    VanillaTilt.init(Array.from(tiltElements));
+  }
 
-// Initialize tsParticles for the Hero section
-const particlesNode = document.getElementById("tsparticles");
-if (particlesNode) {
-  loadSlim(tsParticles).then(() => {
-    tsParticles.load({
-      id: "tsparticles",
-      options: {
-        background: { color: { value: "transparent" } },
-        fpsLimit: 60,
-        interactivity: {
-          events: {
-            onClick: { enable: true, mode: "push" },
-            onHover: { enable: true, mode: "repulse" },
+  // Initialize tsParticles for the Hero section
+  const particlesNode = document.getElementById("tsparticles");
+  if (particlesNode) {
+    loadSlim(tsParticles).then(() => {
+      tsParticles.load({
+        id: "tsparticles",
+        options: {
+          background: { color: { value: "transparent" } },
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onClick: { enable: true, mode: "push" },
+              onHover: { enable: true, mode: "repulse" },
+            },
+            modes: {
+              push: { quantity: 2 },
+              repulse: { distance: 100, duration: 0.4 },
+            },
           },
-          modes: {
-            push: { quantity: 2 },
-            repulse: { distance: 100, duration: 0.4 },
+          particles: {
+            color: { value: "#ffffff" },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.2,
+              width: 1,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: { default: "bounce" },
+              random: false,
+              speed: 1,
+              straight: false,
+            },
+            number: {
+              density: { enable: true },
+              value: 60,
+            },
+            opacity: { value: 0.3 },
+            shape: { type: "circle" },
+            size: {
+              value: { min: 1, max: 3 },
+            },
           },
+          detectRetina: true,
         },
-        particles: {
-          color: { value: "#ffffff" },
-          links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.2,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: { default: "bounce" },
-            random: false,
-            speed: 1,
-            straight: false,
-          },
-          number: {
-            density: { enable: true },
-            value: 60,
-          },
-          opacity: { value: 0.3 },
-          shape: { type: "circle" },
-          size: {
-            value: { min: 1, max: 3 },
-          },
-        },
-        detectRetina: true,
-      },
+      });
     });
-  });
+  }
 }

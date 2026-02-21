@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
-  <body class="font-montserrat" x-data="{ showLegalModal: false, activeLegalTab: 'terms' }">
+  <body class="font-montserrat overflow-x-hidden" x-data="{ showLegalModal: false, activeLegalTab: 'terms' }">
     <!-- Navigation -->
     <nav class="fixed top-0 z-50 w-full px-4 py-2 transition-all duration-300">
       <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm transition-all duration-300">
@@ -59,7 +59,7 @@
       </div>
 
       <!-- Hero Content Overlay -->
-      <div id="tsparticles" class="absolute inset-0 z-[5] pointer-events-none"></div>
+      <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
           <div class="inline-block rounded-full bg-white px-4 py-1 text-sm">
@@ -84,16 +84,16 @@
       <!-- Who Tarbiya Is For -->
       <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20 relative overflow-hidden">
         <!-- Floating Animated SVG Background -->
-        <div class="absolute -top-20 -left-20 z-0 opacity-20 floating-svg-slow pointer-events-none">
+        <div class="absolute -top-20 -left-20 z-0 opacity-20 floating-svg-slow pointer-events-none hidden lg:block">
            <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path fill="#F6AC1D" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
            </svg>
         </div>
         <div class="relative z-10 grid items-center gap-6 md:grid-cols-5 md:gap-12">
-          <div class="col-span-2 overflow-hidden rounded-4xl shadow-xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="md:col-span-2 overflow-hidden rounded-4xl shadow-xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <img src="2.jpg" alt="Peaceful doorway" class="aspect-square w-full" />
           </div>
-          <div class="col-span-3">
+          <div class="md:col-span-3">
             <h2 class="mb-4 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">What is Tarbiya?</h2>
             <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">Tarbiya is a comprehensive online learning app and website designed to impart authentic Islamic knowledge in a structured, easy-to-follow format. Built for both children and adults, the platform serves as a digital gateway to learning the Deen based strictly on the Qur’an, the authentic Sunnah, and the methodology of the Salaf.</p>
             <br />
@@ -230,8 +230,10 @@
             </p>
           </div>
 
-          <div class="overflow-hidden rounded-3xl" data-aos="fade-left" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
-            <img src="4.png" alt="Decorative archway" class="ms-auto aspect-square w-full md:w-148" />
+          <div data-aos="fade-left">
+            <div class="overflow-hidden rounded-3xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+              <img src="4.png" alt="Decorative archway" class="ms-auto aspect-square w-full md:w-148" />
+            </div>
           </div>
         </div>
       </section>
@@ -239,7 +241,7 @@
       <!-- How Knowledge is Approached -->
       <section class="bg-gray-50 py-10 md:py-16 lg:py-20 relative overflow-hidden">
         <!-- Floating Animated SVG Background -->
-        <div class="absolute top-1/2 right-[-5%] -translate-y-1/2 z-0 opacity-10 floating-svg-fast pointer-events-none">
+        <div class="absolute top-1/2 right-[-5%] -translate-y-1/2 z-0 opacity-10 floating-svg-fast pointer-events-none hidden lg:block">
           <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#005BAC" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
           </svg>
@@ -247,29 +249,35 @@
         <div class="relative z-10">
           <h2 class="mb-8 px-4 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16 lg:text-5xl" data-aos="fade-up">Our Learning Methodology</h2>
 
-          <div class="grid gap-8 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
-            <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
-              <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 transition-transform hover:scale-110 hover:rotate-12 duration-300 shadow-lg hover:shadow-xl icon-pulse">
-                <i class="ri-book-line text-2xl text-white"></i>
+          <div class="grid gap-8 divide-y md:divide-y-0 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
+            <div data-aos="fade-up" data-aos-delay="100">
+              <div class="px-4 text-center md:px-8 pt-8 md:pt-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse">
+                  <i class="ri-book-line text-2xl text-white"></i>
+                </div>
+                <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
+                <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
               </div>
-              <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
-              <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
             </div>
 
-            <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
-              <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 transition-transform hover:scale-110 hover:rotate-12 duration-300 shadow-lg hover:shadow-xl icon-pulse" style="animation-delay: 1s;">
-                <i class="ri-list-check-3 text-2xl text-white"></i>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div class="px-4 text-center md:px-8 pt-8 md:pt-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="animation-delay: 1s;">
+                  <i class="ri-list-check-3 text-2xl text-white"></i>
+                </div>
+                <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
+                <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
               </div>
-              <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
-              <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
             </div>
 
-            <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
-              <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 transition-transform hover:scale-110 hover:rotate-12 duration-300 shadow-lg hover:shadow-xl icon-pulse" style="animation-delay: 2s;">
-                <i class="ri-graduation-cap-line text-2xl text-white"></i>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <div class="px-4 text-center md:px-8 pt-8 md:pt-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="animation-delay: 2s;">
+                  <i class="ri-graduation-cap-line text-2xl text-white"></i>
+                </div>
+                <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
+                <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
               </div>
-              <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
-              <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
             </div>
           </div>
         </div>
@@ -278,50 +286,62 @@
       <!-- Learning That Feels Simple and Engaging -->
       <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20">
         <div class="grid items-center gap-6 md:grid-cols-5 md:gap-12">
-          <div class="order-2 col-span-3 md:order-1" data-aos="fade-right">
+          <div class="order-2 md:col-span-3 md:order-1" data-aos="fade-right">
             <h2 class="mb-4 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">Simple, Engaging Learning</h2>
             <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
           </div>
-          <div class="order-1 col-span-2 md:order-2">
-            <!-- Learning Swiper -->
-            <div class="learning-swiper relative aspect-square w-full overflow-hidden rounded-4xl bg-orange-50">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide flex items-center justify-center">
-                  <img src="carousel-1.jpg" class="h-full w-full object-cover" />
+          <div class="order-1 md:col-span-2 md:order-2">
+            <!-- Native CSS Scroll Snap Carousel -->
+            <div class="relative aspect-square w-full overflow-hidden rounded-4xl bg-orange-50 group" x-data="{ scroll: 0, maxScroll: 1000 }" x-init="$nextTick(() => { maxScroll = $refs.slider.scrollWidth - $refs.slider.clientWidth }); window.addEventListener('resize', () => { maxScroll = $refs.slider.scrollWidth - $refs.slider.clientWidth })">
+              
+              <!-- Scroll Container -->
+              <div 
+                x-ref="slider"
+                @scroll.passive="scroll = $event.target.scrollLeft"
+                class="flex h-full w-full overflow-x-auto snap-x snap-mandatory no-scrollbar"
+                style="scroll-behavior: smooth;"
+              >
+                <!-- Slide 1 -->
+                <div class="h-full w-full shrink-0 snap-center flex items-center justify-center">
+                  <img src="carousel-1.jpg" class="h-full w-full object-cover pointer-events-none" />
                 </div>
-                <div class="swiper-slide flex items-center justify-center">
-                  <img src="carousel-2.jpg" class="h-full w-full object-cover" />
+                <!-- Slide 2 -->
+                <div class="h-full w-full shrink-0 snap-center flex items-center justify-center">
+                  <img src="carousel-2.jpg" class="h-full w-full object-cover pointer-events-none" />
                 </div>
               </div>
-              <!-- Navigation -->
-              <div class="learning-button-prev absolute top-1/2 left-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
+
+              <!-- Navigation: Prev -->
+              <button 
+                @click="$refs.slider.scrollBy({left: -$refs.slider.clientWidth, behavior: 'smooth'})"
+                x-show="scroll > 10"
+                x-transition.opacity
+                class="absolute top-1/2 left-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white transition-all md:opacity-0 md:group-hover:opacity-100"
+                aria-label="Previous image"
+              >
                 <i class="ri-arrow-left-s-line text-2xl"></i>
-              </div>
-              <div class="learning-button-next absolute top-1/2 right-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white">
+              </button>
+
+              <!-- Navigation: Next -->
+              <button 
+                @click="$refs.slider.scrollBy({left: $refs.slider.clientWidth, behavior: 'smooth'})"
+                x-show="scroll < maxScroll - 10"
+                x-transition.opacity
+                class="absolute top-1/2 right-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg hover:bg-white transition-all md:opacity-0 md:group-hover:opacity-100"
+                aria-label="Next image"
+              >
                 <i class="ri-arrow-right-s-line text-2xl"></i>
+              </button>
+
+              <!-- Pagination Indicator -->
+              <div class="absolute right-0 bottom-4 left-0 z-10 flex justify-center gap-2 pointer-events-none">
+                <div class="h-2 rounded-full transition-all duration-300" :class="scroll < (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
+                <div class="h-2 rounded-full transition-all duration-300" :class="scroll >= (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
               </div>
-              <!-- Pagination -->
-              <div class="learning-pagination absolute right-0 bottom-4 left-0 z-10 text-center"></div>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- Quote Section -->
-      <!-- <section class="py-20">
-        <div class="mx-auto max-w-4xl px-6 text-center">
-          <div class="mb-6 text-8xl text-gray-900">"</div>
-          <blockquote class="mb-2 text-3xl font-medium text-gray-900">
-            "A calm and clear beginning to learning Islam,
-            <span class="text-gray-600">built on understanding and care</span>"
-          </blockquote>
-        </div>
-        <div class="mx-auto mt-12 max-w-2xl px-6">
-          <div class="h-64 overflow-hidden rounded-full bg-linear-to-br from-orange-300 to-pink-300">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="Peaceful landscape" class="h-full w-full object-cover opacity-70" />
-          </div>
-        </div>
-      </section> -->
     </main>
 
     <!-- Footer -->
