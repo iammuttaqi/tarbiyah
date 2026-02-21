@@ -59,6 +59,7 @@
       </div>
 
       <!-- Hero Content Overlay -->
+      <div id="tsparticles" class="absolute inset-0 z-[5] pointer-events-none"></div>
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
           <div class="inline-block rounded-full bg-white px-4 py-1 text-sm">
@@ -81,9 +82,15 @@
 
     <main class="container mx-auto bg-yellow-100/10">
       <!-- Who Tarbiya Is For -->
-      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20">
-        <div class="grid items-center gap-6 md:grid-cols-5 md:gap-12">
-          <div class="col-span-2 overflow-hidden rounded-4xl shadow-xl">
+      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20 relative overflow-hidden">
+        <!-- Floating Animated SVG Background -->
+        <div class="absolute -top-20 -left-20 z-0 opacity-20 floating-svg-slow pointer-events-none">
+           <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#F6AC1D" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
+           </svg>
+        </div>
+        <div class="relative z-10 grid items-center gap-6 md:grid-cols-5 md:gap-12">
+          <div class="col-span-2 overflow-hidden rounded-4xl shadow-xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <img src="2.jpg" alt="Peaceful doorway" class="aspect-square w-full" />
           </div>
           <div class="col-span-3">
@@ -223,39 +230,47 @@
             </p>
           </div>
 
-          <div class="overflow-hidden rounded-3xl" data-aos="fade-left">
+          <div class="overflow-hidden rounded-3xl" data-aos="fade-left" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <img src="4.png" alt="Decorative archway" class="ms-auto aspect-square w-full md:w-148" />
           </div>
         </div>
       </section>
 
       <!-- How Knowledge is Approached -->
-      <section class="bg-gray-50 py-10 md:py-16 lg:py-20">
-        <h2 class="mb-8 px-4 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16 lg:text-5xl" data-aos="fade-up">Our Learning Methodology</h2>
+      <section class="bg-gray-50 py-10 md:py-16 lg:py-20 relative overflow-hidden">
+        <!-- Floating Animated SVG Background -->
+        <div class="absolute top-1/2 right-[-5%] -translate-y-1/2 z-0 opacity-10 floating-svg-fast pointer-events-none">
+          <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#005BAC" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
+          </svg>
+        </div>
+        <div class="relative z-10">
+          <h2 class="mb-8 px-4 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16 lg:text-5xl" data-aos="fade-up">Our Learning Methodology</h2>
 
-        <div class="grid gap-8 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
-          <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
-              <i class="ri-book-line text-2xl text-white"></i>
+          <div class="grid gap-8 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
+            <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
+              <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 transition-transform hover:scale-110 hover:rotate-12 duration-300 shadow-lg hover:shadow-xl icon-pulse">
+                <i class="ri-book-line text-2xl text-white"></i>
+              </div>
+              <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
+              <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
             </div>
-            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
-            <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
-          </div>
 
-          <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="200">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
-              <i class="ri-list-check-3 text-2xl text-white"></i>
+            <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
+              <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 transition-transform hover:scale-110 hover:rotate-12 duration-300 shadow-lg hover:shadow-xl icon-pulse" style="animation-delay: 1s;">
+                <i class="ri-list-check-3 text-2xl text-white"></i>
+              </div>
+              <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
+              <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
             </div>
-            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
-            <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
-          </div>
 
-          <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="300">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16">
-              <i class="ri-graduation-cap-line text-2xl text-white"></i>
+            <div class="px-4 text-center md:px-8" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
+              <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 transition-transform hover:scale-110 hover:rotate-12 duration-300 shadow-lg hover:shadow-xl icon-pulse" style="animation-delay: 2s;">
+                <i class="ri-graduation-cap-line text-2xl text-white"></i>
+              </div>
+              <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
+              <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
             </div>
-            <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
-            <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
           </div>
         </div>
       </section>

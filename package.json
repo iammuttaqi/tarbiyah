@@ -19,9 +19,12 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.0",
+    "@tsparticles/slim": "^3.9.1",
     "aos": "^2.3.4",
     "swiper": "^12.1.2",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "tsparticles": "^3.9.1",
+    "vanilla-tilt": "^1.8.1"
   },
   "prettier": {
     "printWidth": 1000,

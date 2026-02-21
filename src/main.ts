@@ -5,6 +5,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+// New imports for interactivity
+import VanillaTilt from "vanilla-tilt";
+import { tsParticles } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
+
 import "./style.css";
 
 // Initialize AOS (Animate On Scroll)
@@ -87,6 +93,65 @@ if (jumpToTopButton) {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
+    });
+  });
+}
+
+// Initialize vanilla-tilt
+const tiltElements = document.querySelectorAll<HTMLElement>("[data-tilt]");
+if (tiltElements.length > 0) {
+  // @ts-ignore
+  VanillaTilt.init(Array.from(tiltElements));
+}
+
+// Initialize tsParticles for the Hero section
+const particlesNode = document.getElementById("tsparticles");
+if (particlesNode) {
+  loadSlim(tsParticles).then(() => {
+    tsParticles.load({
+      id: "tsparticles",
+      options: {
+        background: { color: { value: "transparent" } },
+        fpsLimit: 60,
+        interactivity: {
+          events: {
+            onClick: { enable: true, mode: "push" },
+            onHover: { enable: true, mode: "repulse" },
+          },
+          modes: {
+            push: { quantity: 2 },
+            repulse: { distance: 100, duration: 0.4 },
+          },
+        },
+        particles: {
+          color: { value: "#ffffff" },
+          links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: true,
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: { default: "bounce" },
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+          number: {
+            density: { enable: true },
+            value: 60,
+          },
+          opacity: { value: 0.3 },
+          shape: { type: "circle" },
+          size: {
+            value: { min: 1, max: 3 },
+          },
+        },
+        detectRetina: true,
+      },
     });
   });
 }
