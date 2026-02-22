@@ -74,7 +74,7 @@
       </div>
 
       <!-- Hero Content Overlay -->
-      <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
+      <!-- <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div> -->
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
           <div class="inline-block rounded-full bg-white px-4 py-1 text-sm">
@@ -194,7 +194,7 @@
 
         <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
           <template x-for="(category, index) in categories" :key="index">
-            <div x-show="active_tab === index" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100">
+            <div x-show="active_tab === index" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100">
               <p class="text-lg text-gray-600 sm:text-xl md:text-2xl" x-text="category.description"></p>
             </div>
           </template>
