@@ -9,11 +9,11 @@
 }
 
 @utility heading-1 {
-  @apply text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl tracking-tight;
+  @apply text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl;
 }
 
 @utility heading-2 {
-  @apply text-3xl font-semibold text-gray-900 sm:text-4xl md:text-5xl tracking-tight;
+  @apply text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl md:text-5xl;
 }
 
 @utility heading-3 {
@@ -37,7 +37,7 @@
 }
 
 @utility btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full bg-white text-gray-900 border border-gray-300 px-6 py-3 text-sm font-semibold transition-all md:text-base hover:bg-gray-50;
+  @apply inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-all hover:bg-gray-50 md:text-base;
 }
 
 @utility transform-style-3d {
@@ -96,7 +96,7 @@ body {
   outline: none !important;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 20px;
 }

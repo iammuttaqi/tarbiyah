@@ -28,57 +28,47 @@
           <div class="flex items-center gap-2 pr-2 md:pr-0">
             <a href="/#newsletter-section" class="hidden rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:block md:px-6 md:text-base">Join Waitlist</a>
             <!-- Mobile Menu Toggle -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-white md:hidden p-1 focus:outline-none">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-1 text-white focus:outline-none md:hidden">
               <i class="ri-menu-3-line text-2xl" x-show="!mobileMenuOpen"></i>
               <i class="ri-close-line text-2xl" x-show="mobileMenuOpen" x-cloak></i>
             </button>
           </div>
         </div>
       </div>
-      
+
       <!-- Mobile Menu Dropdown -->
-      <div 
-        x-show="mobileMenuOpen" 
-        x-cloak 
-        x-transition:enter="transition ease-out duration-200" 
-        x-transition:enter-start="opacity-0 -translate-y-2" 
-        x-transition:enter-end="opacity-100 translate-y-0" 
-        x-transition:leave="transition ease-in duration-150" 
-        x-transition:leave-start="opacity-100 translate-y-0" 
-        x-transition:leave-end="opacity-0 -translate-y-2" 
-        class="container mx-auto mt-2 rounded-2xl border border-gray-700 bg-gray-900/95 p-4 backdrop-blur-lg md:hidden shadow-xl"
-      >
+      <div x-show="mobileMenuOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="container mx-auto mt-2 rounded-2xl border border-gray-700 bg-gray-900/95 p-4 shadow-xl backdrop-blur-lg md:hidden">
         <div class="flex flex-col space-y-4 text-center text-white">
-          <a href="/" class="hover:text-gray-300 font-medium py-2">Home</a>
-          <a href="/about.html" class="hover:text-gray-300 font-medium py-2 border-t border-gray-800">About Us</a>
-          <a href="/contact.html" class="hover:text-gray-300 font-medium py-2 border-t border-gray-800">Contact</a>
-          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 mx-auto transition-colors hover:bg-gray-200">Join Waitlist</a>
+          <a href="/" class="py-2 font-medium hover:text-gray-300">Home</a>
+          <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
+          <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
+          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] overflow-hidden bg-gray-900">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('slider-2.jpg');"></div>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(&quot;slider-2.jpg&quot;)"></div>
       <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
       <div class="relative z-10 flex h-full min-h-[60vh] items-center justify-center px-4 pt-32 pb-16 text-center text-white sm:px-6">
         <div class="w-full max-w-4xl space-y-6">
-          <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl text-white tracking-tight">About Tarbiya</h1>
-          <p class="mx-auto max-w-3xl text-lg sm:text-xl md:text-2xl text-white/90">Building a structured path to authentic Islamic knowledge for every Muslim</p>
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">About Tarbiya</h1>
+          <p class="mx-auto max-w-3xl text-lg text-white/90 sm:text-xl md:text-2xl">Building a structured path to authentic Islamic knowledge for every Muslim</p>
         </div>
       </div>
     </section>
 
     <main class="container mx-auto">
       <!-- Our Mission -->
-      <section class="section-padding px-4 sm:px-6 relative overflow-hidden">
+      <section class="section-padding relative overflow-hidden px-4 sm:px-6">
         <!-- Floating Animated SVG -->
-        <div class="absolute top-10 right-10 z-0 opacity-[0.05] pointer-events-none hidden lg:block spin-3d delay-1s" style="animation-duration: 25s;">
-           <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#F97316" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
-           </svg>
+        <div class="spin-3d delay-1s pointer-events-none absolute top-10 right-10 z-0 hidden opacity-[0.05] lg:block" style="animation-duration: 25s">
+          <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#F97316" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
+          </svg>
         </div>
-        <div class="mx-auto max-w-4xl text-center relative z-10">
+        <div class="relative z-10 mx-auto max-w-4xl text-center">
           <h2 class="heading-2 mb-6">Our Mission</h2>
           <p class="text-body-lg">To provide every Muslim—regardless of age, background, or level—with clear, structured, and authentic Islamic education rooted in the Quran, Sunnah, and the understanding of the Salaf.</p>
         </div>
@@ -88,8 +78,8 @@
       <section class="section-padding bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6">
           <div class="mx-auto max-w-5xl">
-            <h2 class="heading-2 text-center mb-8 md:mb-12">Why Tarbiya?</h2>
-            <div class="space-y-6 text-body-lg">
+            <h2 class="heading-2 mb-8 text-center md:mb-12">Why Tarbiya?</h2>
+            <div class="text-body-lg space-y-6">
               <p>When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day came up empty.</p>
               <p>And, like most parents, I did not want my children being raised on Youtube and social media. So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background.</p>
               <p class="font-semibold text-gray-900">What I love for my children, I want for every Muslim child in the world too.</p>
@@ -101,7 +91,7 @@
       <!-- Our Values -->
       <section class="section-padding px-4 sm:px-6">
         <div class="mx-auto max-w-6xl">
-          <h2 class="heading-2 text-center mb-12 md:mb-16">Our Core Values</h2>
+          <h2 class="heading-2 mb-12 text-center md:mb-16">Our Core Values</h2>
           <div class="grid gap-8 md:grid-cols-3 md:gap-12">
             <div class="text-center">
               <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-teal-600 text-white">
@@ -131,14 +121,14 @@
       </section>
 
       <!-- Who We Serve -->
-      <section class="section-padding bg-white relative overflow-hidden">
+      <section class="section-padding relative overflow-hidden bg-white">
         <!-- Floating Animated SVG -->
-        <div class="absolute top-1/2 left-[-5%] -translate-y-1/2 z-0 opacity-[0.05] pointer-events-none hidden lg:block spin-3d delay-2s" style="animation-duration: 30s;">
+        <div class="spin-3d delay-2s pointer-events-none absolute top-1/2 left-[-5%] z-0 hidden -translate-y-1/2 opacity-[0.05] lg:block" style="animation-duration: 30s">
           <svg width="350" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#0EA5E9" d="M42.7,-73.4C55.9,-65.7,67.7,-54.6,74.7,-40.7C81.8,-26.8,84.1,-10.1,81.3,5.6C78.4,21.3,70.5,36.1,59.2,46.9C47.9,57.7,33.2,64.5,17.6,69.5C2,74.5,-14.4,77.7,-29.7,73.5C-45,69.4,-59.2,57.9,-68.8,43.3C-78.4,28.8,-83.4,11.2,-81.2,-5.2C-78.9,-21.6,-69.5,-36.8,-57.2,-48.7C-44.9,-60.7,-29.8,-69.4,-14.4,-72C1.1,-74.5,16.5,-71,29.5,-69C42.4,-67.1,53.2,-61.2,42.7,-73.4Z" transform="translate(100 100)" />
           </svg>
         </div>
-        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <div class="relative z-10 container mx-auto px-4 sm:px-6">
           <div class="mx-auto max-w-4xl text-center">
             <h2 class="mb-8 text-3xl font-semibold text-gray-900 sm:text-4xl md:mb-12 md:text-5xl">Who We Serve</h2>
             <div class="grid gap-6 text-left md:grid-cols-2 md:gap-8">

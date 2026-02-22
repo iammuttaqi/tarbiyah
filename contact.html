@@ -28,57 +28,47 @@
           <div class="flex items-center gap-2 pr-2 md:pr-0">
             <a href="/#newsletter-section" class="hidden rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:block md:px-6 md:text-base">Join Waitlist</a>
             <!-- Mobile Menu Toggle -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-white md:hidden p-1 focus:outline-none">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-1 text-white focus:outline-none md:hidden">
               <i class="ri-menu-3-line text-2xl" x-show="!mobileMenuOpen"></i>
               <i class="ri-close-line text-2xl" x-show="mobileMenuOpen" x-cloak></i>
             </button>
           </div>
         </div>
       </div>
-      
+
       <!-- Mobile Menu Dropdown -->
-      <div 
-        x-show="mobileMenuOpen" 
-        x-cloak 
-        x-transition:enter="transition ease-out duration-200" 
-        x-transition:enter-start="opacity-0 -translate-y-2" 
-        x-transition:enter-end="opacity-100 translate-y-0" 
-        x-transition:leave="transition ease-in duration-150" 
-        x-transition:leave-start="opacity-100 translate-y-0" 
-        x-transition:leave-end="opacity-0 -translate-y-2" 
-        class="container mx-auto mt-2 rounded-2xl border border-gray-700 bg-gray-900/95 p-4 backdrop-blur-lg md:hidden shadow-xl"
-      >
+      <div x-show="mobileMenuOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="container mx-auto mt-2 rounded-2xl border border-gray-700 bg-gray-900/95 p-4 shadow-xl backdrop-blur-lg md:hidden">
         <div class="flex flex-col space-y-4 text-center text-white">
-          <a href="/" class="hover:text-gray-300 font-medium py-2">Home</a>
-          <a href="/about.html" class="hover:text-gray-300 font-medium py-2 border-t border-gray-800">About Us</a>
-          <a href="/contact.html" class="hover:text-gray-300 font-medium py-2 border-t border-gray-800">Contact</a>
-          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 mx-auto transition-colors hover:bg-gray-200">Join Waitlist</a>
+          <a href="/" class="py-2 font-medium hover:text-gray-300">Home</a>
+          <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
+          <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
+          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-[50vh] overflow-hidden bg-gray-900">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('slider-3.jpg');"></div>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(&quot;slider-3.jpg&quot;)"></div>
       <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
       <div class="relative z-10 flex h-full min-h-[50vh] items-center justify-center px-4 pt-32 pb-16 text-center text-white sm:px-6">
         <div class="w-full max-w-4xl space-y-6">
-          <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl text-white tracking-tight">Get in Touch</h1>
-          <p class="mx-auto max-w-3xl text-lg sm:text-xl md:text-2xl text-white/90">Have questions? We'd love to hear from you</p>
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">Get in Touch</h1>
+          <p class="mx-auto max-w-3xl text-lg text-white/90 sm:text-xl md:text-2xl">Have questions? We'd love to hear from you</p>
         </div>
       </div>
     </section>
 
     <main class="container mx-auto">
       <!-- Contact Form -->
-      <section class="section-padding px-4 sm:px-6 relative overflow-hidden">
+      <section class="section-padding relative overflow-hidden px-4 sm:px-6">
         <!-- Floating Animated SVG -->
-        <div class="absolute bottom-10 left-10 z-0 opacity-[0.05] pointer-events-none hidden md:block spin-3d delay-1s" style="animation-duration: 25s;">
-           <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#059669" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
-           </svg>
+        <div class="spin-3d delay-1s pointer-events-none absolute bottom-10 left-10 z-0 hidden opacity-[0.05] md:block" style="animation-duration: 25s">
+          <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#059669" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
+          </svg>
         </div>
-        <div class="mx-auto max-w-4xl relative z-10">
+        <div class="relative z-10 mx-auto max-w-4xl">
           <div class="grid gap-12 md:grid-cols-2">
             <!-- Form -->
             <div>
@@ -179,7 +169,7 @@
 
               <!-- Social Links -->
               <div>
-                <h3 class="mb-4 heading-4">Connect With Us</h3>
+                <h3 class="heading-4 mb-4">Connect With Us</h3>
                 <div class="flex flex-wrap gap-3">
                   <a href="#" target="_blank" class="flex size-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-700 transition-all hover:border-gray-900 hover:bg-gray-900 hover:text-white" aria-label="Facebook">
                     <i class="ri-facebook-fill text-xl"></i>
