@@ -30,7 +30,7 @@
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
-            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:block md:px-6 md:text-base">Join Waitlist</a>
+            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-100 px-4 py-2 text-sm transition-all hover:bg-gray-200 md:block md:px-6 md:text-base">Join Waitlist</a>
             <!-- Mobile Menu Toggle -->
             <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-1 text-white focus:outline-none md:hidden">
               <i class="ri-menu-3-line text-2xl" x-show="!mobileMenuOpen"></i>
@@ -67,14 +67,14 @@
           </div>
         </div>
         <!-- Navigation -->
-        <div class="swiper-button-prev text-white!"></div>
-        <div class="swiper-button-next text-white!"></div>
+        <div class="swiper-button-prev z-20! text-white!"></div>
+        <div class="swiper-button-next z-20! text-white!"></div>
         <!-- Pagination -->
         <div class="swiper-pagination"></div>
       </div>
 
       <!-- Hero Content Overlay -->
-      <!-- <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div> -->
+      <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
           <div class="inline-block rounded-full bg-white px-4 py-1 text-sm">
@@ -87,9 +87,32 @@
           <h1 class="heading-1 text-white">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
           <p class="text-body-lg font-sora mx-auto text-white/90">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
 
-          <a href="#newsletter-section" class="inline-flex items-center rounded-full bg-gray-800/70 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-800/90 md:text-base">
-            <span class="px-2 md:px-4">Join the Waiting List</span>
-            <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
+          <a href="#newsletter-section" class="group relative inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 active:scale-95 md:text-base">
+            <!-- Outer Glow -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
+
+            <!-- Rotating radar beam -->
+            <div class="absolute inset-[1px] overflow-hidden rounded-full bg-black/20 backdrop-blur-lg transition-colors duration-300 group-hover:bg-black/40">
+              <div class="absolute top-1/2 left-1/2 h-[500%] w-[500%] -translate-x-1/2 -translate-y-1/2 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,rgba(246,172,29,0)_0%,rgba(246,172,29,0.7)_50%,rgba(246,172,29,0)_100%)] opacity-50 transition-opacity duration-500 group-hover:opacity-100" style="animation-duration: 4s"></div>
+            </div>
+
+            <!-- Border Lines -->
+            <div class="absolute inset-0 rounded-full border border-white/20 transition-colors duration-300 group-hover:border-white/40"></div>
+            <!-- Inner Border for 3D effect -->
+            <div class="absolute inset-[1px] rounded-full border border-white/10"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 flex items-center gap-2 px-2 py-2">
+              <span class="px-2 font-medium tracking-wide text-white drop-shadow-md md:px-4">Join the Waiting List</span>
+              <div class="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 via-orange-500 to-red-500 shadow-[0_0_15px_rgba(246,172,29,0.5)] transition-all duration-300 group-hover:translate-x-1 group-hover:shadow-[0_0_25px_rgba(246,172,29,0.8)] md:size-11">
+                <i class="ri-arrow-right-line text-xl text-white md:text-2xl"></i>
+              </div>
+            </div>
+
+            <!-- Sheen effect over the button -->
+            <div class="pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-full">
+              <div class="absolute top-0 -left-[100%] h-full w-[50%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-700 ease-in-out group-hover:left-[150%]"></div>
+            </div>
           </a>
         </div>
       </div>

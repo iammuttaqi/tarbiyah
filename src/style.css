@@ -101,11 +101,6 @@ body {
   bottom: 20px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  z-index: 20;
-}
-
 /* Floating SVGs */
 @keyframes floatSlow {
   0% {
