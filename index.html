@@ -27,6 +27,7 @@
           <div class="hidden items-center space-x-8 text-white md:flex">
             <a href="/" class="hover:text-gray-200">Home</a>
             <a href="/about.html" class="hover:text-gray-200">About Us</a>
+            <a href="/#who-we-are" class="hover:text-gray-200">Who We Are</a>
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
@@ -45,6 +46,7 @@
         <div class="flex flex-col space-y-4 text-center text-white">
           <a href="/" class="py-2 font-medium hover:text-gray-300">Home</a>
           <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
+          <a href="/#who-we-are" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Who We Are</a>
           <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
           <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
@@ -266,6 +268,67 @@
               </div>
             </div>
           </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who We Are Section -->
+      <section id="who-we-are" class="section-padding relative mx-auto overflow-hidden px-4 sm:px-6 bg-gray-50/50">
+        <!-- Floating Animated Background Vector -->
+        <div class="spin-3d delay-2s pointer-events-none absolute top-10 right-[-10%] z-0 hidden opacity-5 lg:block" style="animation-duration: 35s">
+          <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#F59E0B" d="M45.7,-76.3C58.9,-69.3,69.1,-56,76.5,-41.5C83.9,-27,88.5,-11.3,86.3,3.4C84.1,18.1,75.1,31.8,64.2,42.4C53.3,53,40.5,60.5,26.4,66.5C12.3,72.5,-3.1,77,-18.2,75.1C-33.3,73.2,-48.1,64.9,-59.6,53.2C-71.1,41.5,-79.3,26.4,-82.5,10.1C-85.7,-6.2,-83.9,-23.7,-75.7,-38.4C-67.5,-53.1,-52.9,-65,-37.8,-71.4C-22.7,-77.8,-7.1,-78.7,8.2,-74.6C23.5,-70.5,32.5,-83.3,45.7,-76.3Z" transform="translate(100 100)" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
+          <div class="order-2 md:order-1" data-aos="fade-right">
+            <div class="mb-4 inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">Who We Are</div>
+            <h2 class="heading-2 mb-6 text-gray-900">Dedicated to <span class="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
+            
+            <div class="space-y-5 text-body-lg">
+              <p>Tarbiya was founded with a singular mission: to make authentic, structured Islamic knowledge accessible to families everywhere.</p>
+              <p>We understand the challenges of finding trustworthy educational resources in today's digital age. That's why every course, puzzle, and lesson is meticulously crafted by students of knowledge upon the methodology of the Salaf-us-Salih.</p>
+              <p>Whether you are starting from the very basics or looking to deepen your family's understanding of the Deen, we provide a clear, mapped-out journey rooted deeply in the Quran and the Sunnah.</p>
+            </div>
+            
+            <div class="mt-8 flex items-center gap-4">
+              <a href="/about.html" class="group inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 font-semibold text-white transition-all hover:bg-gray-800 hover:shadow-lg active:scale-95">
+                <span>Learn our story</span>
+                <i class="ri-arrow-right-line transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="order-1 md:order-2" data-aos="fade-left">
+            <!-- 3D Image Wrapper -->
+            <div class="transform-style-3d relative mx-auto max-w-md md:max-w-full" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.2">
+              
+              <!-- Decorative background blob -->
+              <div class="absolute -inset-4 z-0 rounded-3xl bg-gradient-to-tr from-amber-200 to-orange-100 opacity-50 blur-2xl"></div>
+              
+              <div class="relative z-10 overflow-hidden rounded-[2rem] shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                <img src="/founder.jpg" alt="Who We Are" class="w-full object-cover transition-transform duration-700 hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1000&auto=format&fit=crop'" />
+                
+                <!-- Overlay gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent pointer-events-none"></div>
+                
+                <!-- Floating stat badge -->
+                <div class="absolute bottom-6 left-6 rounded-2xl border border-white/20 bg-white/20 p-4 shadow-xl backdrop-blur-md" style="transform: translateZ(40px)">
+                  <div class="flex items-center gap-3">
+                    <div class="flex size-10 items-center justify-center rounded-full bg-amber-500 text-white shadow-inner">
+                      <i class="ri-team-fill text-lg"></i>
+                    </div>
+                    <div>
+                      <p class="font-sora text-sm font-bold text-white">For Every Family</p>
+                      <p class="text-xs text-white/80">Built on trust</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -311,6 +374,159 @@
               <div class="pointer-events-none absolute right-0 bottom-4 left-0 z-10 flex justify-center gap-2">
                 <div class="h-2 rounded-full transition-all duration-300" :class="scroll < (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
                 <div class="h-2 rounded-full transition-all duration-300" :class="scroll >= (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fair Pricing Section -->
+      <section class="section-padding relative overflow-hidden bg-white">
+        <!-- Floating Animated Backgrounds -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <!-- Main subtle grid pattern -->
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30"></div>
+          
+          <!-- Animated gradient blobs -->
+          <div class="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-emerald-300 mix-blend-multiply opacity-20 blur-[100px] animate-[float-slow_15s_ease-in-out_infinite_alternate] filter"></div>
+          
+          <div class="absolute right-[-20%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-purple-300 mix-blend-multiply opacity-20 blur-[120px] animate-[float-fast_12s_ease-in-out_infinite_alternate-reverse] filter delay-700"></div>
+
+          <div class="absolute top-[20%] left-[60%] h-[400px] w-[400px] rounded-full bg-orange-200 mix-blend-multiply opacity-30 blur-[90px] animate-[float-slow_20s_ease-in-out_infinite_alternate] filter delay-1000"></div>
+
+          <!-- Existing Floating SVG Vector -->
+          <div class="spin-3d delay-1s absolute top-10 right-[-5%] hidden opacity-5 lg:block" style="animation-duration: 40s">
+            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#8B5CF6" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
+            </svg>
+          </div>
+
+          <!-- Floating abstract rings -->
+          <div class="absolute left-[15%] top-[60%] animate-[float-fast_8s_ease-in-out_infinite_alternate] hidden md:block">
+            <div class="h-16 w-16 rounded-full border-4 border-emerald-500/20"></div>
+          </div>
+          <div class="absolute right-[25%] top-[20%] animate-[float-slow_10s_ease-in-out_infinite_alternate-reverse] delay-300 hidden lg:block">
+            <div class="h-24 w-24 rounded-full border-2 border-purple-500/10"></div>
+          </div>
+        </div>
+        
+        <div class="container relative z-10 mx-auto px-4 sm:px-6">
+          <div class="mx-auto mb-10 max-w-3xl text-center md:mb-16">
+            <h2 class="heading-2 mb-4">Fair Pricing</h2>
+            <p class="text-body-lg">It is my aim to deliver the best in Islamic education to every child around the world. And I want this to be affordable always.</p>
+          </div>
+
+          <div class="relative mx-auto mt-12 grid max-w-7xl items-center gap-8 md:grid-cols-12 md:gap-12 lg:mb-12">
+            
+            <!-- Left Side Floating Elements -->
+            <div class="hidden flex-col items-center justify-center space-y-12 md:col-span-3 md:flex lg:col-span-4">
+              <div class="transform-style-3d relative flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-slow 8s ease-in-out infinite;">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-rocket-2-fill text-2xl text-white"></i>
+                </div>
+                <div style="transform: translateZ(20px)">
+                  <p class="font-sora text-sm font-bold text-gray-900">Accelerated</p>
+                  <p class="text-xs text-gray-600">Learning Path</p>
+                </div>
+              </div>
+
+              <div class="transform-style-3d relative ml-12 flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-fast 6s ease-in-out infinite;">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-medal-fill text-2xl text-white"></i>
+                </div>
+                <div style="transform: translateZ(20px)">
+                  <p class="font-sora text-sm font-bold text-gray-900">Gamified</p>
+                  <p class="text-xs text-gray-600">Puzzles & Quizzes</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center Pricing Table -->
+            <div class="z-20 md:col-span-6 lg:col-span-4" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.1">
+              <div class="relative overflow-hidden rounded-[2.5rem] bg-gray-900 p-[1px] shadow-2xl transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-400 via-emerald-500 to-green-600 opacity-20"></div>
+                
+                <!-- Shimmer inner border -->
+                <div class="absolute inset-[1px] rounded-[2.5rem] bg-gray-900"></div>
+                
+                <div class="relative z-10 flex flex-col p-8 md:p-10">
+                  <div class="mb-6 flex items-center justify-between border-b border-gray-800 pb-6">
+                    <div>
+                      <h3 class="font-sora text-2xl font-bold text-white">Premium Access</h3>
+                      <p class="mt-1 text-sm text-gray-400">Everything you need to grow.</p>
+                    </div>
+                    <div class="text-right">
+                      <span class="block text-4xl font-extrabold text-white"><span class="text-xl text-emerald-500 mr-1">$</span>6</span>
+                      <span class="text-xs font-semibold uppercase tracking-wider text-gray-400">/ month</span>
+                    </div>
+                  </div>
+
+                  <ul class="mb-8 space-y-4 text-base text-gray-300">
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Full access to all 6 levels</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Over 2000+ hours of learning</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Interactive quizzes and puzzles</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Progress check and self test</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Real time analytics & tracking</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Parent-child talking points</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Monthly new courses addition</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-checkbox-circle-fill mr-3 mt-0.5 text-xl text-emerald-400"></i>
+                      <span>Structured daily learning plan</span>
+                    </li>
+                  </ul>
+
+                  <a href="#newsletter-section" class="group relative mt-auto flex w-full items-center justify-center overflow-hidden rounded-full bg-emerald-500 py-4 font-semibold text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all hover:bg-emerald-400 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                    <span class="relative z-10">Get Started Today</span>
+                    <!-- Button Shimmer -->
+                    <div class="pointer-events-none absolute inset-0 z-20">
+                      <div class="absolute top-0 -left-[100%] h-full w-[50%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-700 ease-in-out group-hover:left-[150%]"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side Floating Elements -->
+            <div class="hidden flex-col items-center justify-center space-y-12 md:col-span-3 md:flex lg:col-span-4">
+              <div class="transform-style-3d relative flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-fast 7s ease-in-out infinite; animation-delay: 1s;">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-parent-fill text-2xl text-white"></i>
+                </div>
+                <div style="transform: translateZ(20px)">
+                  <p class="font-sora text-sm font-bold text-gray-900">Family Box</p>
+                  <p class="text-xs text-gray-600">Guided Discussion</p>
+                </div>
+              </div>
+
+              <div class="transform-style-3d relative mr-12 flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-slow 9s ease-in-out infinite; animation-delay: 2s;">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gray-900 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-line-chart-fill text-2xl text-white"></i>
+                </div>
+                <div style="transform: translateZ(20px)">
+                  <p class="font-sora text-sm font-bold text-gray-900">Analytics</p>
+                  <p class="text-xs text-gray-600">Real-time stats</p>
+                </div>
               </div>
             </div>
           </div>
