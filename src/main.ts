@@ -9,15 +9,61 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 // New imports for interactivity
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import Alpine from "alpinejs";
 import VanillaTilt from "vanilla-tilt";
 
+declare global {
+  interface Window {
+    Alpine: typeof Alpine;
+  }
+}
+
 import "./style.css";
+
+window.Alpine = Alpine;
+Alpine.start();
 
 // Initialize AOS (Animate On Scroll)
 AOS.init({
   duration: 800,
   once: true,
   offset: 100,
+});
+
+// Scroll Progress Bar
+const progressBar = document.createElement("div");
+progressBar.className = "fixed top-0 left-0 h-1 bg-gradient-to-r from-teal-500 via-orange-500 to-pink-500 z-[100] transition-all duration-75 pointer-events-none";
+progressBar.style.width = "0%";
+document.body.appendChild(progressBar);
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercentage = (scrollTop / scrollHeight) * 100;
+  progressBar.style.width = scrollPercentage + "%";
+});
+
+// Magnetic Buttons Physics
+document.addEventListener("DOMContentLoaded", () => {
+  const magneticButtons = document.querySelectorAll(".btn-primary, .btn-secondary, .btn-3d");
+
+  magneticButtons.forEach((btn) => {
+    if (window.innerWidth >= 768) {
+      btn.addEventListener("mousemove", (e: Event) => {
+        const mouseEvent = e as MouseEvent;
+        const rect = (btn as HTMLElement).getBoundingClientRect();
+        const x = mouseEvent.clientX - rect.left - rect.width / 2;
+        const y = mouseEvent.clientY - rect.top - rect.height / 2;
+
+        // 0.3 determines the magnetic snap strength
+        (btn as HTMLElement).style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        (btn as HTMLElement).style.transform = "translate(0px, 0px)";
+      });
+    }
+  });
 });
 
 // Navbar scroll behavior - add solid background when scrolling

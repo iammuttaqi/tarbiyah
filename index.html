@@ -13,12 +13,10 @@
 
     <link href="/src/style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
   <body class="font-montserrat overflow-x-hidden" x-data="{ showLegalModal: false, activeLegalTab: 'terms' }">
-    <!-- Navigation -->
-    <nav class="fixed top-0 z-50 w-full px-4 py-2 transition-all duration-300">
+    <nav class="fixed top-0 z-50 w-full px-4 py-2 transition-all duration-300" x-data="{ mobileMenuOpen: false }">
       <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm transition-all duration-300">
         <div class="flex items-center justify-between px-2">
           <div class="flex items-center space-x-2 rounded-full px-4 py-2">
@@ -28,10 +26,37 @@
           </div>
           <div class="hidden items-center space-x-8 text-white md:flex">
             <a href="/" class="hover:text-gray-200">Home</a>
-            <a href="#" class="hover:text-gray-200">About Us</a>
-            <a href="#" class="hover:text-gray-200">Contact</a>
+            <a href="/about.html" class="hover:text-gray-200">About Us</a>
+            <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
-          <a href="#newsletter-section" class="rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:px-6 md:text-base">Join Waitlist</a>
+          <div class="flex items-center gap-2 pr-2 md:pr-0">
+            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:block md:px-6 md:text-base">Join Waitlist</a>
+            <!-- Mobile Menu Toggle -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-white md:hidden p-1 focus:outline-none">
+              <i class="ri-menu-3-line text-2xl" x-show="!mobileMenuOpen"></i>
+              <i class="ri-close-line text-2xl" x-show="mobileMenuOpen" x-cloak></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Dropdown -->
+      <div 
+        x-show="mobileMenuOpen" 
+        x-cloak 
+        x-transition:enter="transition ease-out duration-200" 
+        x-transition:enter-start="opacity-0 -translate-y-2" 
+        x-transition:enter-end="opacity-100 translate-y-0" 
+        x-transition:leave="transition ease-in duration-150" 
+        x-transition:leave-start="opacity-100 translate-y-0" 
+        x-transition:leave-end="opacity-0 -translate-y-2" 
+        class="container mx-auto mt-2 rounded-2xl border border-gray-700 bg-gray-900/95 p-4 backdrop-blur-lg md:hidden shadow-xl"
+      >
+        <div class="flex flex-col space-y-4 text-center text-white">
+          <a href="/" class="hover:text-gray-300 font-medium py-2">Home</a>
+          <a href="/about.html" class="hover:text-gray-300 font-medium py-2 border-t border-gray-800">About Us</a>
+          <a href="/contact.html" class="hover:text-gray-300 font-medium py-2 border-t border-gray-800">Contact</a>
+          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 mx-auto transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
       </div>
     </nav>
@@ -69,8 +94,8 @@
             </div>
           </div>
 
-          <h1 class="text-3xl leading-tight font-medium text-white sm:text-4xl md:text-5xl lg:text-6xl">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
-          <p class="font-sora mx-auto px-2 text-base text-white/90 sm:text-lg md:text-xl">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
+          <h1 class="heading-1 text-white">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
+          <p class="text-body-lg font-sora mx-auto text-white/90">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
 
           <a href="#newsletter-section" class="inline-flex items-center rounded-full bg-gray-800/70 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-800/90 md:text-base">
             <span class="px-2 md:px-4">Join the Waiting List</span>
@@ -82,7 +107,7 @@
 
     <main class="container mx-auto bg-yellow-100/10">
       <!-- Who Tarbiya Is For -->
-      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20 relative overflow-hidden">
+      <section class="section-padding px-4 sm:px-6 mx-auto relative overflow-hidden">
         <!-- Floating Animated SVG Background -->
         <div class="absolute -top-20 -left-20 z-0 opacity-20 floating-svg-slow pointer-events-none hidden lg:block">
            <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -94,10 +119,10 @@
             <img src="2.jpg" alt="Peaceful doorway" class="aspect-square w-full" />
           </div>
           <div class="md:col-span-3">
-            <h2 class="mb-4 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">What is Tarbiya?</h2>
-            <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">Tarbiya is a comprehensive online learning app and website designed to impart authentic Islamic knowledge in a structured, easy-to-follow format. Built for both children and adults, the platform serves as a digital gateway to learning the Deen based strictly on the Qur’an, the authentic Sunnah, and the methodology of the Salaf.</p>
+            <h2 class="heading-2 mb-4 md:mb-6">What is Tarbiya?</h2>
+            <p class="text-body-lg">Tarbiya is a comprehensive online learning app and website designed to impart authentic Islamic knowledge in a structured, easy-to-follow format. Built for both children and adults, the platform serves as a digital gateway to learning the Deen based strictly on the Qur’an, the authentic Sunnah, and the methodology of the Salaf.</p>
             <br />
-            <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">We recognize that every student begins their journey at a different point. Therefore, Tarbiya is organized into levels of understanding, allowing users to progress from foundational principles to more detailed studies at a pace that suits them.</p>
+            <p class="text-body-lg">We recognize that every student begins their journey at a different point. Therefore, Tarbiya is organized into levels of understanding, allowing users to progress from foundational principles to more detailed studies at a pace that suits them.</p>
           </div>
         </div>
       </section>
@@ -114,7 +139,7 @@
 
       <!-- What You Will Learn -->
       <section
-        class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20"
+        class="section-padding px-4 sm:px-6 mx-auto"
         x-data="{
         active_tab: 0,
         categories: [
@@ -187,7 +212,7 @@
       </section>
 
       <!-- How Knowledge is Approached -->
-      <section class="bg-gray-50 py-10 md:py-16 lg:py-20 relative overflow-hidden">
+      <section class="section-padding bg-gray-50 relative overflow-hidden">
         <!-- Floating Animated SVG Background -->
         <div class="absolute top-1/2 right-[-5%] -translate-y-1/2 z-0 opacity-10 floating-svg-fast pointer-events-none hidden lg:block">
           <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -195,36 +220,36 @@
           </svg>
         </div>
         <div class="relative z-10">
-          <h2 class="mb-8 px-4 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16 lg:text-5xl" data-aos="fade-up">Our Learning Methodology</h2>
+          <h2 class="heading-2 text-center mb-8 md:mb-12 lg:mb-16 px-4" data-aos="fade-up">Our Learning Methodology</h2>
 
-          <div class="grid gap-8 divide-y md:divide-y-0 divide-gray-200 md:grid-cols-3 md:gap-12 md:divide-x">
+          <div class="grid gap-8 md:grid-cols-3 md:gap-8 px-8">
             <div data-aos="fade-up" data-aos-delay="100">
-              <div class="px-4 text-center md:px-8 pt-8 md:pt-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
-                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse">
+              <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8 relative z-10 transform-style-3d" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="transform: translateZ(30px);">
                   <i class="ri-book-line text-2xl text-white"></i>
                 </div>
-                <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Rooted in revelation</h3>
-                <p class="text-base text-gray-600 md:text-lg">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
+                <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px);">Rooted in revelation</h3>
+                <p class="text-body" style="transform: translateZ(10px);">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
               </div>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200">
-              <div class="px-4 text-center md:px-8 pt-8 md:pt-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
-                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="animation-delay: 1s;">
+              <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8 relative z-10 transform-style-3d" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="animation-delay: 1s; transform: translateZ(30px);">
                   <i class="ri-list-check-3 text-2xl text-white"></i>
                 </div>
-                <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Structured, not scattered</h3>
-                <p class="text-base text-gray-600 md:text-lg">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
+                <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px);">Structured, not scattered</h3>
+                <p class="text-body" style="transform: translateZ(10px);">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
               </div>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="300">
-              <div class="px-4 text-center md:px-8 pt-8 md:pt-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.1">
-                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="animation-delay: 2s;">
+              <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8 relative z-10 transform-style-3d" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 md:mb-6 md:h-16 md:w-16 shadow-lg icon-pulse" style="animation-delay: 2s; transform: translateZ(30px);">
                   <i class="ri-graduation-cap-line text-2xl text-white"></i>
                 </div>
-                <h3 class="mb-2 text-lg font-medium text-gray-900 sm:text-xl md:mb-3 md:text-2xl">Knowledge with practice</h3>
-                <p class="text-base text-gray-600 md:text-lg">Learning is tied to reflection and action, not memorization alone.</p>
+                <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px);">Knowledge with practice</h3>
+                <p class="text-body" style="transform: translateZ(10px);">Learning is tied to reflection and action, not memorization alone.</p>
               </div>
             </div>
           </div>
@@ -232,11 +257,17 @@
       </section>
 
       <!-- Learning That Feels Simple and Engaging -->
-      <section class="mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20">
-        <div class="grid items-center gap-6 md:grid-cols-5 md:gap-12">
+      <section class="section-padding px-4 sm:px-6 mx-auto relative overflow-hidden">
+        <!-- Floating Animated SVG -->
+        <div class="absolute bottom-10 left-[-5%] z-0 opacity-10 pointer-events-none hidden md:block spin-3d delay-1s" style="animation-duration: 22s;">
+          <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#059669" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
+          </svg>
+        </div>
+        <div class="relative z-10 grid items-center gap-6 md:grid-cols-5 md:gap-12">
           <div class="order-2 md:col-span-3 md:order-1" data-aos="fade-right">
-            <h2 class="mb-4 text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">Simple, Engaging Learning</h2>
-            <p class="text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
+            <h2 class="heading-2 mb-4 md:mb-6">Simple, Engaging Learning</h2>
+            <p class="text-body-lg">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
           </div>
           <div class="order-1 md:col-span-2 md:order-2">
             <!-- Native CSS Scroll Snap Carousel -->
@@ -291,17 +322,24 @@
         </div>
       </section>
 
-      <!-- Newsletter Section (Moved up) -->
-      <section class="mx-auto bg-white px-4 py-10 sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
-        <div class="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+      <!-- Newsletter Section -->
+      <section class="mx-auto bg-white px-4 py-10 sm:px-6 md:py-16 lg:py-20 relative overflow-hidden" id="newsletter-section">
+        <!-- Floating Animated SVG -->
+        <div class="absolute -top-10 -right-10 z-0 opacity-[0.07] pointer-events-none hidden md:block spin-3d delay-2s" style="animation-duration: 28s;">
+          <svg width="350" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#8B5CF6" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
+          </svg>
+        </div>
+        <div class="relative z-10 grid items-center gap-8 md:grid-cols-2 md:gap-12">
           <div class="max-w-xl" data-aos="fade-right">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-4 md:text-4xl lg:text-5xl">Be the first to know</h2>
-            <p class="mb-6 text-base text-gray-600 sm:text-lg md:mb-8 md:text-xl">
+            <h2 class="heading-2 mb-3 md:mb-4">Be the first to know</h2>
+            <p class="text-body-lg mb-6 md:mb-8">
               Join our community of learners
               <span class="font-semibold">waiting for a better way</span> to understand their faith
             </p>
 
             <form class="mb-4 space-y-3 md:mb-6 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
+              <!-- <input type="hidden" name="access_key" value="3e506723-16c4-4b18-95d1-1f7a6901ca53" /> -->
               <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" />
 
               <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
@@ -314,7 +352,7 @@
                 <input type="email" placeholder="Your email address" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="email" />
               </div>
 
-              <button class="inline-flex w-full items-center justify-center rounded-full bg-gray-800 px-2 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-700 md:text-base" type="submit">
+              <button class="btn-primary w-full" type="submit">
                 <span class="px-2 md:px-4">Join Now</span>
                 <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
               </button>
@@ -407,11 +445,11 @@
             <div>
               <h3 class="mb-4 font-medium text-white">Company</h3>
               <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">About Tarbiya</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="/about.html">About Tarbiya</a></li>
                 <li><a class="text-gray-400 transition-colors hover:text-white" href="#">The Need</a></li>
                 <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Methodology</a></li>
                 <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Pricing</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Contact Us</a></li>
+                <li><a class="text-gray-400 transition-colors hover:text-white" href="/contact.html">Contact Us</a></li>
               </ul>
             </div>
             <div>
@@ -493,7 +531,7 @@
       <div class="flex items-start gap-4">
         <div class="text-2xl">🍪</div>
         <div>
-          <h3 class="text-lg font-semibold text-gray-900">We use cookies</h3>
+          <h3 class="heading-4">We use cookies</h3>
           <p class="mt-2 text-sm text-gray-600">
             We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.
           </p>
