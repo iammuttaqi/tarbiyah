@@ -31,11 +31,11 @@
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
-            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-100 px-4 py-2 text-sm transition-all hover:bg-gray-200 md:block md:px-6 md:text-base">Join Waitlist</a>
+            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-100 px-4 py-2 text-xs transition-all hover:bg-gray-200 md:block md:px-6 md:text-sm">Join Waitlist</a>
             <!-- Mobile Menu Toggle -->
             <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-1 text-white focus:outline-none md:hidden">
-              <i class="ri-menu-3-line text-2xl" x-show="!mobileMenuOpen"></i>
-              <i class="ri-close-line text-2xl" x-show="mobileMenuOpen" x-cloak></i>
+              <i class="ri-menu-3-line text-xl" x-show="!mobileMenuOpen"></i>
+              <i class="ri-close-line text-xl" x-show="mobileMenuOpen" x-cloak></i>
             </button>
           </div>
         </div>
@@ -48,7 +48,7 @@
           <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
           <a href="/#who-we-are" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Who We Are</a>
           <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
-          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
+          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
       </div>
     </nav>
@@ -79,9 +79,9 @@
       <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
-          <div class="inline-block rounded-full bg-white px-4 py-1 text-sm">
+          <div class="inline-block rounded-full bg-white px-4 py-1 text-xs">
             <div class="flex items-center gap-1 text-black">
-              <div><i class="ri-arrow-right-circle-fill text-xl"></i></div>
+              <div><i class="ri-arrow-right-circle-fill text-lg"></i></div>
               <div><span>Coming Soon</span></div>
             </div>
           </div>
@@ -89,7 +89,7 @@
           <h1 class="heading-1 text-white">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
           <p class="text-body-lg font-sora mx-auto text-white/90">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
 
-          <a href="#newsletter-section" class="group relative inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 active:scale-95 md:text-base">
+          <a href="#newsletter-section" class="group relative inline-flex items-center justify-center rounded-full text-xs font-semibold transition-all duration-300 hover:scale-105 active:scale-95 md:text-sm">
             <!-- Outer Glow -->
             <div class="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
 
@@ -107,7 +107,7 @@
             <div class="relative z-10 flex items-center gap-2 px-2 py-2">
               <span class="px-2 font-medium tracking-wide text-white drop-shadow-md md:px-4">Join the Waiting List</span>
               <div class="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 via-orange-500 to-red-500 shadow-[0_0_15px_rgba(246,172,29,0.5)] transition-all duration-300 group-hover:translate-x-1 group-hover:shadow-[0_0_25px_rgba(246,172,29,0.8)] md:size-11">
-                <i class="ri-arrow-right-line text-xl text-white md:text-2xl"></i>
+                <i class="ri-arrow-right-line text-lg text-white md:text-xl"></i>
               </div>
             </div>
 
@@ -145,10 +145,10 @@
       <!-- Why Tarbiya Exists -->
       <section class="bg-white py-10 md:py-16 lg:py-20">
         <div class="mx-auto px-4 sm:px-6">
-          <h2 class="mb-6 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-8 md:text-5xl">Why Tarbiya?</h2>
-          <p class="mx-auto text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day. And, like most parents, I did not want my children being raised on Youtube and social media.</p>
+          <h2 class="mb-6 text-center text-xl font-semibold text-gray-900 sm:text-2xl md:mb-8 md:text-4xl">Why Tarbiya?</h2>
+          <p class="mx-auto text-base leading-relaxed text-gray-500 sm:text-lg md:text-xl">When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day. And, like most parents, I did not want my children being raised on Youtube and social media.</p>
           <br />
-          <p class="mx-auto text-lg leading-relaxed text-gray-500 sm:text-xl md:text-2xl">So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background. What I love for my children, I want for every Muslim child in the world too.</p>
+          <p class="mx-auto text-base leading-relaxed text-gray-500 sm:text-lg md:text-xl">So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background. What I love for my children, I want for every Muslim child in the world too.</p>
         </div>
       </section>
 
@@ -209,9 +209,9 @@
         ]
       }"
       >
-        <h2 class="mb-8 text-center text-2xl font-semibold text-gray-900 sm:text-3xl md:mb-12 md:text-4xl lg:text-5xl" data-aos="fade-up">What You Will Learn</h2>
+        <h2 class="mb-8 text-center text-xl font-semibold text-gray-900 sm:text-2xl md:mb-12 md:text-3xl lg:text-4xl" data-aos="fade-up">What You Will Learn</h2>
 
-        <div class="mb-8 flex flex-wrap justify-center gap-2 text-base font-light sm:gap-3 sm:text-lg md:mb-12 md:gap-4 md:text-xl lg:text-2xl">
+        <div class="mb-8 flex flex-wrap justify-center gap-2 text-sm font-light sm:gap-3 sm:text-base md:mb-12 md:gap-4 md:text-lg lg:text-xl">
           <template x-for="(category, index) in categories" :key="index">
             <button type="button" @click="active_tab = index" :class="active_tab === index ? 'bg-gray-900 text-white' : 'border border-gray-400 text-gray-700 hover:border-gray-600'" class="rounded-full px-4 py-2 transition-all duration-500 md:px-6" x-text="category.title" data-aos="zoom-in" :data-aos-delay="index * 50"></button>
           </template>
@@ -220,7 +220,7 @@
         <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
           <template x-for="(category, index) in categories" :key="index">
             <div x-show="active_tab === index" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100">
-              <p class="text-lg text-gray-600 sm:text-xl md:text-2xl" x-text="category.description"></p>
+              <p class="text-base text-gray-600 sm:text-lg md:text-xl" x-text="category.description"></p>
             </div>
           </template>
         </div>
@@ -241,7 +241,7 @@
             <div data-aos="fade-up" data-aos-delay="100">
               <div class="transform-style-3d relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                 <div class="icon-pulse mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:mb-6 md:h-16 md:w-16" style="transform: translateZ(30px)">
-                  <i class="ri-book-line text-2xl text-white"></i>
+                  <i class="ri-book-line text-xl text-white"></i>
                 </div>
                 <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px)">Rooted in revelation</h3>
                 <p class="text-body" style="transform: translateZ(10px)">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
@@ -251,7 +251,7 @@
             <div data-aos="fade-up" data-aos-delay="200">
               <div class="transform-style-3d relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                 <div class="icon-pulse mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:mb-6 md:h-16 md:w-16" style="animation-delay: 1s; transform: translateZ(30px)">
-                  <i class="ri-list-check-3 text-2xl text-white"></i>
+                  <i class="ri-list-check-3 text-xl text-white"></i>
                 </div>
                 <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px)">Structured, not scattered</h3>
                 <p class="text-body" style="transform: translateZ(10px)">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
@@ -261,7 +261,7 @@
             <div data-aos="fade-up" data-aos-delay="300">
               <div class="transform-style-3d relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
                 <div class="icon-pulse mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:mb-6 md:h-16 md:w-16" style="animation-delay: 2s; transform: translateZ(30px)">
-                  <i class="ri-graduation-cap-line text-2xl text-white"></i>
+                  <i class="ri-graduation-cap-line text-xl text-white"></i>
                 </div>
                 <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px)">Knowledge with practice</h3>
                 <p class="text-body" style="transform: translateZ(10px)">Learning is tied to reflection and action, not memorization alone.</p>
@@ -282,7 +282,7 @@
 
         <div class="relative z-10 grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
           <div class="order-2 md:order-1" data-aos="fade-right">
-            <div class="mb-4 inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">Who We Are</div>
+            <div class="mb-4 inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">Who We Are</div>
             <h2 class="heading-2 mb-6 text-gray-900">Dedicated to <span class="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
 
             <div class="text-body-lg space-y-5">
@@ -315,10 +315,10 @@
                 <div class="absolute bottom-6 left-6 rounded-2xl border border-white/20 bg-white/20 p-4 shadow-xl backdrop-blur-md" style="transform: translateZ(40px)">
                   <div class="flex items-center gap-3">
                     <div class="flex size-10 items-center justify-center rounded-full bg-amber-500 text-white shadow-inner">
-                      <i class="ri-team-fill text-lg"></i>
+                      <i class="ri-team-fill text-base"></i>
                     </div>
                     <div>
-                      <p class="font-sora text-sm font-bold text-white">For Every Family</p>
+                      <p class="font-sora text-xs font-bold text-white">For Every Family</p>
                       <p class="text-xs text-white/80">Built on trust</p>
                     </div>
                   </div>
@@ -359,12 +359,12 @@
 
               <!-- Navigation: Prev -->
               <button @click="$refs.slider.scrollBy({left: -$refs.slider.clientWidth, behavior: 'smooth'})" x-show="scroll > 10" x-transition.opacity class="absolute top-1/2 left-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-all hover:bg-white md:opacity-0 md:group-hover:opacity-100" aria-label="Previous image">
-                <i class="ri-arrow-left-s-line text-2xl"></i>
+                <i class="ri-arrow-left-s-line text-xl"></i>
               </button>
 
               <!-- Navigation: Next -->
               <button @click="$refs.slider.scrollBy({left: $refs.slider.clientWidth, behavior: 'smooth'})" x-show="scroll < maxScroll - 10" x-transition.opacity class="absolute top-1/2 right-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-all hover:bg-white md:opacity-0 md:group-hover:opacity-100" aria-label="Next image">
-                <i class="ri-arrow-right-s-line text-2xl"></i>
+                <i class="ri-arrow-right-s-line text-xl"></i>
               </button>
 
               <!-- Pagination Indicator -->
@@ -377,7 +377,7 @@
         </div>
       </section>
 
-      <!-- Fair Pricing Section -->
+      <!-- Pricing Section -->
       <section class="section-padding relative overflow-hidden bg-white">
         <!-- Floating Animated Backgrounds -->
         <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -385,25 +385,25 @@
           <div class="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] bg-[size:4rem_4rem] opacity-30"></div>
 
           <!-- Animated gradient blobs -->
-          <div class="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] animate-[float-slow_15s_ease-in-out_infinite_alternate] rounded-full bg-emerald-300 opacity-20 mix-blend-multiply blur-[100px] filter"></div>
+          <div class="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] animate-[float-slow_15s_ease-in-out_infinite_alternate] rounded-full bg-amber-300 opacity-20 mix-blend-multiply blur-[100px] filter"></div>
 
-          <div class="absolute right-[-20%] bottom-[-10%] h-[600px] w-[600px] animate-[float-fast_12s_ease-in-out_infinite_alternate-reverse] rounded-full bg-purple-300 opacity-20 mix-blend-multiply blur-[120px] filter delay-700"></div>
+          <div class="absolute right-[-20%] bottom-[-10%] h-[600px] w-[600px] animate-[float-fast_12s_ease-in-out_infinite_alternate-reverse] rounded-full bg-orange-300 opacity-20 mix-blend-multiply blur-[120px] filter delay-700"></div>
 
-          <div class="absolute top-[20%] left-[60%] h-[400px] w-[400px] animate-[float-slow_20s_ease-in-out_infinite_alternate] rounded-full bg-orange-200 opacity-30 mix-blend-multiply blur-[90px] filter delay-1000"></div>
+          <div class="absolute top-[20%] left-[60%] h-[400px] w-[400px] animate-[float-slow_20s_ease-in-out_infinite_alternate] rounded-full bg-yellow-200 opacity-30 mix-blend-multiply blur-[90px] filter delay-1000"></div>
 
           <!-- Existing Floating SVG Vector -->
           <div class="spin-3d delay-1s absolute top-10 right-[-5%] hidden opacity-5 lg:block" style="animation-duration: 40s">
             <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#8B5CF6" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
+              <path fill="#F59E0B" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
             </svg>
           </div>
 
           <!-- Floating abstract rings -->
           <div class="absolute top-[60%] left-[15%] hidden animate-[float-fast_8s_ease-in-out_infinite_alternate] md:block">
-            <div class="h-16 w-16 rounded-full border-4 border-emerald-500/20"></div>
+            <div class="h-16 w-16 rounded-full border-4 border-amber-500/20"></div>
           </div>
           <div class="absolute top-[20%] right-[25%] hidden animate-[float-slow_10s_ease-in-out_infinite_alternate-reverse] delay-300 lg:block">
-            <div class="h-24 w-24 rounded-full border-2 border-purple-500/10"></div>
+            <div class="h-24 w-24 rounded-full border-2 border-orange-500/10"></div>
           </div>
         </div>
 
@@ -417,88 +417,82 @@
             <!-- Left Side Floating Elements -->
             <div class="hidden flex-col items-center justify-center space-y-12 md:col-span-3 md:flex lg:col-span-4">
               <div class="transform-style-3d relative flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-slow 8s ease-in-out infinite">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg" style="transform: translateZ(30px)">
-                  <i class="ri-rocket-2-fill text-2xl text-white"></i>
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-rocket-2-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
-                  <p class="font-sora text-sm font-bold text-gray-900">Accelerated</p>
+                  <p class="font-sora text-xs font-bold text-gray-900">Accelerated</p>
                   <p class="text-xs text-gray-600">Learning Path</p>
                 </div>
               </div>
 
               <div class="transform-style-3d relative ml-12 flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-fast 6s ease-in-out infinite">
                 <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg" style="transform: translateZ(30px)">
-                  <i class="ri-medal-fill text-2xl text-white"></i>
+                  <i class="ri-medal-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
-                  <p class="font-sora text-sm font-bold text-gray-900">Gamified</p>
+                  <p class="font-sora text-xs font-bold text-gray-900">Gamified</p>
                   <p class="text-xs text-gray-600">Puzzles & Quizzes</p>
                 </div>
               </div>
             </div>
 
             <!-- Center Pricing Table -->
-            <div class="z-20 md:col-span-6 lg:col-span-4" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.1">
-              <div class="relative overflow-hidden rounded-[2.5rem] bg-gray-900 p-[1px] shadow-2xl transition-transform duration-300">
-                <div class="absolute inset-0 bg-gradient-to-br from-teal-400 via-emerald-500 to-green-600 opacity-20"></div>
-
-                <!-- Shimmer inner border -->
-                <div class="absolute inset-[1px] rounded-[2.5rem] bg-gray-900"></div>
+            <!-- <div class="z-20 md:col-span-6 lg:col-span-4" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.1"> -->
+            <div class="z-20 md:col-span-6 lg:col-span-4">
+              <div class="relative overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-[1px] shadow-2xl transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#FDFBF7] via-white to-[#F5F5ED] opacity-100"></div>
 
                 <div class="relative z-10 flex flex-col p-8 md:p-10">
-                  <div class="mb-6 flex items-center justify-between border-b border-gray-800 pb-6">
+                  <div class="mb-6 flex items-center justify-between border-b border-gray-200 pb-6">
                     <div>
-                      <h3 class="font-sora text-2xl font-bold text-white">Premium Access</h3>
-                      <p class="mt-1 text-sm text-gray-400">Everything you need to grow.</p>
+                      <h3 class="font-sora text-xl font-bold text-gray-900">Full Access</h3>
+                      <p class="mt-1 text-xs text-gray-500">Everything in Tarbiya</p>
                     </div>
                     <div class="text-right">
-                      <span class="block text-4xl font-extrabold text-white"><span class="mr-1 text-xl text-emerald-500">$</span>6</span>
-                      <span class="text-xs font-semibold tracking-wider text-gray-400 uppercase">/ month</span>
+                      <span class="block text-5xl font-extrabold text-gray-900"><span class="mr-1 text-xl text-amber-500">$</span>6</span>
+                      <span class="text-xs font-semibold tracking-wider text-gray-500 uppercase">/ month</span>
                     </div>
                   </div>
 
-                  <ul class="mb-8 space-y-4 text-base text-gray-300">
+                  <ul class="mb-8 space-y-4 text-sm font-medium text-gray-700">
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Full access to all 6 levels</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Over 2000+ hours of learning</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Interactive quizzes and puzzles</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Progress check and self test</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Real time analytics & tracking</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Parent-child talking points</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Monthly new courses addition</span>
                     </li>
                     <li class="flex items-center">
-                      <i class="ri-checkbox-circle-fill mr-3 text-xl text-emerald-400"></i>
+                      <i class="ri-checkbox-circle-fill mr-3 text-lg text-amber-500"></i>
                       <span>Structured daily learning plan</span>
                     </li>
                   </ul>
 
-                  <a href="#newsletter-section" class="group relative mt-auto flex w-full items-center justify-center overflow-hidden rounded-full bg-emerald-500 py-4 font-semibold text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all hover:bg-emerald-400 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                  <button disabled class="group relative mt-auto flex w-full cursor-not-allowed items-center justify-center overflow-hidden rounded-full border border-amber-500/20 bg-amber-50/60 py-4 font-semibold text-gray-400 shadow-sm transition-all">
                     <span class="relative z-10">Get Started Today</span>
-                    <!-- Button Shimmer -->
-                    <div class="pointer-events-none absolute inset-0 z-20">
-                      <div class="absolute top-0 -left-[100%] h-full w-[50%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-700 ease-in-out group-hover:left-[150%]"></div>
-                    </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -506,21 +500,21 @@
             <!-- Right Side Floating Elements -->
             <div class="hidden flex-col items-center justify-center space-y-12 md:col-span-3 md:flex lg:col-span-4">
               <div class="transform-style-3d relative flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-fast 7s ease-in-out infinite; animation-delay: 1s">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 shadow-lg" style="transform: translateZ(30px)">
-                  <i class="ri-parent-fill text-2xl text-white"></i>
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-parent-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
-                  <p class="font-sora text-sm font-bold text-gray-900">Family Box</p>
+                  <p class="font-sora text-xs font-bold text-gray-900">Family Box</p>
                   <p class="text-xs text-gray-600">Guided Discussion</p>
                 </div>
               </div>
 
               <div class="transform-style-3d relative mr-12 flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-slow 9s ease-in-out infinite; animation-delay: 2s">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gray-900 shadow-lg" style="transform: translateZ(30px)">
-                  <i class="ri-line-chart-fill text-2xl text-white"></i>
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 shadow-lg" style="transform: translateZ(30px)">
+                  <i class="ri-line-chart-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
-                  <p class="font-sora text-sm font-bold text-gray-900">Analytics</p>
+                  <p class="font-sora text-xs font-bold text-gray-900">Analytics</p>
                   <p class="text-xs text-gray-600">Real-time stats</p>
                 </div>
               </div>
@@ -550,18 +544,18 @@
               <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" />
 
               <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
-                <i class="ri-user-3-line me-2 text-xl text-gray-400"></i>
-                <input type="text" placeholder="Your full name" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="name" />
+                <i class="ri-user-3-line me-2 text-lg text-gray-400"></i>
+                <input type="text" placeholder="Your full name" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required name="name" />
               </div>
 
               <div class="flex items-center rounded-full border border-gray-300 px-4 py-2">
-                <i class="ri-mail-line me-2 text-xl text-gray-400"></i>
-                <input type="email" placeholder="Your email address" class="flex-1 bg-transparent text-sm outline-none md:text-base" required name="email" />
+                <i class="ri-mail-line me-2 text-lg text-gray-400"></i>
+                <input type="email" placeholder="Your email address" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required name="email" />
               </div>
 
               <button class="btn-primary w-full" type="submit">
                 <span class="px-2 md:px-4">Join Now</span>
-                <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-2xl"></i>
+                <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-xl"></i>
               </button>
             </form>
 
@@ -571,10 +565,10 @@
                 <div class="size-6 rounded-full border-2 border-white bg-gray-400 md:size-8"></div>
                 <div class="size-6 rounded-full border-2 border-white bg-gray-500 md:size-8"></div>
               </div>
-              <span class="text-xs text-gray-600 md:text-sm">100+ people have joined</span>
+              <span class="text-xs text-gray-600 md:text-xs">100+ people have joined</span>
             </div>
 
-            <p class="text-xs text-gray-500 md:text-sm">
+            <p class="text-xs text-gray-500 md:text-xs">
               By joining, you agree to the
               <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="underline">Terms & Conditions</a> and <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'" class="underline">Privacy Policy</a>.
             </p>
@@ -597,7 +591,7 @@
             <a class="mb-6" href="/">
               <img class="h-12 w-auto" src="/logo.png" alt="Tarbiyah" />
             </a>
-            <p class="mb-8 max-w-2xl text-lg leading-relaxed text-white/80">Tarbiya.me is an online learning app and website dedicated to imparting authentic Islamic knowledge through a structured, easy-to-follow curriculum. Designed for both children and adults, our platform provides a clear path to understanding the Deen, rooted strictly in the Qur’an, the authentic Sunnah, and the methodology of the Salaf-us-Salih.</p>
+            <p class="mb-8 max-w-2xl text-base leading-relaxed text-white/80">Tarbiya.me is an online learning app and website dedicated to imparting authentic Islamic knowledge through a structured, easy-to-follow curriculum. Designed for both children and adults, our platform provides a clear path to understanding the Deen, rooted strictly in the Qur’an, the authentic Sunnah, and the methodology of the Salaf-us-Salih.</p>
 
             <div class="space-y-3">
               <span class="block font-medium text-white">Powered By</span>
@@ -675,8 +669,8 @@
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div class="space-y-3">
-            <h4 class="text-base font-medium text-white">Tarbiyah Head Office</h4>
-            <div class="text-light-gray/80 text-sm leading-relaxed">
+            <h4 class="text-sm font-medium text-white">Tarbiyah Head Office</h4>
+            <div class="text-light-gray/80 text-xs leading-relaxed">
               <p>Tarbiyah, Inc</p>
               <p>256 Chapman, Road STE</p>
               <p>105-4 Delaware City,</p>
@@ -685,30 +679,30 @@
           </div>
 
           <div class="space-y-3">
-            <h4 class="text-base font-medium text-white">Kuwait Office</h4>
-            <div class="text-light-gray/80 text-sm leading-relaxed">
+            <h4 class="text-sm font-medium text-white">Kuwait Office</h4>
+            <div class="text-light-gray/80 text-xs leading-relaxed">
               <p>Villa 5, Salem Mubarak St.</p>
               <p>Salmiya, Kuwait.</p>
             </div>
           </div>
 
           <div class="space-y-4">
-            <h4 class="text-base font-medium text-white">Social Media Links</h4>
+            <h4 class="text-sm font-medium text-white">Social Media Links</h4>
             <div class="flex flex-wrap gap-2">
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="Facebook">
-                <i class="ri-facebook-fill text-xl"></i>
+                <i class="ri-facebook-fill text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="Twitter">
-                <i class="ri-twitter-x-line text-xl"></i>
+                <i class="ri-twitter-x-line text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="Instagram">
-                <i class="ri-instagram-line text-xl"></i>
+                <i class="ri-instagram-line text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="LinkedIn">
-                <i class="ri-linkedin-fill text-xl"></i>
+                <i class="ri-linkedin-fill text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="WhatsApp">
-                <i class="ri-whatsapp-line text-xl"></i>
+                <i class="ri-whatsapp-line text-lg"></i>
               </a>
             </div>
           </div>
@@ -716,7 +710,7 @@
 
         <hr class="h-px w-full text-gray-600" />
 
-        <div class="text-sm font-normal text-white">
+        <div class="text-xs font-normal text-white">
           <p>&copy; Tarbiya <span x-text="currentYear"></span>, All Rights Reserved to Tarbiya, Inc. Use of website constitutes acceptance of Tarbiya's <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="text-red-100 underline">Terms Of Use</a> and <a class="text-red-100 underline" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a>.</p>
         </div>
       </div>
@@ -746,14 +740,14 @@
       <div x-show="showCookieBanner && !showSettings" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-10" class="fixed right-4 bottom-4 left-4 z-[90] rounded-3xl border border-gray-100 bg-white p-6 shadow-2xl md:right-auto md:bottom-6 md:left-6 md:max-w-lg" style="display: none">
         <div class="flex items-start gap-4">
           <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100">
-            <i class="ri-cookie-line text-2xl text-orange-500"></i>
+            <i class="ri-cookie-line text-xl text-orange-500"></i>
           </div>
           <div class="flex-1">
-            <h3 class="mb-1 text-lg font-bold text-gray-900">Your Privacy</h3>
-            <p class="mb-4 text-sm leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
+            <h3 class="mb-1 text-base font-bold text-gray-900">Your Privacy</h3>
+            <p class="mb-4 text-xs leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
             <div class="flex flex-col gap-2 sm:flex-row">
-              <button @click="savePreferences('all')" class="flex-1 rounded-full bg-gray-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-gray-800">Accept All</button>
-              <button @click="savePreferences('necessary')" class="flex-1 rounded-full bg-gray-100 px-4 py-2.5 text-center text-sm font-semibold text-gray-900 transition-all hover:bg-gray-200">Reject Non-Essential</button>
+              <button @click="savePreferences('all')" class="flex-1 rounded-full bg-gray-900 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-gray-800">Accept All</button>
+              <button @click="savePreferences('necessary')" class="flex-1 rounded-full bg-gray-100 px-4 py-2.5 text-center text-xs font-semibold text-gray-900 transition-all hover:bg-gray-200">Reject Non-Essential</button>
             </div>
             <button @click="showSettings = true" class="mt-3 w-full text-center text-xs font-medium text-gray-500 underline transition-colors hover:text-gray-900">Manage Preferences</button>
           </div>
@@ -764,11 +758,11 @@
       <div x-show="showSettings" x-transition.opacity class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/60 p-4 backdrop-blur-sm" style="display: none">
         <div @click.away="showSettings = false" class="no-scrollbar relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl md:p-8">
           <button @click="showSettings = false" class="absolute top-6 right-6 text-gray-400 transition-colors hover:text-gray-900">
-            <i class="ri-close-line text-2xl"></i>
+            <i class="ri-close-line text-xl"></i>
           </button>
 
-          <h2 class="mb-2 text-2xl font-bold text-gray-900">Cookie Preferences</h2>
-          <p class="mb-6 text-sm text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
+          <h2 class="mb-2 text-xl font-bold text-gray-900">Cookie Preferences</h2>
+          <p class="mb-6 text-xs text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
 
           <div class="space-y-4 divide-y divide-gray-100">
             <!-- Essential -->
@@ -806,7 +800,7 @@
           </div>
 
           <div class="mt-8 flex gap-3">
-            <button @click="savePreferences('custom')" class="flex-1 rounded-full bg-gray-900 px-4 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-gray-800">Save Preferences</button>
+            <button @click="savePreferences('custom')" class="flex-1 rounded-full bg-gray-900 px-4 py-3 text-center text-xs font-semibold text-white transition-all hover:bg-gray-800">Save Preferences</button>
           </div>
         </div>
       </div>
@@ -814,7 +808,7 @@
 
     <!-- Jump To Top Button -->
     <button id="jump_to_top" class="fixed right-6 bottom-6 z-50 hidden size-12 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-gray-700" aria-label="Jump to top">
-      <i class="ri-arrow-up-line text-xl"></i>
+      <i class="ri-arrow-up-line text-lg"></i>
     </button>
 
     <!-- Legal Modal -->
@@ -824,13 +818,13 @@
         <!-- Modal Header & Tabs -->
         <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 sm:px-10">
           <div class="flex space-x-6">
-            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Terms of Use</button>
-            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Privacy Policy</button>
-            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Cookie Policy</button>
-            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Takedown Policy</button>
+            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Terms of Use</button>
+            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Privacy Policy</button>
+            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Cookie Policy</button>
+            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Takedown Policy</button>
           </div>
           <button @click="showLegalModal = false" class="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200">
-            <i class="ri-close-line text-xl"></i>
+            <i class="ri-close-line text-lg"></i>
           </button>
         </div>
 

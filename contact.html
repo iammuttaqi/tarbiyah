@@ -26,11 +26,11 @@
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
-            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800 md:block md:px-6 md:text-base">Join Waitlist</a>
+            <a href="/#newsletter-section" class="hidden rounded-full bg-gray-900 px-4 py-2 text-xs text-white hover:bg-gray-800 md:block md:px-6 md:text-sm">Join Waitlist</a>
             <!-- Mobile Menu Toggle -->
             <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-1 text-white focus:outline-none md:hidden">
-              <i class="ri-menu-3-line text-2xl" x-show="!mobileMenuOpen"></i>
-              <i class="ri-close-line text-2xl" x-show="mobileMenuOpen" x-cloak></i>
+              <i class="ri-menu-3-line text-xl" x-show="!mobileMenuOpen"></i>
+              <i class="ri-close-line text-xl" x-show="mobileMenuOpen" x-cloak></i>
             </button>
           </div>
         </div>
@@ -42,7 +42,7 @@
           <a href="/" class="py-2 font-medium hover:text-gray-300">Home</a>
           <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
           <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
-          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
+          <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
       </div>
     </nav>
@@ -53,8 +53,8 @@
       <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
       <div class="relative z-10 flex h-full min-h-[50vh] items-center justify-center px-4 pt-32 pb-16 text-center text-white sm:px-6">
         <div class="w-full max-w-4xl space-y-6">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">Get in Touch</h1>
-          <p class="mx-auto max-w-3xl text-lg text-white/90 sm:text-xl md:text-2xl">Have questions? We'd love to hear from you</p>
+          <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">Get in Touch</h1>
+          <p class="mx-auto max-w-3xl text-base text-white/90 sm:text-lg md:text-xl">Have questions? We'd love to hear from you</p>
         </div>
       </div>
     </section>
@@ -81,40 +81,40 @@
                 <input type="hidden" name="subject" value="New Contact Form Submission from Tarbiya" />
 
                 <div>
-                  <label for="name" class="mb-2 block text-sm font-medium text-gray-700">Full Name</label>
+                  <label for="name" class="mb-2 block text-xs font-medium text-gray-700">Full Name</label>
                   <div class="flex items-center rounded-2xl border border-gray-300 px-4 py-3">
-                    <i class="ri-user-3-line mr-3 text-xl text-gray-400"></i>
-                    <input type="text" id="name" name="name" placeholder="Your full name" class="flex-1 bg-transparent text-base outline-none" required />
+                    <i class="ri-user-3-line mr-3 text-lg text-gray-400"></i>
+                    <input type="text" id="name" name="name" placeholder="Your full name" class="flex-1 bg-transparent text-sm outline-none" required />
                   </div>
                 </div>
 
                 <div>
-                  <label for="email" class="mb-2 block text-sm font-medium text-gray-700">Email Address</label>
+                  <label for="email" class="mb-2 block text-xs font-medium text-gray-700">Email Address</label>
                   <div class="flex items-center rounded-2xl border border-gray-300 px-4 py-3">
-                    <i class="ri-mail-line mr-3 text-xl text-gray-400"></i>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" class="flex-1 bg-transparent text-base outline-none" required />
+                    <i class="ri-mail-line mr-3 text-lg text-gray-400"></i>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" class="flex-1 bg-transparent text-sm outline-none" required />
                   </div>
                 </div>
 
                 <div>
-                  <label for="subject" class="mb-2 block text-sm font-medium text-gray-700">Subject</label>
+                  <label for="subject" class="mb-2 block text-xs font-medium text-gray-700">Subject</label>
                   <div class="flex items-center rounded-2xl border border-gray-300 px-4 py-3">
-                    <i class="ri-chat-3-line mr-3 text-xl text-gray-400"></i>
-                    <input type="text" id="subject" name="custom_subject" placeholder="How can we help?" class="flex-1 bg-transparent text-base outline-none" required />
+                    <i class="ri-chat-3-line mr-3 text-lg text-gray-400"></i>
+                    <input type="text" id="subject" name="custom_subject" placeholder="How can we help?" class="flex-1 bg-transparent text-sm outline-none" required />
                   </div>
                 </div>
 
                 <div>
-                  <label for="message" class="mb-2 block text-sm font-medium text-gray-700">Message</label>
+                  <label for="message" class="mb-2 block text-xs font-medium text-gray-700">Message</label>
                   <div class="flex rounded-2xl border border-gray-300 px-4 py-3">
-                    <i class="ri-message-3-line mr-3 pt-1 text-xl text-gray-400"></i>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us more about your inquiry..." class="flex-1 resize-none bg-transparent text-base outline-none" required></textarea>
+                    <i class="ri-message-3-line mr-3 pt-1 text-lg text-gray-400"></i>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us more about your inquiry..." class="flex-1 resize-none bg-transparent text-sm outline-none" required></textarea>
                   </div>
                 </div>
 
-                <button type="submit" class="btn-primary w-full text-lg">
+                <button type="submit" class="btn-primary w-full text-base">
                   <span class="px-2">Send Message</span>
-                  <i class="ri-send-plane-fill ml-2 text-xl"></i>
+                  <i class="ri-send-plane-fill ml-2 text-lg"></i>
                 </button>
               </form>
             </div>
@@ -123,46 +123,32 @@
             <div class="space-y-8">
               <div>
                 <h2 class="heading-2 mb-6">Contact Information</h2>
-                <p class="text-base text-gray-600 sm:text-lg">You can also reach us through any of our global offices</p>
+                <p class="text-sm text-gray-600 sm:text-base">You can also reach us through any of our global offices</p>
               </div>
 
               <!-- Office Locations -->
               <div class="space-y-6">
                 <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
                   <div class="mb-3 flex items-center">
-                    <i class="ri-map-pin-line mr-3 text-2xl text-teal-600"></i>
-                    <h3 class="heading-4">Head Office (USA)</h3>
+                    <i class="ri-map-pin-line mr-3 text-xl text-teal-600"></i>
+                    <h3 class="heading-4">Tarbiyah Head Office</h3>
                   </div>
-                  <p class="ml-9 text-sm leading-relaxed text-gray-600">
+                  <p class="ml-9 text-xs leading-relaxed text-gray-600">
                     Tarbiyah, Inc<br />
-                    256 Chapman Road STE 105-4<br />
-                    Delaware City, DE 10702<br />
-                    United States
+                    256 Chapman, Road STE<br />
+                    105-4 Delaware City,<br />
+                    DE 10702, USA
                   </p>
                 </div>
 
                 <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
                   <div class="mb-3 flex items-center">
-                    <i class="ri-map-pin-line mr-3 text-2xl text-orange-500"></i>
-                    <h3 class="heading-4">Middle East Office</h3>
+                    <i class="ri-map-pin-line mr-3 text-xl text-orange-500"></i>
+                    <h3 class="heading-4">Kuwait Office</h3>
                   </div>
-                  <p class="ml-9 text-sm leading-relaxed text-gray-600">
-                    Tarbiyah General Trading Co.<br />
-                    Azaiba, 18th November Street<br />
-                    Bldg. 101, Muscat<br />
-                    Oman
-                  </p>
-                </div>
-
-                <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                  <div class="mb-3 flex items-center">
-                    <i class="ri-map-pin-line mr-3 text-2xl text-pink-500"></i>
-                    <h3 class="heading-4">Europe Office</h3>
-                  </div>
-                  <p class="ml-9 text-sm leading-relaxed text-gray-600">
-                    Tarbiyah Srl<br />
-                    Strada Valea Adanca, 17C<br />
-                    Iași, Romania
+                  <p class="ml-9 text-xs leading-relaxed text-gray-600">
+                    Villa 5, Salem Mubarak St.<br />
+                    Salmiya, Kuwait.
                   </p>
                 </div>
               </div>
@@ -172,19 +158,19 @@
                 <h3 class="heading-4 mb-4">Connect With Us</h3>
                 <div class="flex flex-wrap gap-3">
                   <a href="#" target="_blank" class="flex size-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-700 transition-all hover:border-gray-900 hover:bg-gray-900 hover:text-white" aria-label="Facebook">
-                    <i class="ri-facebook-fill text-xl"></i>
+                    <i class="ri-facebook-fill text-lg"></i>
                   </a>
                   <a href="#" target="_blank" class="flex size-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-700 transition-all hover:border-gray-900 hover:bg-gray-900 hover:text-white" aria-label="Twitter">
-                    <i class="ri-twitter-x-line text-xl"></i>
+                    <i class="ri-twitter-x-line text-lg"></i>
                   </a>
                   <a href="#" target="_blank" class="flex size-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-700 transition-all hover:border-gray-900 hover:bg-gray-900 hover:text-white" aria-label="Instagram">
-                    <i class="ri-instagram-line text-xl"></i>
+                    <i class="ri-instagram-line text-lg"></i>
                   </a>
                   <a href="#" target="_blank" class="flex size-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-700 transition-all hover:border-gray-900 hover:bg-gray-900 hover:text-white" aria-label="LinkedIn">
-                    <i class="ri-linkedin-fill text-xl"></i>
+                    <i class="ri-linkedin-fill text-lg"></i>
                   </a>
                   <a href="#" target="_blank" class="flex size-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-700 transition-all hover:border-gray-900 hover:bg-gray-900 hover:text-white" aria-label="WhatsApp">
-                    <i class="ri-whatsapp-line text-xl"></i>
+                    <i class="ri-whatsapp-line text-lg"></i>
                   </a>
                 </div>
               </div>
@@ -202,7 +188,7 @@
             <a class="mb-6" href="/">
               <img class="h-12 w-auto" src="/logo.png" alt="Tarbiyah" />
             </a>
-            <p class="mb-8 max-w-2xl text-lg leading-relaxed text-white/80">Tarbiya.me is an online learning app and website dedicated to imparting authentic Islamic knowledge through a structured, easy-to-follow curriculum. Designed for both children and adults, our platform provides a clear path to understanding the Deen, rooted strictly in the Qur’an, the authentic Sunnah, and the methodology of the Salaf-us-Salih.</p>
+            <p class="mb-8 max-w-2xl text-base leading-relaxed text-white/80">Tarbiya.me is an online learning app and website dedicated to imparting authentic Islamic knowledge through a structured, easy-to-follow curriculum. Designed for both children and adults, our platform provides a clear path to understanding the Deen, rooted strictly in the Qur’an, the authentic Sunnah, and the methodology of the Salaf-us-Salih.</p>
 
             <div class="space-y-3">
               <span class="block font-medium text-white">Powered By</span>
@@ -280,8 +266,8 @@
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div class="space-y-3">
-            <h4 class="text-base font-medium text-white">Tarbiyah Head Office</h4>
-            <div class="text-light-gray/80 text-sm leading-relaxed">
+            <h4 class="text-sm font-medium text-white">Tarbiyah Head Office</h4>
+            <div class="text-light-gray/80 text-xs leading-relaxed">
               <p>Tarbiyah, Inc</p>
               <p>256 Chapman, Road STE</p>
               <p>105-4 Delaware City,</p>
@@ -290,30 +276,30 @@
           </div>
 
           <div class="space-y-3">
-            <h4 class="text-base font-medium text-white">Kuwait Office</h4>
-            <div class="text-light-gray/80 text-sm leading-relaxed">
+            <h4 class="text-sm font-medium text-white">Kuwait Office</h4>
+            <div class="text-light-gray/80 text-xs leading-relaxed">
               <p>Villa 5, Salem Mubarak St.</p>
               <p>Salmiya, Kuwait.</p>
             </div>
           </div>
 
           <div class="space-y-4">
-            <h4 class="text-base font-medium text-white">Social Media Links</h4>
+            <h4 class="text-sm font-medium text-white">Social Media Links</h4>
             <div class="flex flex-wrap gap-2">
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="Facebook">
-                <i class="ri-facebook-fill text-xl"></i>
+                <i class="ri-facebook-fill text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="Twitter">
-                <i class="ri-twitter-x-line text-xl"></i>
+                <i class="ri-twitter-x-line text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="Instagram">
-                <i class="ri-instagram-line text-xl"></i>
+                <i class="ri-instagram-line text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="LinkedIn">
-                <i class="ri-linkedin-fill text-xl"></i>
+                <i class="ri-linkedin-fill text-lg"></i>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="flex size-10 items-center justify-center rounded-full border-2 border-gray-500 text-white transition-all hover:bg-gray-500 active:scale-95" aria-label="WhatsApp">
-                <i class="ri-whatsapp-line text-xl"></i>
+                <i class="ri-whatsapp-line text-lg"></i>
               </a>
             </div>
           </div>
@@ -321,7 +307,7 @@
 
         <hr class="h-px w-full text-gray-600" />
 
-        <div class="text-sm font-normal text-white">
+        <div class="text-xs font-normal text-white">
           <p>&copy; Tarbiya <span x-text="currentYear"></span>, All Rights Reserved to Tarbiya, Inc. Use of website constitutes acceptance of Tarbiya's <a href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'" class="text-red-100 underline">Terms Of Use</a> and <a class="text-red-100 underline" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a>.</p>
         </div>
       </div>
@@ -351,14 +337,14 @@
       <div x-show="showCookieBanner && !showSettings" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-10" class="fixed right-4 bottom-4 left-4 z-[90] rounded-3xl border border-gray-100 bg-white p-6 shadow-2xl md:right-auto md:bottom-6 md:left-6 md:max-w-lg" style="display: none">
         <div class="flex items-start gap-4">
           <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100">
-            <i class="ri-cookie-line text-2xl text-orange-500"></i>
+            <i class="ri-cookie-line text-xl text-orange-500"></i>
           </div>
           <div class="flex-1">
-            <h3 class="mb-1 text-lg font-bold text-gray-900">Your Privacy</h3>
-            <p class="mb-4 text-sm leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
+            <h3 class="mb-1 text-base font-bold text-gray-900">Your Privacy</h3>
+            <p class="mb-4 text-xs leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
             <div class="flex flex-col gap-2 sm:flex-row">
-              <button @click="savePreferences('all')" class="flex-1 rounded-full bg-gray-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-gray-800">Accept All</button>
-              <button @click="savePreferences('necessary')" class="flex-1 rounded-full bg-gray-100 px-4 py-2.5 text-center text-sm font-semibold text-gray-900 transition-all hover:bg-gray-200">Reject Non-Essential</button>
+              <button @click="savePreferences('all')" class="flex-1 rounded-full bg-gray-900 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-gray-800">Accept All</button>
+              <button @click="savePreferences('necessary')" class="flex-1 rounded-full bg-gray-100 px-4 py-2.5 text-center text-xs font-semibold text-gray-900 transition-all hover:bg-gray-200">Reject Non-Essential</button>
             </div>
             <button @click="showSettings = true" class="mt-3 w-full text-center text-xs font-medium text-gray-500 underline transition-colors hover:text-gray-900">Manage Preferences</button>
           </div>
@@ -369,11 +355,11 @@
       <div x-show="showSettings" x-transition.opacity class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/60 p-4 backdrop-blur-sm" style="display: none">
         <div @click.away="showSettings = false" class="no-scrollbar relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl md:p-8">
           <button @click="showSettings = false" class="absolute top-6 right-6 text-gray-400 transition-colors hover:text-gray-900">
-            <i class="ri-close-line text-2xl"></i>
+            <i class="ri-close-line text-xl"></i>
           </button>
 
-          <h2 class="mb-2 text-2xl font-bold text-gray-900">Cookie Preferences</h2>
-          <p class="mb-6 text-sm text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
+          <h2 class="mb-2 text-xl font-bold text-gray-900">Cookie Preferences</h2>
+          <p class="mb-6 text-xs text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
 
           <div class="space-y-4 divide-y divide-gray-100">
             <!-- Essential -->
@@ -411,7 +397,7 @@
           </div>
 
           <div class="mt-8 flex gap-3">
-            <button @click="savePreferences('custom')" class="flex-1 rounded-full bg-gray-900 px-4 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-gray-800">Save Preferences</button>
+            <button @click="savePreferences('custom')" class="flex-1 rounded-full bg-gray-900 px-4 py-3 text-center text-xs font-semibold text-white transition-all hover:bg-gray-800">Save Preferences</button>
           </div>
         </div>
       </div>
@@ -419,7 +405,7 @@
 
     <!-- Jump To Top Button -->
     <button id="jump_to_top" class="fixed right-6 bottom-6 z-50 hidden size-12 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-gray-700" aria-label="Jump to top">
-      <i class="ri-arrow-up-line text-xl"></i>
+      <i class="ri-arrow-up-line text-lg"></i>
     </button>
 
     <!-- Legal Modal -->
@@ -429,13 +415,13 @@
         <!-- Modal Header & Tabs -->
         <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 sm:px-10">
           <div class="flex space-x-6">
-            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Terms of Use</button>
-            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Privacy Policy</button>
-            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Cookie Policy</button>
-            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-lg font-semibold transition-colors">Takedown Policy</button>
+            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Terms of Use</button>
+            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Privacy Policy</button>
+            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Cookie Policy</button>
+            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Takedown Policy</button>
           </div>
           <button @click="showLegalModal = false" class="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200">
-            <i class="ri-close-line text-xl"></i>
+            <i class="ri-close-line text-lg"></i>
           </button>
         </div>
 
