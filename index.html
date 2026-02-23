@@ -26,6 +26,7 @@
             <a href="/" class="hover:text-gray-200">Home</a>
             <a href="/about.html" class="hover:text-gray-200">About Us</a>
             <a href="/#who-we-are" class="hover:text-gray-200">Who We Are</a>
+            <a href="/#pricing" class="hover:text-gray-200">Pricing</a>
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
@@ -45,6 +46,7 @@
           <a href="/" class="py-2 font-medium hover:text-gray-300">Home</a>
           <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
           <a href="/#who-we-are" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Who We Are</a>
+          <a href="/#pricing" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Pricing</a>
           <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
           <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
@@ -67,14 +69,14 @@
           </div>
         </div>
         <!-- Navigation -->
-        <div class="swiper-button-prev z-20! text-white!"></div>
-        <div class="swiper-button-next z-20! text-white!"></div>
+        <div class="swiper-button-prev z-20! text-white! max-md:scale-50"></div>
+        <div class="swiper-button-next z-20! text-white! max-md:scale-50"></div>
         <!-- Pagination -->
         <div class="swiper-pagination"></div>
       </div>
 
       <!-- Hero Content Overlay -->
-      <div id="tsparticles" class="absolute inset-0 z-5 hidden lg:block"></div>
+      <div id="tsparticles" class="absolute inset-0 z-5"></div>
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
           <div class="inline-flex items-center gap-1 rounded-full bg-white px-4 py-1 text-xs text-black">
@@ -120,7 +122,7 @@
       <!-- Who Tarbiya Is For -->
       <section class="section-padding relative mx-auto overflow-hidden px-4 sm:px-6">
         <!-- Floating Animated SVG Background -->
-        <div class="floating-svg-slow pointer-events-none absolute -top-20 -left-20 z-0 hidden opacity-20 lg:block">
+        <div class="floating-svg-slow pointer-events-none absolute -top-20 -left-20 z-0 opacity-20">
           <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#F6AC1D" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
           </svg>
@@ -129,10 +131,9 @@
           <div class="overflow-hidden rounded-4xl shadow-xl md:col-span-2" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <img src="2.jpg" alt="Peaceful doorway" class="aspect-square w-full" />
           </div>
-          <div class="md:col-span-3">
-            <h2 class="heading-2 mb-4 md:mb-6">What is Tarbiya?</h2>
+          <div class="space-y-4 md:col-span-3 md:space-y-6">
+            <h2 class="heading-2">What is Tarbiya?</h2>
             <p class="text-body-lg">Tarbiya is a comprehensive online learning app and website designed to impart authentic Islamic knowledge in a structured, easy-to-follow format. Built for both children and adults, the platform serves as a digital gateway to learning the Deen based strictly on the Qur’an, the authentic Sunnah, and the methodology of the Salaf.</p>
-            <br />
             <p class="text-body-lg">We recognize that every student begins their journey at a different point. Therefore, Tarbiya is organized into levels of understanding, allowing users to progress from foundational principles to more detailed studies at a pace that suits them.</p>
           </div>
         </div>
@@ -140,10 +141,9 @@
 
       <!-- Why Tarbiya Exists -->
       <section class="bg-white py-10 md:py-16 lg:py-20">
-        <div class="mx-auto px-4 sm:px-6">
-          <h2 class="mb-6 text-center text-xl font-semibold text-gray-900 sm:text-2xl md:mb-8 md:text-4xl">Why Tarbiya?</h2>
+        <div class="mx-auto space-y-6 px-4 sm:px-6 md:space-y-8">
+          <h2 class="text-center text-xl font-semibold text-gray-900 sm:text-2xl md:text-4xl">Why Tarbiya?</h2>
           <p class="mx-auto text-base leading-relaxed text-gray-500 sm:text-lg md:text-xl">When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day. And, like most parents, I did not want my children being raised on Youtube and social media.</p>
-          <br />
           <p class="mx-auto text-base leading-relaxed text-gray-500 sm:text-lg md:text-xl">So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background. What I love for my children, I want for every Muslim child in the world too.</p>
         </div>
       </section>
@@ -203,27 +203,29 @@
             description: 'Applying Islam in daily affairs such as work, behavior, intentions, and interactions, ensuring actions align with correct belief, lawful conduct, and good character.'
           }
         ]
-      }"
+        }"
       >
-        <h2 class="mb-8 text-center text-xl font-semibold text-gray-900 sm:text-2xl md:mb-12 md:text-3xl lg:text-4xl" data-aos="fade-up">What You Will Learn</h2>
+        <div class="flex flex-col space-y-8 md:space-y-12">
+          <h2 class="text-center text-xl font-semibold text-gray-900 sm:text-2xl md:text-3xl lg:text-4xl" data-aos="fade-up">What You Will Learn</h2>
 
-        <div class="mb-8 flex flex-wrap justify-center gap-2 text-sm font-light sm:gap-3 sm:text-base md:mb-12 md:gap-4 md:text-lg lg:text-xl">
-          <template x-for="(category, index) in categories" :key="index">
-            <button type="button" @click="active_tab = index" :class="active_tab === index ? 'bg-gray-900 text-white' : 'border border-gray-400 text-gray-700 hover:border-gray-600'" class="rounded-full px-4 py-2 transition-all duration-500 md:px-6" x-text="category.title" data-aos="zoom-in" :data-aos-delay="index * 50"></button>
-          </template>
-        </div>
+          <div class="flex flex-wrap justify-center gap-2 text-sm font-light sm:gap-3 sm:text-base md:gap-4 md:text-lg lg:text-xl">
+            <template x-for="(category, index) in categories" :key="index">
+              <button type="button" @click="active_tab = index" :class="active_tab === index ? 'bg-gray-900 text-white' : 'border border-gray-400 text-gray-700 hover:border-gray-600'" class="rounded-full px-4 py-2 transition-all duration-500 md:px-6" x-text="category.title" data-aos="zoom-in" :data-aos-delay="index * 50"></button>
+            </template>
+          </div>
 
-        <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
-          <template x-for="(category, index) in categories" :key="index">
-            <p x-show="active_tab === index" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100" class="text-base text-gray-600 sm:text-lg md:text-xl" x-text="category.description"></p>
-          </template>
+          <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
+            <template x-for="(category, index) in categories" :key="index">
+              <p x-show="active_tab === index" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100" class="text-base text-gray-600 sm:text-lg md:text-xl" x-text="category.description"></p>
+            </template>
+          </div>
         </div>
       </section>
 
       <!-- How Knowledge is Approached -->
       <section class="section-padding relative overflow-hidden bg-gray-50">
         <!-- Floating Animated SVG Background -->
-        <div class="floating-svg-fast pointer-events-none absolute top-1/2 right-[-5%] z-0 hidden -translate-y-1/2 opacity-10 lg:block">
+        <div class="floating-svg-fast pointer-events-none absolute top-1/2 right-[-5%] z-0 -translate-y-1/2 opacity-10">
           <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#005BAC" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
           </svg>
@@ -233,31 +235,31 @@
 
           <div class="grid gap-8 px-8 md:grid-cols-3 md:gap-8">
             <div data-aos="fade-up" data-aos-delay="100">
-              <div class="transform-style-3d relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                <div class="icon-pulse mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:mb-6 md:h-16 md:w-16" style="transform: translateZ(30px)">
+              <div class="transform-style-3d relative z-10 space-y-3 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="icon-pulse mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:h-16 md:w-16" style="transform: translateZ(30px)">
                   <i class="ri-book-line text-xl text-white"></i>
                 </div>
-                <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px)">Rooted in revelation</h3>
+                <h3 class="heading-4" style="transform: translateZ(20px)">Rooted in revelation</h3>
                 <p class="text-body" style="transform: translateZ(10px)">Every lesson is drawn from authentic Islamic sources and classical scholarship.</p>
               </div>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200">
-              <div class="transform-style-3d relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                <div class="icon-pulse mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:mb-6 md:h-16 md:w-16" style="animation-delay: 1s; transform: translateZ(30px)">
+              <div class="transform-style-3d relative z-10 space-y-3 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="icon-pulse mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:h-16 md:w-16" style="animation-delay: 1s; transform: translateZ(30px)">
                   <i class="ri-list-check-3 text-xl text-white"></i>
                 </div>
-                <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px)">Structured, not scattered</h3>
+                <h3 class="heading-4" style="transform: translateZ(20px)">Structured, not scattered</h3>
                 <p class="text-body" style="transform: translateZ(10px)">Topics are taught in a deliberate sequence, guiding learners step by step.</p>
               </div>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="300">
-              <div class="transform-style-3d relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                <div class="icon-pulse mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:mb-6 md:h-16 md:w-16" style="animation-delay: 2s; transform: translateZ(30px)">
+              <div class="transform-style-3d relative z-10 space-y-3 rounded-2xl border border-gray-100 bg-white p-6 shadow-xs transition-shadow hover:shadow-md md:p-8" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="icon-pulse mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-gray-900 shadow-lg md:h-16 md:w-16" style="animation-delay: 2s; transform: translateZ(30px)">
                   <i class="ri-graduation-cap-line text-xl text-white"></i>
                 </div>
-                <h3 class="heading-4 mb-2 md:mb-3" style="transform: translateZ(20px)">Knowledge with practice</h3>
+                <h3 class="heading-4" style="transform: translateZ(20px)">Knowledge with practice</h3>
                 <p class="text-body" style="transform: translateZ(10px)">Learning is tied to reflection and action, not memorization alone.</p>
               </div>
             </div>
@@ -268,16 +270,16 @@
       <!-- Who We Are Section -->
       <section id="who-we-are" class="section-padding relative mx-auto overflow-hidden bg-gray-50/50 px-4 sm:px-6">
         <!-- Floating Animated Background Vector -->
-        <div class="spin-3d delay-2s pointer-events-none absolute top-10 right-[-10%] z-0 hidden opacity-5 lg:block" style="animation-duration: 35s">
+        <div class="spin-3d delay-2s pointer-events-none absolute top-10 right-[-10%] z-0 opacity-5" style="animation-duration: 35s">
           <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#F59E0B" d="M45.7,-76.3C58.9,-69.3,69.1,-56,76.5,-41.5C83.9,-27,88.5,-11.3,86.3,3.4C84.1,18.1,75.1,31.8,64.2,42.4C53.3,53,40.5,60.5,26.4,66.5C12.3,72.5,-3.1,77,-18.2,75.1C-33.3,73.2,-48.1,64.9,-59.6,53.2C-71.1,41.5,-79.3,26.4,-82.5,10.1C-85.7,-6.2,-83.9,-23.7,-75.7,-38.4C-67.5,-53.1,-52.9,-65,-37.8,-71.4C-22.7,-77.8,-7.1,-78.7,8.2,-74.6C23.5,-70.5,32.5,-83.3,45.7,-76.3Z" transform="translate(100 100)" />
           </svg>
         </div>
 
         <div class="relative z-10 grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
-          <div class="order-2 md:order-1" data-aos="fade-right">
-            <div class="mb-4 inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">Who We Are</div>
-            <h2 class="heading-2 mb-6 text-gray-900">Dedicated to <span class="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
+          <div class="order-2 space-y-4 md:order-1 md:space-y-6" data-aos="fade-right">
+            <div class="inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">Who We Are</div>
+            <h2 class="heading-2 text-gray-900">Dedicated to <span class="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
 
             <div class="text-body-lg space-y-5">
               <p>Tarbiya was founded with a singular mission: to make authentic, structured Islamic knowledge accessible to families everywhere.</p>
@@ -324,14 +326,14 @@
       <!-- Learning That Feels Simple and Engaging -->
       <section class="section-padding relative mx-auto overflow-hidden px-4 sm:px-6">
         <!-- Floating Animated SVG -->
-        <div class="spin-3d delay-1s pointer-events-none absolute bottom-10 left-[-5%] z-0 hidden opacity-10 md:block" style="animation-duration: 22s">
+        <div class="spin-3d delay-1s pointer-events-none absolute bottom-10 left-[-5%] z-0 opacity-10" style="animation-duration: 22s">
           <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#059669" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
           </svg>
         </div>
         <div class="relative z-10 grid items-center gap-6 md:grid-cols-5 md:gap-12">
-          <div class="order-2 md:order-1 md:col-span-3" data-aos="fade-right">
-            <h2 class="heading-2 mb-4 md:mb-6">Simple, Engaging Learning</h2>
+          <div class="order-2 space-y-4 md:order-1 md:col-span-3 md:space-y-6" data-aos="fade-right">
+            <h2 class="heading-2">Simple, Engaging Learning</h2>
             <p class="text-body-lg">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
           </div>
           <div class="order-1 md:order-2 md:col-span-2">
@@ -370,7 +372,7 @@
       </section>
 
       <!-- Pricing Section -->
-      <section class="section-padding relative overflow-hidden bg-white">
+      <section id="pricing" class="section-padding relative overflow-hidden bg-white">
         <!-- Floating Animated Backgrounds -->
         <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           <!-- Main subtle grid pattern -->
@@ -384,24 +386,24 @@
           <div class="absolute top-[20%] left-[60%] h-100 w-100 animate-[float-slow_20s_ease-in-out_infinite_alternate] rounded-full bg-yellow-200 opacity-30 mix-blend-multiply blur-[90px] filter delay-1000"></div>
 
           <!-- Existing Floating SVG Vector -->
-          <div class="spin-3d delay-1s absolute top-10 right-[-5%] hidden opacity-5 lg:block" style="animation-duration: 40s">
+          <div class="spin-3d delay-1s absolute top-10 right-[-5%] opacity-5" style="animation-duration: 40s">
             <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path fill="#F59E0B" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
             </svg>
           </div>
 
           <!-- Floating abstract rings -->
-          <div class="absolute top-[60%] left-[15%] hidden animate-[float-fast_8s_ease-in-out_infinite_alternate] md:block">
+          <div class="absolute top-[60%] left-[15%] animate-[float-fast_8s_ease-in-out_infinite_alternate]">
             <div class="h-16 w-16 rounded-full border-4 border-amber-500/20"></div>
           </div>
-          <div class="absolute top-[20%] right-[25%] hidden animate-[float-slow_10s_ease-in-out_infinite_alternate-reverse] delay-300 lg:block">
+          <div class="absolute top-[20%] right-[25%] animate-[float-slow_10s_ease-in-out_infinite_alternate-reverse] delay-300">
             <div class="h-24 w-24 rounded-full border-2 border-orange-500/10"></div>
           </div>
         </div>
 
         <div class="relative z-10 container mx-auto px-4 sm:px-6">
-          <div class="mx-auto mb-10 max-w-3xl text-center md:mb-16">
-            <h2 class="heading-2 mb-4">Fair Pricing</h2>
+          <div class="mx-auto mb-10 max-w-3xl space-y-4 text-center md:mb-16">
+            <h2 class="heading-2">Fair Pricing</h2>
             <p class="text-body-lg">It is my aim to deliver the best in Islamic education to every child around the world. And I want this to be affordable always.</p>
           </div>
 
@@ -518,20 +520,20 @@
       <!-- Newsletter Section -->
       <section class="relative mx-auto overflow-hidden bg-white px-4 py-10 sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
         <!-- Floating Animated SVG -->
-        <div class="spin-3d delay-2s pointer-events-none absolute -top-10 -right-10 z-0 hidden opacity-[0.07] md:block" style="animation-duration: 28s">
+        <div class="spin-3d delay-2s pointer-events-none absolute -top-10 -right-10 z-0 opacity-[0.07]" style="animation-duration: 28s">
           <svg width="350" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#8B5CF6" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
           </svg>
         </div>
         <div class="relative z-10 grid items-center gap-8 md:grid-cols-2 md:gap-12">
-          <div class="max-w-xl" data-aos="fade-right">
-            <h2 class="heading-2 mb-3 md:mb-4">Be the first to know</h2>
-            <p class="text-body-lg mb-6 md:mb-8">
+          <div class="max-w-xl space-y-4 md:space-y-6" data-aos="fade-right">
+            <h2 class="heading-2">Be the first to know</h2>
+            <p class="text-body-lg">
               Join our community of learners
               <span class="font-semibold">waiting for a better way</span> to understand their faith
             </p>
 
-            <form class="mb-4 space-y-3 md:mb-6 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
+            <form class="space-y-3 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
               <!-- <input type="hidden" name="access_key" value="3e506723-16c4-4b18-95d1-1f7a6901ca53" /> -->
               <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" />
 
@@ -631,21 +633,21 @@
           <div class="grid grid-cols-2 gap-8 lg:col-span-4">
             <div>
               <h3 class="mb-4 font-medium text-white">Company</h3>
-              <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="/about.html">About Tarbiya</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">The Need</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Methodology</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Pricing</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="/contact.html">Contact Us</a></li>
+              <ul class="space-y-3 *:text-gray-400 *:transition-colors hover:*:text-white">
+                <li><a href="/about.html">About Tarbiya</a></li>
+                <li><a href="#">The Need</a></li>
+                <li><a href="#">Methodology</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
               </ul>
             </div>
             <div>
               <h3 class="mb-4 font-medium text-white">Useful Links</h3>
-              <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'">Terms of Use</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'cookies'">Cookie Policy</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'takedown'">Takedown Policy</a></li>
+              <ul class="cursor-pointer space-y-3 *:text-gray-400 *:transition-colors hover:*:text-white">
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'terms'">Terms of Use</a></li>
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a></li>
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'cookies'">Cookie Policy</a></li>
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'takedown'">Takedown Policy</a></li>
               </ul>
             </div>
           </div>
@@ -728,14 +730,16 @@
           <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100">
             <i class="ri-cookie-line text-xl text-orange-500"></i>
           </div>
-          <div class="flex-1">
-            <h3 class="mb-1 text-base font-bold text-gray-900">Your Privacy</h3>
-            <p class="mb-4 text-xs leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
+          <div class="flex-1 space-y-4">
+            <div class="space-y-1">
+              <h3 class="text-base font-bold text-gray-900">Your Privacy</h3>
+              <p class="text-xs leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
+            </div>
             <div class="flex flex-col gap-2 sm:flex-row">
               <button @click="savePreferences('all')" class="flex-1 rounded-full bg-gray-900 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-gray-800">Accept All</button>
               <button @click="savePreferences('necessary')" class="flex-1 rounded-full bg-gray-100 px-4 py-2.5 text-center text-xs font-semibold text-gray-900 transition-all hover:bg-gray-200">Reject Non-Essential</button>
             </div>
-            <button @click="showSettings = true" class="mt-3 w-full text-center text-xs font-medium text-gray-500 underline transition-colors hover:text-gray-900">Manage Preferences</button>
+            <button @click="showSettings = true" class="block w-full text-center text-xs font-medium text-gray-500 underline transition-colors hover:text-gray-900">Manage Preferences</button>
           </div>
         </div>
       </div>
@@ -747,8 +751,10 @@
             <i class="ri-close-line text-xl"></i>
           </button>
 
-          <h2 class="mb-2 text-xl font-bold text-gray-900">Cookie Preferences</h2>
-          <p class="mb-6 text-xs text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
+          <div class="mb-6 space-y-2">
+            <h2 class="text-xl font-bold text-gray-900">Cookie Preferences</h2>
+            <p class="text-xs text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
+          </div>
 
           <div class="space-y-4 divide-y divide-gray-100">
             <!-- Essential -->
@@ -803,11 +809,11 @@
       <div x-show="showLegalModal" x-transition.scale.95 class="relative z-10 flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
         <!-- Modal Header & Tabs -->
         <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 sm:px-10">
-          <div class="flex space-x-6">
-            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Terms of Use</button>
-            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Privacy Policy</button>
-            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Cookie Policy</button>
-            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Takedown Policy</button>
+          <div class="flex space-x-6 *:-mb-4.25 *:pb-4 *:text-base *:font-semibold *:transition-colors">
+            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Terms of Use</button>
+            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Privacy Policy</button>
+            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Cookie Policy</button>
+            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Takedown Policy</button>
           </div>
           <button @click="showLegalModal = false" class="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200">
             <i class="ri-close-line text-lg"></i>

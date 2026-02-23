@@ -21,6 +21,7 @@
           <div class="hidden items-center space-x-8 text-white md:flex">
             <a href="/" class="hover:text-gray-200">Home</a>
             <a href="/about.html" class="hover:text-gray-200">About Us</a>
+            <a href="/#pricing" class="hover:text-gray-200">Pricing</a>
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
@@ -39,6 +40,7 @@
         <div class="flex flex-col space-y-4 text-center text-white">
           <a href="/" class="py-2 font-medium hover:text-gray-300">Home</a>
           <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
+          <a href="/#pricing" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Pricing</a>
           <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
           <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
@@ -48,7 +50,7 @@
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] overflow-hidden bg-gray-900">
       <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(&quot;slider-2.jpg&quot;)"></div>
-      <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
+      <div id="tsparticles" class="absolute inset-0 z-5"></div>
       <div class="relative z-10 flex h-full min-h-[60vh] items-center justify-center px-4 pt-32 pb-16 text-center text-white sm:px-6">
         <div class="w-full max-w-4xl space-y-6">
           <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">About Tarbiya</h1>
@@ -61,13 +63,13 @@
       <!-- Our Mission -->
       <section class="section-padding relative overflow-hidden px-4 sm:px-6">
         <!-- Floating Animated SVG -->
-        <div class="spin-3d delay-1s pointer-events-none absolute top-10 right-10 z-0 hidden opacity-[0.05] lg:block" style="animation-duration: 25s">
+        <div class="spin-3d delay-1s pointer-events-none absolute top-10 right-10 z-0 opacity-[0.05]" style="animation-duration: 25s">
           <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#F97316" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
           </svg>
         </div>
-        <div class="relative z-10 mx-auto max-w-4xl text-center">
-          <h2 class="heading-2 mb-6">Our Mission</h2>
+        <div class="relative z-10 mx-auto max-w-4xl space-y-6 text-center">
+          <h2 class="heading-2">Our Mission</h2>
           <p class="text-body-lg">To provide every Muslim—regardless of age, background, or level—with clear, structured, and authentic Islamic education rooted in the Quran, Sunnah, and the understanding of the Salaf.</p>
         </div>
       </section>
@@ -107,11 +109,11 @@
               <p class="text-sm leading-relaxed text-gray-600 md:text-base">A clear, step-by-step curriculum that builds knowledge gradually, making Islam accessible to learners at every level.</p>
             </div>
 
-            <div class="text-center">
-              <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-white">
+            <div class="space-y-4 text-center">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-white">
                 <i class="ri-heart-3-line text-2xl"></i>
               </div>
-              <h3 class="heading-3 mb-4">Application Focused</h3>
+              <h3 class="heading-3">Application Focused</h3>
               <p class="text-sm leading-relaxed text-gray-600 md:text-base">Learning is not just about memorization—it's about understanding, reflection, and applying Islamic teachings in daily life.</p>
             </div>
           </div>
@@ -121,7 +123,7 @@
       <!-- Who We Serve -->
       <section class="section-padding relative overflow-hidden bg-white">
         <!-- Floating Animated SVG -->
-        <div class="spin-3d delay-2s pointer-events-none absolute top-1/2 left-[-5%] z-0 hidden -translate-y-1/2 opacity-[0.05] lg:block" style="animation-duration: 30s">
+        <div class="spin-3d delay-2s pointer-events-none absolute top-1/2 left-[-5%] z-0 -translate-y-1/2 opacity-[0.05]" style="animation-duration: 30s">
           <svg width="350" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#0EA5E9" d="M42.7,-73.4C55.9,-65.7,67.7,-54.6,74.7,-40.7C81.8,-26.8,84.1,-10.1,81.3,5.6C78.4,21.3,70.5,36.1,59.2,46.9C47.9,57.7,33.2,64.5,17.6,69.5C2,74.5,-14.4,77.7,-29.7,73.5C-45,69.4,-59.2,57.9,-68.8,43.3C-78.4,28.8,-83.4,11.2,-81.2,-5.2C-78.9,-21.6,-69.5,-36.8,-57.2,-48.7C-44.9,-60.7,-29.8,-69.4,-14.4,-72C1.1,-74.5,16.5,-71,29.5,-69C42.4,-67.1,53.2,-61.2,42.7,-73.4Z" transform="translate(100 100)" />
           </svg>
@@ -160,10 +162,10 @@
 
       <!-- Call to Action -->
       <section class="px-4 py-16 text-center sm:px-6 md:py-20">
-        <div class="mx-auto max-w-3xl">
-          <h2 class="heading-2 mb-6">Join Us on This Journey</h2>
-          <p class="text-body-lg mb-8">Be among the first to experience a better way to learn Islam—structured, authentic, and accessible.</p>
-          <a href="/#newsletter-section" class="btn-primary text-base">
+        <div class="mx-auto max-w-3xl space-y-6">
+          <h2 class="heading-2">Join Us on This Journey</h2>
+          <p class="text-body-lg">Be among the first to experience a better way to learn Islam—structured, authentic, and accessible.</p>
+          <a href="/#newsletter-section" class="btn-primary inline-flex text-base">
             <span class="px-2">Join the Waiting List</span>
             <i class="ri-arrow-right-line ml-2 text-lg"></i>
           </a>
@@ -227,21 +229,21 @@
           <div class="grid grid-cols-2 gap-8 lg:col-span-4">
             <div>
               <h3 class="mb-4 font-medium text-white">Company</h3>
-              <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="/about.html">About Tarbiya</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">The Need</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Methodology</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#">Pricing</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="/contact.html">Contact Us</a></li>
+              <ul class="space-y-3 *:text-gray-400 *:transition-colors hover:*:text-white">
+                <li><a href="/about.html">About Tarbiya</a></li>
+                <li><a href="#">The Need</a></li>
+                <li><a href="#">Methodology</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
               </ul>
             </div>
             <div>
               <h3 class="mb-4 font-medium text-white">Useful Links</h3>
-              <ul class="space-y-3">
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'terms'">Terms of Use</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'cookies'">Cookie Policy</a></li>
-                <li><a class="text-gray-400 transition-colors hover:text-white" href="#" @click.prevent="showLegalModal = true; activeLegalTab = 'takedown'">Takedown Policy</a></li>
+              <ul class="cursor-pointer space-y-3 *:text-gray-400 *:transition-colors hover:*:text-white">
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'terms'">Terms of Use</a></li>
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'privacy'">Privacy Policy</a></li>
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'cookies'">Cookie Policy</a></li>
+                <li><a @click.prevent="showLegalModal = true; activeLegalTab = 'takedown'">Takedown Policy</a></li>
               </ul>
             </div>
           </div>
@@ -324,14 +326,16 @@
           <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100">
             <i class="ri-cookie-line text-xl text-orange-500"></i>
           </div>
-          <div class="flex-1">
-            <h3 class="mb-1 text-base font-bold text-gray-900">Your Privacy</h3>
-            <p class="mb-4 text-xs leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
+          <div class="flex-1 space-y-4">
+            <div class="space-y-1">
+              <h3 class="text-base font-bold text-gray-900">Your Privacy</h3>
+              <p class="text-xs leading-relaxed text-gray-600">We use cookies to personalize content, provide social media features, and analyze our traffic. Please choose your preferences below.</p>
+            </div>
             <div class="flex flex-col gap-2 sm:flex-row">
               <button @click="savePreferences('all')" class="flex-1 rounded-full bg-gray-900 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-gray-800">Accept All</button>
               <button @click="savePreferences('necessary')" class="flex-1 rounded-full bg-gray-100 px-4 py-2.5 text-center text-xs font-semibold text-gray-900 transition-all hover:bg-gray-200">Reject Non-Essential</button>
             </div>
-            <button @click="showSettings = true" class="mt-3 w-full text-center text-xs font-medium text-gray-500 underline transition-colors hover:text-gray-900">Manage Preferences</button>
+            <button @click="showSettings = true" class="block w-full text-center text-xs font-medium text-gray-500 underline transition-colors hover:text-gray-900">Manage Preferences</button>
           </div>
         </div>
       </div>
@@ -343,8 +347,10 @@
             <i class="ri-close-line text-xl"></i>
           </button>
 
-          <h2 class="mb-2 text-xl font-bold text-gray-900">Cookie Preferences</h2>
-          <p class="mb-6 text-xs text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
+          <div class="mb-6 space-y-2">
+            <h2 class="text-xl font-bold text-gray-900">Cookie Preferences</h2>
+            <p class="text-xs text-gray-600">Manage how we use cookies on your device. Essential cookies cannot be disabled as they are strictly required for the website to function.</p>
+          </div>
 
           <div class="space-y-4 divide-y divide-gray-100">
             <!-- Essential -->
@@ -399,11 +405,11 @@
       <div x-show="showLegalModal" x-transition.scale.95 class="relative z-10 flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
         <!-- Modal Header & Tabs -->
         <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 sm:px-10">
-          <div class="flex space-x-6">
-            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Terms of Use</button>
-            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Privacy Policy</button>
-            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Cookie Policy</button>
-            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Takedown Policy</button>
+          <div class="flex space-x-6 *:-mb-4.25 *:pb-4 *:text-base *:font-semibold *:transition-colors">
+            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Terms of Use</button>
+            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Privacy Policy</button>
+            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Cookie Policy</button>
+            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'border-b-2 border-gray-900 text-gray-900' : 'text-gray-500 hover:text-gray-700'">Takedown Policy</button>
           </div>
           <button @click="showLegalModal = false" class="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200">
             <i class="ri-close-line text-lg"></i>
