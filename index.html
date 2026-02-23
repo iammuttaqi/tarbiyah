@@ -19,11 +19,9 @@
     <nav class="fixed top-0 z-50 w-full px-4 py-2 transition-all duration-300" x-data="{ mobileMenuOpen: false }">
       <div class="container mx-auto rounded-full border border-gray-300 bg-red-500/5 p-1 backdrop-blur-sm transition-all duration-300">
         <div class="flex items-center justify-between px-2">
-          <div class="flex items-center space-x-2 rounded-full px-4 py-2">
-            <a href="/" class="font-semibold text-white">
-              <img src="logo.png" alt="Tarbiya Logo" class="h-8 w-auto" />
-            </a>
-          </div>
+          <a href="/" class="flex items-center space-x-2 rounded-full px-4 py-2 font-semibold text-white">
+            <img src="logo.png" alt="Tarbiya Logo" class="h-8 w-auto" />
+          </a>
           <div class="hidden items-center space-x-8 text-white md:flex">
             <a href="/" class="hover:text-gray-200">Home</a>
             <a href="/about.html" class="hover:text-gray-200">About Us</a>
@@ -76,44 +74,42 @@
       </div>
 
       <!-- Hero Content Overlay -->
-      <div id="tsparticles" class="absolute inset-0 z-[5] hidden lg:block"></div>
+      <div id="tsparticles" class="absolute inset-0 z-5 hidden lg:block"></div>
       <div class="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20 pb-10 text-center sm:px-6">
         <div class="w-full max-w-7xl space-y-8">
-          <div class="inline-block rounded-full bg-white px-4 py-1 text-xs">
-            <div class="flex items-center gap-1 text-black">
-              <div><i class="ri-arrow-right-circle-fill text-lg"></i></div>
-              <div><span>Coming Soon</span></div>
-            </div>
+          <div class="inline-flex items-center gap-1 rounded-full bg-white px-4 py-1 text-xs text-black">
+            <i class="ri-arrow-right-circle-fill text-lg"></i>
+            <span>Coming Soon</span>
           </div>
 
-          <h1 class="heading-1 text-white">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
+          <h1 class="heading-1 leading-normal text-white">A structured learning platform on authentic Islamic knowledge for all levels.</h1>
           <p class="text-body-lg font-sora mx-auto text-white/90">Tarbiya is a structured learning platform on everything about Islam based on Quran, Sunnah and the methodology of the salaf.</p>
 
           <a href="#newsletter-section" class="group relative inline-flex items-center justify-center rounded-full text-xs font-semibold transition-all duration-300 hover:scale-105 active:scale-95 md:text-sm">
             <!-- Outer Glow -->
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
+            <div class="absolute inset-0 rounded-full bg-linear-to-r from-yellow-400 to-orange-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
 
             <!-- Rotating radar beam -->
-            <div class="absolute inset-[1px] overflow-hidden rounded-full bg-black/20 backdrop-blur-lg transition-colors duration-300 group-hover:bg-black/40">
+            <div class="absolute inset-px overflow-hidden rounded-full bg-black/20 backdrop-blur-lg transition-colors duration-300 group-hover:bg-black/40">
               <div class="absolute top-1/2 left-1/2 h-[500%] w-[500%] -translate-x-1/2 -translate-y-1/2 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,rgba(246,172,29,0)_0%,rgba(246,172,29,0.7)_50%,rgba(246,172,29,0)_100%)] opacity-50 transition-opacity duration-500 group-hover:opacity-100" style="animation-duration: 4s"></div>
             </div>
 
             <!-- Border Lines -->
             <div class="absolute inset-0 rounded-full border border-white/20 transition-colors duration-300 group-hover:border-white/40"></div>
             <!-- Inner Border for 3D effect -->
-            <div class="absolute inset-[1px] rounded-full border border-white/10"></div>
+            <div class="absolute inset-px rounded-full border border-white/10"></div>
 
             <!-- Content -->
             <div class="relative z-10 flex items-center gap-2 px-2 py-2">
               <span class="px-2 font-medium tracking-wide text-white drop-shadow-md md:px-4">Join the Waiting List</span>
-              <div class="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 via-orange-500 to-red-500 shadow-[0_0_15px_rgba(246,172,29,0.5)] transition-all duration-300 group-hover:translate-x-1 group-hover:shadow-[0_0_25px_rgba(246,172,29,0.8)] md:size-11">
+              <div class="flex size-10 items-center justify-center rounded-full bg-linear-to-br from-yellow-300 via-orange-500 to-red-500 shadow-[0_0_15px_rgba(246,172,29,0.5)] transition-all duration-300 group-hover:translate-x-1 group-hover:shadow-[0_0_25px_rgba(246,172,29,0.8)] md:size-11">
                 <i class="ri-arrow-right-line text-lg text-white md:text-xl"></i>
               </div>
             </div>
 
             <!-- Sheen effect over the button -->
             <div class="pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-full">
-              <div class="absolute top-0 -left-[100%] h-full w-[50%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-700 ease-in-out group-hover:left-[150%]"></div>
+              <div class="absolute top-0 -left-full h-full w-[50%] skew-x-[-20deg] bg-linear-to-r from-transparent via-white/20 to-transparent transition-all duration-700 ease-in-out group-hover:left-[150%]"></div>
             </div>
           </a>
         </div>
@@ -219,9 +215,7 @@
 
         <div class="mx-auto rounded-2xl p-4 text-center md:p-8">
           <template x-for="(category, index) in categories" :key="index">
-            <div x-show="active_tab === index" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100">
-              <p class="text-base text-gray-600 sm:text-lg md:text-xl" x-text="category.description"></p>
-            </div>
+            <p x-show="active_tab === index" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 blur-sm scale-95" x-transition:enter-end="opacity-100 blur-0 scale-100" class="text-base text-gray-600 sm:text-lg md:text-xl" x-text="category.description"></p>
           </template>
         </div>
       </section>
@@ -283,7 +277,7 @@
         <div class="relative z-10 grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
           <div class="order-2 md:order-1" data-aos="fade-right">
             <div class="mb-4 inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">Who We Are</div>
-            <h2 class="heading-2 mb-6 text-gray-900">Dedicated to <span class="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
+            <h2 class="heading-2 mb-6 text-gray-900">Dedicated to <span class="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
 
             <div class="text-body-lg space-y-5">
               <p>Tarbiya was founded with a singular mission: to make authentic, structured Islamic knowledge accessible to families everywhere.</p>
@@ -303,24 +297,22 @@
             <!-- 3D Image Wrapper -->
             <div class="transform-style-3d relative mx-auto max-w-md md:max-w-full" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.2">
               <!-- Decorative background blob -->
-              <div class="absolute -inset-4 z-0 rounded-3xl bg-gradient-to-tr from-amber-200 to-orange-100 opacity-50 blur-2xl"></div>
+              <div class="absolute -inset-4 z-0 rounded-3xl bg-linear-to-tr from-amber-200 to-orange-100 opacity-50 blur-2xl"></div>
 
-              <div class="relative z-10 overflow-hidden rounded-[2rem] shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+              <div class="relative z-10 overflow-hidden rounded-4xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
                 <img src="/founder.jpg" alt="Who We Are" class="w-full object-cover transition-transform duration-700 hover:scale-110" onerror="this.src = 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1000&auto=format&fit=crop'" />
 
                 <!-- Overlay gradient -->
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-gray-900/60 via-transparent to-transparent"></div>
 
                 <!-- Floating stat badge -->
-                <div class="absolute bottom-6 left-6 rounded-2xl border border-white/20 bg-white/20 p-4 shadow-xl backdrop-blur-md" style="transform: translateZ(40px)">
-                  <div class="flex items-center gap-3">
-                    <div class="flex size-10 items-center justify-center rounded-full bg-amber-500 text-white shadow-inner">
-                      <i class="ri-team-fill text-base"></i>
-                    </div>
-                    <div>
-                      <p class="font-sora text-xs font-bold text-white">For Every Family</p>
-                      <p class="text-xs text-white/80">Built on trust</p>
-                    </div>
+                <div class="absolute bottom-6 left-6 flex items-center gap-3 rounded-2xl border border-white/20 bg-white/20 p-4 shadow-xl backdrop-blur-md" style="transform: translateZ(40px)">
+                  <div class="flex size-10 items-center justify-center rounded-full bg-amber-500 text-white shadow-inner">
+                    <i class="ri-team-fill text-base"></i>
+                  </div>
+                  <div>
+                    <p class="font-sora text-xs font-bold text-white">For Every Family</p>
+                    <p class="text-xs text-white/80">Built on trust</p>
                   </div>
                 </div>
               </div>
@@ -382,14 +374,14 @@
         <!-- Floating Animated Backgrounds -->
         <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           <!-- Main subtle grid pattern -->
-          <div class="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] bg-[size:4rem_4rem] opacity-30"></div>
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] bg-size-[4rem_4rem] opacity-30"></div>
 
           <!-- Animated gradient blobs -->
-          <div class="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] animate-[float-slow_15s_ease-in-out_infinite_alternate] rounded-full bg-amber-300 opacity-20 mix-blend-multiply blur-[100px] filter"></div>
+          <div class="absolute top-[-10%] left-[-10%] h-125 w-125 animate-[float-slow_15s_ease-in-out_infinite_alternate] rounded-full bg-amber-300 opacity-20 mix-blend-multiply blur-[100px] filter"></div>
 
-          <div class="absolute right-[-20%] bottom-[-10%] h-[600px] w-[600px] animate-[float-fast_12s_ease-in-out_infinite_alternate-reverse] rounded-full bg-orange-300 opacity-20 mix-blend-multiply blur-[120px] filter delay-700"></div>
+          <div class="absolute right-[-20%] bottom-[-10%] h-150 w-150 animate-[float-fast_12s_ease-in-out_infinite_alternate-reverse] rounded-full bg-orange-300 opacity-20 mix-blend-multiply blur-[120px] filter delay-700"></div>
 
-          <div class="absolute top-[20%] left-[60%] h-[400px] w-[400px] animate-[float-slow_20s_ease-in-out_infinite_alternate] rounded-full bg-yellow-200 opacity-30 mix-blend-multiply blur-[90px] filter delay-1000"></div>
+          <div class="absolute top-[20%] left-[60%] h-100 w-100 animate-[float-slow_20s_ease-in-out_infinite_alternate] rounded-full bg-yellow-200 opacity-30 mix-blend-multiply blur-[90px] filter delay-1000"></div>
 
           <!-- Existing Floating SVG Vector -->
           <div class="spin-3d delay-1s absolute top-10 right-[-5%] hidden opacity-5 lg:block" style="animation-duration: 40s">
@@ -417,7 +409,7 @@
             <!-- Left Side Floating Elements -->
             <div class="hidden flex-col items-center justify-center space-y-12 md:col-span-3 md:flex lg:col-span-4">
               <div class="transform-style-3d relative flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-slow 8s ease-in-out infinite">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg" style="transform: translateZ(30px)">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-yellow-400 to-amber-500 shadow-lg" style="transform: translateZ(30px)">
                   <i class="ri-rocket-2-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
@@ -427,7 +419,7 @@
               </div>
 
               <div class="transform-style-3d relative ml-12 flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-fast 6s ease-in-out infinite">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg" style="transform: translateZ(30px)">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-amber-400 to-orange-500 shadow-lg" style="transform: translateZ(30px)">
                   <i class="ri-medal-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
@@ -440,8 +432,8 @@
             <!-- Center Pricing Table -->
             <!-- <div class="z-20 md:col-span-6 lg:col-span-4" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.1"> -->
             <div class="z-20 md:col-span-6 lg:col-span-4">
-              <div class="relative overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-[1px] shadow-2xl transition-transform duration-300">
-                <div class="absolute inset-0 bg-gradient-to-br from-[#FDFBF7] via-white to-[#F5F5ED] opacity-100"></div>
+              <div class="relative overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-px shadow-2xl transition-transform duration-300">
+                <div class="absolute inset-0 bg-linear-to-br from-[#FDFBF7] via-white to-[#F5F5ED] opacity-100"></div>
 
                 <div class="relative z-10 flex flex-col p-8 md:p-10">
                   <div class="mb-6 flex items-center justify-between border-b border-gray-200 pb-6">
@@ -500,7 +492,7 @@
             <!-- Right Side Floating Elements -->
             <div class="hidden flex-col items-center justify-center space-y-12 md:col-span-3 md:flex lg:col-span-4">
               <div class="transform-style-3d relative flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-fast 7s ease-in-out infinite; animation-delay: 1s">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg" style="transform: translateZ(30px)">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-yellow-400 to-amber-500 shadow-lg" style="transform: translateZ(30px)">
                   <i class="ri-parent-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
@@ -510,7 +502,7 @@
               </div>
 
               <div class="transform-style-3d relative mr-12 flex items-center gap-4 rounded-3xl border border-white/20 bg-white/40 p-5 shadow-xl backdrop-blur-xl" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="animation: float-slow 9s ease-in-out infinite; animation-delay: 2s">
-                <div class="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 shadow-lg" style="transform: translateZ(30px)">
+                <div class="flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-amber-500 to-orange-600 shadow-lg" style="transform: translateZ(30px)">
                   <i class="ri-line-chart-fill text-xl text-white"></i>
                 </div>
                 <div style="transform: translateZ(20px)">
@@ -596,48 +588,42 @@
             <div class="space-y-3">
               <span class="block font-medium text-white">Powered By</span>
               <div class="flex items-center gap-3">
-                <div>
-                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_177_1821)">
-                      <path d="M44.5972 50H5.40276C2.41895 50 0 47.5811 0 44.5972V5.40276C0 2.41895 2.41895 0 5.40276 0H44.5971C47.5811 0 49.9999 2.41895 49.9999 5.40276V44.5971C50 47.5811 47.5811 50 44.5972 50Z" fill="#635BFF"></path>
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M44.1467 25.2793C44.1467 22.5604 42.8297 20.4148 40.3124 20.4148C37.7846 20.4148 36.2551 22.5604 36.2551 25.2582C36.2551 28.4551 38.0607 30.0695 40.6523 30.0695C41.9162 30.0695 42.8721 29.7828 43.5944 29.3791V27.255C42.8721 27.6161 42.0437 27.8391 40.9922 27.8391C39.9619 27.8391 39.0484 27.4779 38.9317 26.2247H44.1254C44.1254 26.0866 44.1467 25.5343 44.1467 25.2793ZM38.8998 24.2704C38.8998 23.0702 39.6326 22.571 40.3018 22.571C40.9497 22.571 41.64 23.0702 41.64 24.2704H38.8998ZM32.1552 20.4149C31.1144 20.4149 30.4452 20.9034 30.0735 21.2433L29.9355 20.5848H27.5987V32.9692L30.254 32.4063L30.2647 29.4005C30.647 29.6766 31.2099 30.0696 32.1446 30.0696C34.0459 30.0696 35.7771 28.5402 35.7771 25.1732C35.7665 22.093 34.014 20.4149 32.1552 20.4149ZM31.518 27.7329C30.8914 27.7329 30.5195 27.5098 30.2647 27.2337L30.254 23.2932C30.5302 22.9853 30.9125 22.7728 31.518 22.7728C32.4845 22.7728 33.1537 23.8562 33.1537 25.2475C33.1537 26.6708 32.4952 27.7329 31.518 27.7329ZM23.945 19.7882L26.6109 19.2147V17.0586L23.945 17.6215V19.7882ZM23.945 20.5954H26.6109V29.889H23.945V20.5954ZM21.0879 21.3814L20.918 20.5954H18.6238V29.889H21.2791V23.5906C21.9057 22.7727 22.9678 22.9215 23.2971 23.0383V20.5954C22.9572 20.468 21.7145 20.2343 21.0879 21.3814ZM15.7773 18.2906L13.1857 18.8429L13.1751 27.3506C13.1751 28.9225 14.3541 30.0803 15.926 30.0803C16.7969 30.0803 17.4343 29.9209 17.7847 29.7297V27.5736C17.4449 27.7117 15.7667 28.2002 15.7667 26.6284V22.8578H17.7847V20.5955H15.7667L15.7773 18.2906ZM8.59734 23.2932C8.59734 22.8789 8.93718 22.7196 9.50019 22.7196C10.3074 22.7196 11.327 22.9639 12.1342 23.3994V20.9034C11.2526 20.5529 10.3817 20.4148 9.50019 20.4148C7.34403 20.4148 5.91016 21.5407 5.91016 23.4207C5.91016 26.3521 9.94625 25.8848 9.94625 27.1487C9.94625 27.6373 9.52136 27.7966 8.92665 27.7966C8.04506 27.7966 6.91923 27.4355 6.02701 26.9469V29.4747C7.01482 29.8996 8.01316 30.0802 8.92665 30.0802C11.1358 30.0802 12.6547 28.9861 12.6547 27.085C12.6441 23.9198 8.59734 24.4828 8.59734 23.2932Z"
-                        fill="white"
-                      ></path>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_177_1821">
-                        <rect width="50" height="50" fill="white"></rect>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div>
-                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="50" height="50" rx="8" fill="white"></rect>
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_177_1821)">
+                    <path d="M44.5972 50H5.40276C2.41895 50 0 47.5811 0 44.5972V5.40276C0 2.41895 2.41895 0 5.40276 0H44.5971C47.5811 0 49.9999 2.41895 49.9999 5.40276V44.5971C50 47.5811 47.5811 50 44.5972 50Z" fill="#635BFF"></path>
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M20.6353 18.0118L18.3438 32.0946H22.01L24.3018 18.0118H20.6353ZM15.2591 18.0118L11.7636 27.6979L11.3501 25.6121L11.3504 25.6128L11.2593 25.1453C10.8362 24.2336 9.85645 22.5008 8.00635 21.022C7.48866 20.6093 6.94363 20.2322 6.375 19.8932L9.55186 32.0946H13.3718L19.2051 18.0118H15.2591ZM29.5678 21.9215C29.5678 20.3293 33.1384 20.5339 34.7073 21.3984L35.2305 18.3738C35.2305 18.3738 33.6158 17.7598 31.9328 17.7598C30.1133 17.7598 25.7927 18.5555 25.7927 22.4218C25.7927 26.0604 30.8638 26.1057 30.8638 28.016C30.8638 29.9264 26.3155 29.585 24.8145 28.3799L24.269 31.5413C24.269 31.5413 25.9061 32.337 28.4079 32.337C30.9095 32.337 34.6845 31.041 34.6845 27.5157C34.6845 23.8543 29.5678 23.5133 29.5678 21.9215ZM44.5287 18.0118H41.581C40.2198 18.0118 39.8884 19.0613 39.8884 19.0613L34.4208 32.0946H38.2422L39.0066 30.0029H43.6676L44.0976 32.0946H47.464L44.5287 18.0118ZM40.0632 27.113L41.9897 21.8429L43.0735 27.113H40.0632Z"
-                      fill="#005BAC"
+                      d="M44.1467 25.2793C44.1467 22.5604 42.8297 20.4148 40.3124 20.4148C37.7846 20.4148 36.2551 22.5604 36.2551 25.2582C36.2551 28.4551 38.0607 30.0695 40.6523 30.0695C41.9162 30.0695 42.8721 29.7828 43.5944 29.3791V27.255C42.8721 27.6161 42.0437 27.8391 40.9922 27.8391C39.9619 27.8391 39.0484 27.4779 38.9317 26.2247H44.1254C44.1254 26.0866 44.1467 25.5343 44.1467 25.2793ZM38.8998 24.2704C38.8998 23.0702 39.6326 22.571 40.3018 22.571C40.9497 22.571 41.64 23.0702 41.64 24.2704H38.8998ZM32.1552 20.4149C31.1144 20.4149 30.4452 20.9034 30.0735 21.2433L29.9355 20.5848H27.5987V32.9692L30.254 32.4063L30.2647 29.4005C30.647 29.6766 31.2099 30.0696 32.1446 30.0696C34.0459 30.0696 35.7771 28.5402 35.7771 25.1732C35.7665 22.093 34.014 20.4149 32.1552 20.4149ZM31.518 27.7329C30.8914 27.7329 30.5195 27.5098 30.2647 27.2337L30.254 23.2932C30.5302 22.9853 30.9125 22.7728 31.518 22.7728C32.4845 22.7728 33.1537 23.8562 33.1537 25.2475C33.1537 26.6708 32.4952 27.7329 31.518 27.7329ZM23.945 19.7882L26.6109 19.2147V17.0586L23.945 17.6215V19.7882ZM23.945 20.5954H26.6109V29.889H23.945V20.5954ZM21.0879 21.3814L20.918 20.5954H18.6238V29.889H21.2791V23.5906C21.9057 22.7727 22.9678 22.9215 23.2971 23.0383V20.5954C22.9572 20.468 21.7145 20.2343 21.0879 21.3814ZM15.7773 18.2906L13.1857 18.8429L13.1751 27.3506C13.1751 28.9225 14.3541 30.0803 15.926 30.0803C16.7969 30.0803 17.4343 29.9209 17.7847 29.7297V27.5736C17.4449 27.7117 15.7667 28.2002 15.7667 26.6284V22.8578H17.7847V20.5955H15.7667L15.7773 18.2906ZM8.59734 23.2932C8.59734 22.8789 8.93718 22.7196 9.50019 22.7196C10.3074 22.7196 11.327 22.9639 12.1342 23.3994V20.9034C11.2526 20.5529 10.3817 20.4148 9.50019 20.4148C7.34403 20.4148 5.91016 21.5407 5.91016 23.4207C5.91016 26.3521 9.94625 25.8848 9.94625 27.1487C9.94625 27.6373 9.52136 27.7966 8.92665 27.7966C8.04506 27.7966 6.91923 27.4355 6.02701 26.9469V29.4747C7.01482 29.8996 8.01316 30.0802 8.92665 30.0802C11.1358 30.0802 12.6547 28.9861 12.6547 27.085C12.6441 23.9198 8.59734 24.4828 8.59734 23.2932Z"
+                      fill="white"
                     ></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1683 19.3374C10.1683 19.3374 10.0165 18.0664 8.39639 18.0664H2.51035L2.44141 18.3053C2.44141 18.3053 5.2707 18.882 7.98506 21.0429C10.579 23.1081 11.4252 25.6825 11.4252 25.6825L10.1683 19.3374Z" fill="#F6AC1D"></path>
-                  </svg>
-                </div>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_177_1821">
+                      <rect width="50" height="50" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
 
-                <div>
-                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="50" height="50" rx="8" fill="white"></rect>
-                    <path d="M17.3125 38.625C24.6648 38.625 30.625 32.6648 30.625 25.3125C30.625 17.9602 24.6648 12 17.3125 12C9.96021 12 4 17.9602 4 25.3125C4 32.6648 9.96021 38.625 17.3125 38.625Z" fill="#F93232"></path>
-                    <path
-                      d="M33.2871 12C30.2971 12 27.5468 12.9984 25.3262 14.6625H25.2996V14.6811C24.7724 15.0778 24.2879 15.5251 23.8259 15.9937H26.7733C27.1833 16.4104 27.5614 16.8564 27.9115 17.325H22.677C22.3545 17.7504 22.0579 18.195 21.7891 18.6562H28.7968C29.0471 19.0876 29.2827 19.5269 29.4864 19.9875H21.1115C20.9202 20.4218 20.7527 20.8662 20.6096 21.3187H29.9869C30.1254 21.7527 30.2346 22.1987 30.3304 22.65H20.2622C20.173 23.0866 20.0984 23.5286 20.0532 23.9812H30.5447C30.5967 24.4179 30.6246 24.8612 30.6246 25.3125H19.9746C19.9746 25.7638 20.0106 26.2044 20.0545 26.6437H30.5474C30.4968 27.095 30.4236 27.5383 30.3317 27.975H20.2635C20.3553 28.429 20.4738 28.8709 20.6109 29.3062H29.9883C29.8452 29.7588 29.6777 30.2032 29.4864 30.6375H21.1115C21.3125 31.0954 21.5388 31.5401 21.7891 31.9688H28.7968C28.5275 32.4304 28.2301 32.8749 27.9062 33.3H22.677C23.0312 33.7686 23.4132 34.2146 23.8246 34.6312H26.7733C26.3151 35.1045 25.8225 35.5432 25.2996 35.9439C27.5987 37.6842 30.4036 38.6257 33.2871 38.625C40.6396 38.625 46.5996 32.6637 46.5996 25.3125C46.5996 17.9613 40.6396 12 33.2871 12Z"
-                      fill="#FED049"
-                    ></path>
-                  </svg>
-                </div>
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="50" height="50" rx="8" fill="white"></rect>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20.6353 18.0118L18.3438 32.0946H22.01L24.3018 18.0118H20.6353ZM15.2591 18.0118L11.7636 27.6979L11.3501 25.6121L11.3504 25.6128L11.2593 25.1453C10.8362 24.2336 9.85645 22.5008 8.00635 21.022C7.48866 20.6093 6.94363 20.2322 6.375 19.8932L9.55186 32.0946H13.3718L19.2051 18.0118H15.2591ZM29.5678 21.9215C29.5678 20.3293 33.1384 20.5339 34.7073 21.3984L35.2305 18.3738C35.2305 18.3738 33.6158 17.7598 31.9328 17.7598C30.1133 17.7598 25.7927 18.5555 25.7927 22.4218C25.7927 26.0604 30.8638 26.1057 30.8638 28.016C30.8638 29.9264 26.3155 29.585 24.8145 28.3799L24.269 31.5413C24.269 31.5413 25.9061 32.337 28.4079 32.337C30.9095 32.337 34.6845 31.041 34.6845 27.5157C34.6845 23.8543 29.5678 23.5133 29.5678 21.9215ZM44.5287 18.0118H41.581C40.2198 18.0118 39.8884 19.0613 39.8884 19.0613L34.4208 32.0946H38.2422L39.0066 30.0029H43.6676L44.0976 32.0946H47.464L44.5287 18.0118ZM40.0632 27.113L41.9897 21.8429L43.0735 27.113H40.0632Z"
+                    fill="#005BAC"
+                  ></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1683 19.3374C10.1683 19.3374 10.0165 18.0664 8.39639 18.0664H2.51035L2.44141 18.3053C2.44141 18.3053 5.2707 18.882 7.98506 21.0429C10.579 23.1081 11.4252 25.6825 11.4252 25.6825L10.1683 19.3374Z" fill="#F6AC1D"></path>
+                </svg>
+
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="50" height="50" rx="8" fill="white"></rect>
+                  <path d="M17.3125 38.625C24.6648 38.625 30.625 32.6648 30.625 25.3125C30.625 17.9602 24.6648 12 17.3125 12C9.96021 12 4 17.9602 4 25.3125C4 32.6648 9.96021 38.625 17.3125 38.625Z" fill="#F93232"></path>
+                  <path
+                    d="M33.2871 12C30.2971 12 27.5468 12.9984 25.3262 14.6625H25.2996V14.6811C24.7724 15.0778 24.2879 15.5251 23.8259 15.9937H26.7733C27.1833 16.4104 27.5614 16.8564 27.9115 17.325H22.677C22.3545 17.7504 22.0579 18.195 21.7891 18.6562H28.7968C29.0471 19.0876 29.2827 19.5269 29.4864 19.9875H21.1115C20.9202 20.4218 20.7527 20.8662 20.6096 21.3187H29.9869C30.1254 21.7527 30.2346 22.1987 30.3304 22.65H20.2622C20.173 23.0866 20.0984 23.5286 20.0532 23.9812H30.5447C30.5967 24.4179 30.6246 24.8612 30.6246 25.3125H19.9746C19.9746 25.7638 20.0106 26.2044 20.0545 26.6437H30.5474C30.4968 27.095 30.4236 27.5383 30.3317 27.975H20.2635C20.3553 28.429 20.4738 28.8709 20.6109 29.3062H29.9883C29.8452 29.7588 29.6777 30.2032 29.4864 30.6375H21.1115C21.3125 31.0954 21.5388 31.5401 21.7891 31.9688H28.7968C28.5275 32.4304 28.2301 32.8749 27.9062 33.3H22.677C23.0312 33.7686 23.4132 34.2146 23.8246 34.6312H26.7733C26.3151 35.1045 25.8225 35.5432 25.2996 35.9439C27.5987 37.6842 30.4036 38.6257 33.2871 38.625C40.6396 38.625 46.5996 32.6637 46.5996 25.3125C46.5996 17.9613 40.6396 12 33.2871 12Z"
+                    fill="#FED049"
+                  ></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -737,7 +723,7 @@
       x-init="$watch('showCookieBanner', value => { if(value) document.body.style.overflow = ''; })"
     >
       <!-- Main Toast Notification -->
-      <div x-show="showCookieBanner && !showSettings" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-10" class="fixed right-4 bottom-4 left-4 z-[90] rounded-3xl border border-gray-100 bg-white p-6 shadow-2xl md:right-auto md:bottom-6 md:left-6 md:max-w-lg" style="display: none">
+      <div x-show="showCookieBanner && !showSettings" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-10" class="fixed right-4 bottom-4 left-4 z-90 rounded-3xl border border-gray-100 bg-white p-6 shadow-2xl md:right-auto md:bottom-6 md:left-6 md:max-w-lg" style="display: none">
         <div class="flex items-start gap-4">
           <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100">
             <i class="ri-cookie-line text-xl text-orange-500"></i>
@@ -755,7 +741,7 @@
       </div>
 
       <!-- Advanced Settings Modal Overlay -->
-      <div x-show="showSettings" x-transition.opacity class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/60 p-4 backdrop-blur-sm" style="display: none">
+      <div x-show="showSettings" x-transition.opacity class="fixed inset-0 z-100 flex items-center justify-center bg-gray-900/60 p-4 backdrop-blur-sm" style="display: none">
         <div @click.away="showSettings = false" class="no-scrollbar relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl md:p-8">
           <button @click="showSettings = false" class="absolute top-6 right-6 text-gray-400 transition-colors hover:text-gray-900">
             <i class="ri-close-line text-xl"></i>
@@ -812,16 +798,16 @@
     </button>
 
     <!-- Legal Modal -->
-    <div x-show="showLegalModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6" style="display: none">
+    <div x-show="showLegalModal" class="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6" style="display: none">
       <div x-show="showLegalModal" x-transition.opacity class="fixed inset-0 bg-black/60 backdrop-blur-sm" @click="showLegalModal = false"></div>
       <div x-show="showLegalModal" x-transition.scale.95 class="relative z-10 flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
         <!-- Modal Header & Tabs -->
         <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 sm:px-10">
           <div class="flex space-x-6">
-            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Terms of Use</button>
-            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Privacy Policy</button>
-            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Cookie Policy</button>
-            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-[17px] pb-4 text-base font-semibold transition-colors">Takedown Policy</button>
+            <button @click="activeLegalTab = 'terms'" :class="activeLegalTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Terms of Use</button>
+            <button @click="activeLegalTab = 'privacy'" :class="activeLegalTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Privacy Policy</button>
+            <button @click="activeLegalTab = 'cookies'" :class="activeLegalTab === 'cookies' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Cookie Policy</button>
+            <button @click="activeLegalTab = 'takedown'" :class="activeLegalTab === 'takedown' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'" class="-mb-4.25 pb-4 text-base font-semibold transition-colors">Takedown Policy</button>
           </div>
           <button @click="showLegalModal = false" class="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200">
             <i class="ri-close-line text-lg"></i>
