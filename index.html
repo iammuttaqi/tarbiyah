@@ -43,6 +43,7 @@
             <a href="/about.html" class="hover:text-gray-200">About Us</a>
             <a href="/#who-we-are" class="hover:text-gray-200">Who We Are</a>
             <a href="/#pricing" class="hover:text-gray-200">Pricing</a>
+            <a href="/#faq" class="hover:text-gray-200">FAQ</a>
             <a href="/contact.html" class="hover:text-gray-200">Contact</a>
           </div>
           <div class="flex items-center gap-2 pr-2 md:pr-0">
@@ -63,6 +64,7 @@
           <a href="/about.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">About Us</a>
           <a href="/#who-we-are" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Who We Are</a>
           <a href="/#pricing" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Pricing</a>
+          <a href="/#faq" @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">FAQ</a>
           <a href="/contact.html" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300">Contact</a>
           <a href="/#newsletter-section" @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200">Join Waitlist</a>
         </div>
@@ -531,6 +533,73 @@
         </div>
       </section>
 
+      <!-- FAQ Section -->
+      <section id="faq" class="section-padding relative bg-gray-50/80 px-4 backdrop-blur-sm sm:px-6">
+        <div class="relative z-10 mx-auto max-w-3xl">
+          <div class="mb-10 space-y-4 text-center md:mb-16">
+            <h2 class="heading-2">Frequently Asked Questions</h2>
+            <p class="text-body-lg">Got questions? We've got answers. If you don't see your question below, feel free to <a href="/contact.html" class="font-medium text-amber-600 hover:underline">contact us</a>.</p>
+          </div>
+
+          <div class="space-y-4" x-data="{ active: null }">
+            <!-- FAQ 1 -->
+            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <button @click="active !== 1 ? active = 1 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What age groups is Tarbiya suitable for?</span>
+                <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 1}"></i>
+              </button>
+              <div x-show="active === 1" x-collapse>
+                <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya is designed to be accessible for learners of all ages. From young children starting their foundational understanding to adults seeking to solidify their core knowledge, the curriculum progresses structurally through different levels suited for any beginner.</div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <button @click="active !== 2 ? active = 2 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What is the methodology taught on Tarbiya?</span>
+                <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 2}"></i>
+              </button>
+              <div x-show="active === 2" x-collapse>
+                <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Every lesson on Tarbiya is drawn strictly from authentic Islamic sources—the Qur’an and the authentic Sunnah—upon the understanding and methodology of the Salaf-us-Salih (the pious predecessors).</div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <button @click="active !== 3 ? active = 3 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Can I use Tarbiya on my phone or tablet?</span>
+                <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 3}"></i>
+              </button>
+              <div x-show="active === 3" x-collapse>
+                <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Yes! Tarbiya is fully mobile-responsive and accessible via any modern web browser on your phone, tablet, or desktop computer. We also plan to release dedicated mobile apps in the near future.</div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <button @click="active !== 4 ? active = 4 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Is there a free trial, or how much does it cost?</span>
+                <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 4}"></i>
+              </button>
+              <div x-show="active === 4" x-collapse>
+                <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya's goal is to be exceptionally affordable. Full access to the platform, including all courses, analytics, and interactive activities, is only $6/month. We believe authentic education should not be a financial burden.</div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <button @click="active !== 5 ? active = 5 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Do I need any prior Islamic knowledge to start?</span>
+                <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 5}"></i>
+              </button>
+              <div x-show="active === 5" x-collapse>
+                <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Absolutely not. Tarbiya is intentionally structured for absolute beginners while offering depth for those seeking it. You can start with the foundational Level 1 basics and progress step-by-step at your own pace.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Newsletter Section -->
       <section class="relative mx-auto bg-white/80 px-4 py-10 backdrop-blur-sm sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
         <div class="relative z-10 grid items-center gap-8 md:grid-cols-2 md:gap-12">
@@ -645,7 +714,8 @@
                 <li><a href="/about.html">About Tarbiya</a></li>
                 <li><a href="#">The Need</a></li>
                 <li><a href="#">Methodology</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/#faq">FAQ</a></li>
                 <li><a href="/contact.html">Contact Us</a></li>
               </ul>
             </div>
