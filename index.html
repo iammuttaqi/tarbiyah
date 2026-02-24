@@ -204,7 +204,7 @@
         </section>
 
         <!-- Why Tarbiya Exists -->
-        <section class="py-10 md:py-16 lg:py-20">
+        <section class="py-10 md:py-16 lg:py-16">
           <div class="mx-auto space-y-6 px-4 sm:px-6 md:space-y-8" data-aos="fade-up">
             <h2 class="text-center text-xl font-semibold text-gray-900 sm:text-2xl md:text-4xl">Why Tarbiya?</h2>
             <p class="mx-auto text-base leading-relaxed text-gray-500 sm:text-lg md:text-xl">When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day. And, like most parents, I did not want my children being raised on Youtube and social media.</p>
@@ -214,7 +214,7 @@
 
         <!-- What You Will Learn -->
         <section
-          class="section-padding relative mx-auto my-8 overflow-hidden rounded-3xl px-4 py-12 sm:px-6 md:my-16 lg:py-20"
+          class="section-padding relative mx-auto overflow-hidden rounded-3xl px-4 py-12 sm:px-6"
           x-data="{
         active_tab: 0,
         categories: [
@@ -330,12 +330,12 @@
           <div class="relative z-10 grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
             <div class="order-2 space-y-4 md:order-1 md:space-y-6" data-aos="fade-right">
               <div class="inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">Who We Are</div>
-              <h2 class="heading-2 text-gray-900">Dedicated to <span class="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Authentic Learning</span></h2>
+              <h2 class="heading-2 text-gray-900">Raising Children Upon <span class="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Goodness</span></h2>
 
               <div class="text-body-lg space-y-5">
-                <p>Tarbiya was founded with a singular mission: to make authentic, structured Islamic knowledge accessible to families everywhere.</p>
-                <p>We understand the challenges of finding trustworthy educational resources in today's digital age. That's why every course, puzzle, and lesson is meticulously crafted by students of knowledge upon the methodology of the Salaf-us-Salih.</p>
-                <p>Whether you are starting from the very basics or looking to deepen your family's understanding of the Deen, we provide a clear, mapped-out journey rooted deeply in the Quran and the Sunnah.</p>
+                <p>When it was time for my children to start learning Islam, I was lost. I did not know where to start, and how to approach educating my children on Islam. My search for a basic, structured course on authentic Quran and Sunnah that my children could do for even 15 minutes a day came up empty.</p>
+                <p>And, like most parents, I did not want my children being raised on Youtube and social media. So, I built the Tarbiya platform. It aims to educate Muslims (not just children) on everything about Islam based on your level no matter your age or background.</p>
+                <p>Tarbiya was founded with a singular mission: to make authentic, structured Islamic knowledge accessible to Muslim families everywhere.</p>
               </div>
 
               <div class="mt-8 flex items-center gap-4">
@@ -353,7 +353,7 @@
                 <div class="absolute -inset-4 z-0 rounded-3xl bg-linear-to-tr from-amber-200 to-orange-100 opacity-50 blur-2xl"></div>
 
                 <div class="relative z-10 overflow-hidden rounded-4xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
-                  <img src="/founder.jpg" alt="Who We Are" class="w-full object-cover transition-transform duration-700 hover:scale-110" onerror="this.src = 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1000&auto=format&fit=crop'" />
+                  <img src="5.jpg" alt="Who We Are" class="w-full object-cover transition-transform duration-700 hover:scale-110" onerror="this.src = 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1000&auto=format&fit=crop'" />
 
                   <!-- Overlay gradient -->
                   <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-gray-900/60 via-transparent to-transparent"></div>
@@ -420,6 +420,7 @@
         <section id="pricing" class="section-padding relative">
           <div class="relative z-10 container mx-auto px-4 sm:px-6">
             <div class="mx-auto mb-10 max-w-3xl space-y-4 text-center md:mb-16" data-aos="fade-up">
+              <div class="inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">Pricing</div>
               <h2 class="heading-2">Fair Pricing</h2>
               <p class="text-body-lg">It is my aim to deliver the best in Islamic education to every child around the world. And I want this to be affordable always.</p>
             </div>
@@ -538,57 +539,58 @@
         <section id="faq" class="section-padding relative px-4 sm:px-6">
           <div class="relative z-10 mx-auto max-w-3xl">
             <div class="mb-10 space-y-4 text-center md:mb-16" data-aos="fade-up">
-              <h2 class="heading-2">Frequently Asked Questions</h2>
-              <p class="text-body-lg">Got questions? We've got answers. If you don't see your question below, feel free to <a href="/contact.html" class="font-medium text-amber-600 hover:underline">contact us</a>.</p>
+              <div class="inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">FAQ</div>
+              <h2 class="heading-2">FAQs</h2>
+              <p class="text-body-lg">Got questions? We've got answers insha'allah. If you don't see your question below, feel free to <a href="/contact.html" class="font-medium text-amber-600 hover:underline">contact us</a>.</p>
             </div>
 
             <div class="space-y-4" x-data="{ active: null }">
               <!-- FAQ 1 -->
               <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="100">
                 <button @click="active !== 1 ? active = 1 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
-                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What age groups is Tarbiya suitable for?</span>
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What is Tarbiya?</span>
                   <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 1}"></i>
                 </button>
                 <div x-show="active === 1" x-collapse>
-                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya is designed to be accessible for learners of all ages. From young children starting their foundational understanding to adults seeking to solidify their core knowledge, the curriculum progresses structurally through different levels suited for any beginner.</div>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya is an Islamic online learning platform for Muslim children, parents, reverts and basically anyone who wants to learn everything about Islam at their own pace and level.</div>
                 </div>
               </div>
 
               <!-- FAQ 2 -->
-              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="200">
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="150">
                 <button @click="active !== 2 ? active = 2 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
-                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What is the methodology taught on Tarbiya?</span>
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What does it contain?</span>
                   <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 2}"></i>
                 </button>
                 <div x-show="active === 2" x-collapse>
-                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Every lesson on Tarbiya is drawn strictly from authentic Islamic sources—the Qur’an and the authentic Sunnah—upon the understanding and methodology of the Salaf-us-Salih (the pious predecessors).</div>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya consists of 8 levels starting from basic foundation all the way to student of knowledge level.</div>
                 </div>
               </div>
 
               <!-- FAQ 3 -->
-              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="300">
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="200">
                 <button @click="active !== 3 ? active = 3 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
-                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Can I use Tarbiya on my phone or tablet?</span>
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Why was Tarbiya made?</span>
                   <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 3}"></i>
                 </button>
                 <div x-show="active === 3" x-collapse>
-                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Yes! Tarbiya is fully mobile-responsive and accessible via any modern web browser on your phone, tablet, or desktop computer. We also plan to release dedicated mobile apps in the near future.</div>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">I wanted my children to learn about Islam in a controlled, structured way where it becomes a part of their daily habit. I didn't find a learning eco-system that gave my children an engaging, fun and interactive platform to learn Islam from the start. And this is why I created it for them, and the rest of the ummah.</div>
                 </div>
               </div>
 
               <!-- FAQ 4 -->
-              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="400">
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="250">
                 <button @click="active !== 4 ? active = 4 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
-                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Is there a free trial, or how much does it cost?</span>
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What is the source of Islamic knowledge?</span>
                   <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 4}"></i>
                 </button>
                 <div x-show="active === 4" x-collapse>
-                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya's goal is to be exceptionally affordable. Full access to the platform, including all courses, analytics, and interactive activities, is only $6/month. We believe authentic education should not be a financial burden.</div>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Every chapter, line and story is based on the glorious Qur'an, authentic Sunnah and the methodology of the first three generations of Islam known for their excellence.</div>
                 </div>
               </div>
 
               <!-- FAQ 5 -->
-              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="500">
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="300">
                 <button @click="active !== 5 ? active = 5 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
                   <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Do I need any prior Islamic knowledge to start?</span>
                   <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 5}"></i>
@@ -597,32 +599,103 @@
                   <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Absolutely not. Tarbiya is intentionally structured for absolute beginners while offering depth for those seeking it. You can start with the foundational Level 1 basics and progress step-by-step at your own pace.</div>
                 </div>
               </div>
+
+              <!-- FAQ 6 -->
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="350">
+                <button @click="active !== 6 ? active = 6 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">How many hours do I or my child need to spend on Tarbiya?</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 6}"></i>
+                </button>
+                <div x-show="active === 6" x-collapse>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">As little as 20 minutes a day. They can read, listen to audio, watch videos, solve puzzles, answer quizzes and compete with their siblings on a closed leaderboard.</div>
+                </div>
+              </div>
+
+              <!-- FAQ 7 -->
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                <button @click="active !== 7 ? active = 7 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Can adults use Tarbiya?</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 7}"></i>
+                </button>
+                <div x-show="active === 7" x-collapse>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Of course! You can select the level you feel comfortable with and start right away. Your puzzles will be much more challenging though.</div>
+                </div>
+              </div>
+
+              <!-- FAQ 8 -->
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="450">
+                <button @click="active !== 8 ? active = 8 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Why does it cost only $6 for full access?</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 8}"></i>
+                </button>
+                <div x-show="active === 8" x-collapse>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Tarbiya's goal is to be exceptionally affordable. Full access to the platform, including all courses, analytics, and interactive activities, is only $6/month. We believe authentic education should not be a financial burden.</div>
+                </div>
+              </div>
+
+              <!-- FAQ 9 -->
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                <button @click="active !== 9 ? active = 9 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">What if I have more than one child?</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 9}"></i>
+                </button>
+                <div x-show="active === 9" x-collapse>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Then its $4 for each additional account.</div>
+                </div>
+              </div>
+
+              <!-- FAQ 10 -->
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="550">
+                <button @click="active !== 10 ? active = 10 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Can I change my subscription at any time?</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 10}"></i>
+                </button>
+                <div x-show="active === 10" x-collapse>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Yes, you can add additional accounts or even cancel your subscription at any time.</div>
+                </div>
+              </div>
+
+              <!-- FAQ 11 -->
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" data-aos="fade-up" data-aos-delay="600">
+                <button @click="active !== 11 ? active = 11 : active = null" class="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50 focus:outline-none">
+                  <span class="font-sora text-sm font-bold text-gray-900 md:text-base">Can I use Tarbiya on my phone or tablet?</span>
+                  <i class="ri-arrow-down-s-line text-xl text-gray-500 transition-transform duration-300" :class="{'rotate-180': active === 11}"></i>
+                </button>
+                <div x-show="active === 11" x-collapse>
+                  <div class="px-6 pb-5 text-sm text-gray-600 md:text-base">Yes! Tarbiya is fully mobile-responsive and accessible via any modern web browser on your phone, tablet, or desktop computer. We also plan to release dedicated mobile apps in the near future.</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- Newsletter Section -->
-        <section class="relative mx-auto px-4 py-10 sm:px-6 md:py-16 lg:py-20" id="newsletter-section">
+        <section class="relative mx-auto px-4 py-10 sm:px-6 md:py-16" id="newsletter-section">
           <div class="relative z-10 grid items-center gap-8 md:grid-cols-2 md:gap-12">
             <div class="max-w-xl space-y-4 md:space-y-6" data-aos="fade-right">
               <h2 class="heading-2">Be the first to know</h2>
-              <p class="text-body-lg">
-                Join our community of learners
-                <span class="font-semibold">waiting for a better way</span> to understand their faith
-              </p>
+              <p class="text-body-lg">Join our growing community of parents who want to raise their children with Tarbiya Join our community of learners</p>
 
-              <form class="space-y-3 md:space-y-4" action="https://api.web3forms.com/submit" method="POST">
+              <form class="space-y-3 md:space-y-4" action="https://api.web3forms.com/submit" method="POST" x-data="{ email: '', confirmEmail: '', submitClicked: false }" @submit="submitClicked = true; if(email !== confirmEmail) { $event.preventDefault(); }">
                 <input type="hidden" name="access_key" value="3e506723-16c4-4b18-95d1-1f7a6901ca53" />
                 <!-- <input type="hidden" name="access_key" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02" /> -->
 
                 <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
                   <i class="ri-user-3-line me-2 text-lg text-gray-400"></i>
-                  <input type="text" placeholder="Your full name" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required name="name" />
+                  <input type="text" placeholder="Full Name" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required name="name" />
                 </div>
 
                 <div class="flex items-center rounded-full border border-gray-300 px-4 py-2">
                   <i class="ri-mail-line me-2 text-lg text-gray-400"></i>
-                  <input type="email" placeholder="Your email address" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required name="email" />
+                  <input type="email" placeholder="Email Address" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required name="email" x-model="email" />
+                </div>
+
+                <div class="flex flex-col space-y-1">
+                  <div class="flex items-center rounded-full border border-gray-300 px-4 py-2" :class="{ 'border-red-500': submitClicked && email !== confirmEmail }">
+                    <i class="ri-mail-check-line me-2 text-lg text-gray-400" :class="{ 'text-red-500': submitClicked && email !== confirmEmail }"></i>
+                    <input type="email" placeholder="Confirm Email Address" class="flex-1 bg-transparent text-xs outline-none md:text-sm" required x-model="confirmEmail" @paste.prevent />
+                  </div>
+                  <span x-show="submitClicked && email !== confirmEmail" class="ms-4 text-xs font-medium text-red-500" x-cloak>Emails do not match</span>
                 </div>
 
                 <button class="btn-primary w-full" type="submit">

@@ -73,9 +73,9 @@ if (navbar) {
     const navContainer = navbar.querySelector("div.container");
     if (window.scrollY > 50) {
       navContainer?.classList.remove("bg-red-500/5");
-      navContainer?.classList.add("bg-gray-900/60");
+      navContainer?.classList.add("bg-gray-900/90");
     } else {
-      navContainer?.classList.remove("bg-gray-900/60");
+      navContainer?.classList.remove("bg-gray-900/90");
       navContainer?.classList.add("bg-red-500/5");
     }
   });
