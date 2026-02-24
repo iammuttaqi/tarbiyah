@@ -101,6 +101,25 @@ new Swiper(".hero-swiper", {
   touchStartPreventDefault: false,
 });
 
+// Simple, Engaging Learning Carousel
+new Swiper(".mySwiper", {
+  modules: [Navigation, Pagination, Autoplay],
+  loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  speed: 800,
+});
+
 // Jump To Top Button Functionality
 const jumpToTopButton = document.getElementById("jump_to_top");
 

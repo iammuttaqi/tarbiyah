@@ -382,34 +382,24 @@
               <p class="text-body-lg">Tarbiya uses simple, interactive activities to help learners understand and remember what they learn. <span class="font-semibold">Through crosswords, puzzles, quizzes, and word-matching exercises, learning stays clear, focused, and meaningful without feeling overwhelming.</span></p>
             </div>
             <div class="order-1 md:order-2 md:col-span-2" data-aos="fade-left">
-              <!-- Native CSS Scroll Snap Carousel -->
-              <div class="group relative aspect-square w-full overflow-hidden rounded-4xl bg-orange-50" x-data="{ scroll: 0, maxScroll: 1000 }" x-init="$nextTick(() => { maxScroll = $refs.slider.scrollWidth - $refs.slider.clientWidth }); window.addEventListener('resize', () => { maxScroll = $refs.slider.scrollWidth - $refs.slider.clientWidth })">
-                <!-- Scroll Container -->
-                <div x-ref="slider" @scroll.passive="scroll = $event.target.scrollLeft" class="no-scrollbar flex h-full w-full snap-x snap-mandatory overflow-x-auto" style="scroll-behavior: smooth">
-                  <!-- Slide 1 -->
-                  <div class="flex h-full w-full shrink-0 snap-center items-center justify-center">
-                    <img src="carousel-1.jpg" class="pointer-events-none h-full w-full object-cover" />
+              <div class="relative aspect-square w-full">
+                <!-- Swiper -->
+                <div class="swiper mySwiper group h-full w-full overflow-hidden rounded-4xl bg-orange-50">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide flex items-center justify-center">
+                      <img src="carousel-1.jpg" class="pointer-events-none h-full w-full object-cover" />
+                    </div>
+                    <div class="swiper-slide flex items-center justify-center">
+                      <img src="carousel-2.jpg" class="pointer-events-none h-full w-full object-cover" />
+                    </div>
                   </div>
-                  <!-- Slide 2 -->
-                  <div class="flex h-full w-full shrink-0 snap-center items-center justify-center">
-                    <img src="carousel-2.jpg" class="pointer-events-none h-full w-full object-cover" />
-                  </div>
-                </div>
 
-                <!-- Navigation: Prev -->
-                <button @click="$refs.slider.scrollBy({left: -$refs.slider.clientWidth, behavior: 'smooth'})" x-show="scroll > 10" x-transition.opacity class="absolute top-1/2 left-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-all hover:bg-white md:opacity-0 md:group-hover:opacity-100" aria-label="Previous image">
-                  <i class="ri-arrow-left-s-line text-xl"></i>
-                </button>
+                  <!-- Navigation -->
+                  <div class="swiper-button-prev left-2! size-10! rounded-full! bg-white/80! p-3 text-gray-800! shadow-lg! transition-all hover:bg-white! md:opacity-0! md:group-hover:opacity-100!"></div>
+                  <div class="swiper-button-next right-2! size-10! rounded-full! bg-white/80! p-3 text-gray-800! shadow-lg! transition-all hover:bg-white! md:opacity-0! md:group-hover:opacity-100!"></div>
 
-                <!-- Navigation: Next -->
-                <button @click="$refs.slider.scrollBy({left: $refs.slider.clientWidth, behavior: 'smooth'})" x-show="scroll < maxScroll - 10" x-transition.opacity class="absolute top-1/2 right-2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/80 p-2 text-gray-800 shadow-lg transition-all hover:bg-white md:opacity-0 md:group-hover:opacity-100" aria-label="Next image">
-                  <i class="ri-arrow-right-s-line text-xl"></i>
-                </button>
-
-                <!-- Pagination Indicator -->
-                <div class="pointer-events-none absolute right-0 bottom-4 left-0 z-10 flex justify-center gap-2">
-                  <div class="h-2 rounded-full transition-all duration-300" :class="scroll < (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
-                  <div class="h-2 rounded-full transition-all duration-300" :class="scroll >= (($refs.slider?.clientWidth || 0) / 2) ? 'w-6 bg-white' : 'w-2 bg-white/50'"></div>
+                  <!-- Pagination -->
+                  <div class="swiper-pagination bottom-4!"></div>
                 </div>
               </div>
             </div>
