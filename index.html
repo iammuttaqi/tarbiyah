@@ -156,34 +156,122 @@
         </div>
 
         <!-- 3D SVGs -->
-        <div class="floating-svg-slow absolute top-[2%] -left-20 opacity-20">
+        <!-- Floating 3D Sphere -->
+        <div class="float-3d absolute top-[2%] -left-20 opacity-30" style="animation-duration: 20s">
           <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#F6AC1D" d="M45.7,-76.4C58.9,-69.3,69,-55.8,76.5,-41.3C83.9,-26.8,88.7,-11.3,87.3,3.7C85.9,18.8,78.3,33.3,68.2,45.4C58.1,57.5,45.6,67.2,31.6,73.6C17.6,80,2.1,83.1,-12.4,81.3C-26.9,79.5,-40.4,72.8,-52.8,63.6C-65.2,54.4,-76.5,42.7,-82.5,28.6C-88.5,14.5,-89.2,-2,-84.9,-16.4C-80.6,-30.8,-71.3,-43.3,-59.5,-52.4C-47.7,-61.5,-33.4,-67.2,-19.4,-72.1C-5.4,-77,9.3,-81,24,-81C32.7,-81,40.1,-79,45.7,-76.4Z" transform="translate(100 100)" />
+            <defs>
+              <radialGradient id="sphereGrad1" cx="30%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FCD34D" />
+                <stop offset="50%" stop-color="#F59E0B" />
+                <stop offset="100%" stop-color="#B45309" />
+              </radialGradient>
+              <filter id="shadow1" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="15" dy="20" stdDeviation="15" flood-opacity="0.3" />
+              </filter>
+            </defs>
+            <circle cx="100" cy="100" r="70" fill="url(#sphereGrad1)" filter="url(#shadow1)" />
           </svg>
         </div>
-        <div class="floating-svg-fast absolute top-[20%] right-[-5%] opacity-10">
+
+        <!-- Spinning 3D Torus -->
+        <div class="spin-3d absolute top-[20%] right-[-5%] opacity-20" style="animation-duration: 30s">
           <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#005BAC" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
+            <defs>
+              <linearGradient id="torusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#60A5FA" />
+                <stop offset="50%" stop-color="#2563EB" />
+                <stop offset="100%" stop-color="#1E3A8A" />
+              </linearGradient>
+              <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="20" dy="25" stdDeviation="18" flood-opacity="0.4" />
+              </filter>
+            </defs>
+            <path fill="url(#torusGrad)" filter="url(#shadow2)" d="M100 20C55.8 20 20 55.8 20 100s35.8 80 80 80 80-35.8 80-80-35.8-80-80-80zm0 120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z" />
+            <path fill="white" opacity="0.3" d="M100 30c38.7 0 70 31.3 70 70 0 9.8-2 19.1-5.6 27.6-5.8-31.2-33-55.6-66.4-56.9-1.3-.1-2.7-.1-4-.1C60.6 70.6 33.4 95 27.6 126.2 24.1 117.7 22 108.4 22 98.6 22 59.9 53.3 28.6 92 28.6h8z" />
           </svg>
         </div>
-        <div class="spin-3d delay-2s absolute top-[35%] right-[-10%] opacity-5" style="animation-duration: 35s">
-          <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#F59E0B" d="M45.7,-76.3C58.9,-69.3,69.1,-56,76.5,-41.5C83.9,-27,88.5,-11.3,86.3,3.4C84.1,18.1,75.1,31.8,64.2,42.4C53.3,53,40.5,60.5,26.4,66.5C12.3,72.5,-3.1,77,-18.2,75.1C-33.3,73.2,-48.1,64.9,-59.6,53.2C-71.1,41.5,-79.3,26.4,-82.5,10.1C-85.7,-6.2,-83.9,-23.7,-75.7,-38.4C-67.5,-53.1,-52.9,-65,-37.8,-71.4C-22.7,-77.8,-7.1,-78.7,8.2,-74.6C23.5,-70.5,32.5,-83.3,45.7,-76.3Z" transform="translate(100 100)" />
-          </svg>
-        </div>
-        <div class="spin-3d delay-1s absolute top-[55%] left-[-5%] opacity-10" style="animation-duration: 22s">
+
+        <!-- Floating Isometric Cube -->
+        <div class="float-3d absolute top-[40%] right-[10%] opacity-15" style="animation-duration: 18s; animation-direction: reverse">
           <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#059669" d="M39.6,-66C50.2,-55.3,56.9,-40.6,64.2,-25.9C71.5,-11.2,79.3,3.6,77.5,17.4C75.8,31.2,64.5,44,51.8,53.2C39.1,62.4,24.9,67.9,10.2,70.5C-4.4,73,-19.6,72.6,-32.7,66.6C-45.8,60.6,-56.9,49.1,-65.3,35.5C-73.7,21.9,-79.4,6.2,-78,-8.4C-76.6,-23.1,-68.2,-36.8,-56.7,-47.5C-45.2,-58.2,-30.7,-66,-16.1,-69.1C-1.5,-72.1,13.2,-70.4,26.5,-66Z" transform="translate(100 100)" />
+            <defs>
+              <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FCA5A5" />
+                <stop offset="100%" stop-color="#EF4444" />
+              </linearGradient>
+              <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#DC2626" />
+                <stop offset="100%" stop-color="#991B1B" />
+              </linearGradient>
+              <linearGradient id="cubeRight" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#B91C1C" />
+                <stop offset="100%" stop-color="#7F1D1D" />
+              </linearGradient>
+              <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="12" dy="18" stdDeviation="12" flood-opacity="0.3" />
+              </filter>
+            </defs>
+            <g filter="url(#shadow3)">
+              <polygon points="100,20 160,55 100,90 40,55" fill="url(#cubeTop)" />
+              <polygon points="40,55 100,90 100,160 40,125" fill="url(#cubeLeft)" />
+              <polygon points="100,90 160,55 160,125 100,160" fill="url(#cubeRight)" />
+              <polygon points="100,22 158,55 100,88 42,55" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.5" />
+              <polygon points="42,56 99,89 99,158 42,125" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.3" />
+              <polygon points="101,89 158,56 158,125 101,158" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.2" />
+            </g>
           </svg>
         </div>
-        <div class="spin-3d delay-1s absolute top-[70%] right-[-5%] opacity-5" style="animation-duration: 40s">
-          <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#F59E0B" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
+
+        <!-- Spinning 3D Cylinder -->
+        <div class="spin-3d absolute top-[65%] left-[-5%] opacity-20" style="animation-duration: 25s; transform-origin: center">
+          <svg width="250" height="250" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cylTube" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#047857" />
+                <stop offset="20%" stop-color="#34D399" />
+                <stop offset="50%" stop-color="#059669" />
+                <stop offset="80%" stop-color="#064E3B" />
+                <stop offset="100%" stop-color="#022C22" />
+              </linearGradient>
+              <linearGradient id="cylTop" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6EE7B7" />
+                <stop offset="100%" stop-color="#10B981" />
+              </linearGradient>
+              <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="15" dy="22" stdDeviation="15" flood-opacity="0.25" />
+              </filter>
+            </defs>
+            <g filter="url(#shadow4)">
+              <path fill="url(#cylTube)" d="M50,70 v80 a50,20 0 0,0 100,0 v-80 a50,20 0 0,1 -100,0" />
+              <ellipse cx="100" cy="150" rx="50" ry="20" fill="#022c22" opacity="0.6" />
+              <ellipse cx="100" cy="70" rx="50" ry="20" fill="url(#cylTop)" />
+              <ellipse cx="100" cy="70" rx="46" ry="17" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.4" />
+            </g>
           </svg>
         </div>
-        <div class="spin-3d delay-2s absolute top-[90%] -right-10 opacity-[0.07]" style="animation-duration: 28s">
+
+        <!-- Floating 3D Pyramid -->
+        <div class="float-3d absolute top-[85%] right-[-5%] opacity-[0.15]" style="animation-duration: 16s">
           <svg width="350" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#8B5CF6" d="M47.7,-68.8C61.4,-57.8,71.8,-42.1,77.7,-25.1C83.6,-8.1,85.1,10.2,78.2,25.9C71.3,41.6,56.1,54.7,40.1,64.4C24.1,74.1,7.2,80.4,-8.8,78.7C-24.8,77,-40,67.3,-53.4,55C-66.8,42.7,-78.4,27.8,-82.3,10.7C-86.2,-6.4,-82.4,-25.7,-71.8,-41.8C-61.2,-57.9,-43.8,-70.8,-27.2,-75C-10.6,-79.2,5.2,-74.6,20.4,-72C35.6,-69.4,34,-79.8,47.7,-68.8Z" transform="translate(100 100)" />
+            <defs>
+              <linearGradient id="pyrLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8B5CF6" />
+                <stop offset="100%" stop-color="#5B21B6" />
+              </linearGradient>
+              <linearGradient id="pyrRight" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4C1D95" />
+                <stop offset="100%" stop-color="#2E1065" />
+              </linearGradient>
+              <filter id="shadow5" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="-10" dy="25" stdDeviation="15" flood-opacity="0.4" />
+              </filter>
+            </defs>
+            <g filter="url(#shadow5)">
+              <polygon points="100,30 40,140 100,160" fill="url(#pyrLeft)" />
+              <polygon points="100,30 100,160 160,130" fill="url(#pyrRight)" />
+              <polyline points="100,30 40,140 100,160 160,130 100,30" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1.5" />
+              <line x1="100" y1="30" x2="100" y2="160" stroke="white" stroke-opacity="0.6" stroke-width="1.5" />
+            </g>
           </svg>
         </div>
       </div>
@@ -373,24 +461,30 @@
               <p class="text-body-lg font-semibold text-amber-600">Let's give the best of Tarbiya because they deserve better.</p>
             </div>
             <div class="order-1 md:order-2 md:col-span-2" data-aos="fade-left">
-              <div class="relative aspect-square w-full">
-                <!-- Swiper -->
-                <div class="swiper mySwiper group h-full w-full overflow-hidden rounded-4xl bg-orange-50">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide flex items-center justify-center">
-                      <img src="carousel-1.jpg" class="pointer-events-none h-full w-full object-cover" />
-                    </div>
-                    <div class="swiper-slide flex items-center justify-center">
-                      <img src="carousel-2.jpg" class="pointer-events-none h-full w-full object-cover" />
-                    </div>
+              <div class="relative mx-auto mt-6 w-full max-w-sm md:mt-0 md:max-w-full lg:size-140" x-data="{ currentSlide: 0, slides: ['carousel-1.jpg', 'carousel-2.jpg'] }">
+                <!-- <div class="relative mx-auto size-full max-w-md md:size-140 max-w-full" x-data="{ currentSlide: 0, slides: ['carousel-1.jpg', 'carousel-2.jpg'] }" x-init="setInterval(() => { currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1 }, 3500)"> -->
+                <div class="group relative aspect-square w-full overflow-hidden rounded-4xl shadow-xl transition-transform duration-500 hover:-translate-y-1 hover:shadow-2xl">
+                  <template x-for="(slide, index) in slides" :key="index">
+                    <img :src="slide" class="pointer-events-none absolute inset-0 h-full w-full object-cover transition-all duration-1000 ease-in-out" :class="currentSlide === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'" alt="App Screenshot" />
+                  </template>
+
+                  <!-- Gradient overlay for indicators -->
+                  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/3"></div>
+
+                  <!-- Prev / Next Navigation Arrows -->
+                  <button @click="currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1" class="absolute top-1/2 left-3 size-12 -translate-y-1/2 rounded-full bg-white/50 p-2 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-white md:left-4 md:opacity-0 md:group-hover:opacity-100">
+                    <i class="ri-arrow-left-s-line text-xl"></i>
+                  </button>
+                  <button @click="currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1" class="absolute top-1/2 right-3 size-12 -translate-y-1/2 rounded-full bg-white/50 p-2 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-white md:right-4 md:opacity-0 md:group-hover:opacity-100">
+                    <i class="ri-arrow-right-s-line text-xl"></i>
+                  </button>
+
+                  <!-- Navigation Indicators -->
+                  <div class="absolute right-0 bottom-6 left-0 z-10 flex cursor-pointer justify-center gap-2">
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div @click="currentSlide = index" class="h-2 rounded-full transition-all duration-500" :class="currentSlide === index ? 'w-8 bg-gray-900' : 'w-2 bg-gray-900/50 hover:bg-gray-900/80'"></div>
+                    </template>
                   </div>
-
-                  <!-- Navigation -->
-                  <div class="swiper-button-prev left-2! size-10! rounded-full! bg-white/80! p-3 text-gray-800! shadow-lg! transition-all hover:bg-white! md:opacity-0! md:group-hover:opacity-100!"></div>
-                  <div class="swiper-button-next right-2! size-10! rounded-full! bg-white/80! p-3 text-gray-800! shadow-lg! transition-all hover:bg-white! md:opacity-0! md:group-hover:opacity-100!"></div>
-
-                  <!-- Pagination -->
-                  <div class="swiper-pagination bottom-4!"></div>
                 </div>
               </div>
             </div>

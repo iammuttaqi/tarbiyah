@@ -173,3 +173,38 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
+
+/* 3D Animations */
+@keyframes spin3D {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes float3D {
+  0% {
+    transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: translateY(-40px) translateZ(60px) rotateX(15deg) rotateY(20deg);
+  }
+
+  100% {
+    transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.spin-3d {
+  animation: spin3D 25s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.float-3d {
+  animation: float3D 12s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
