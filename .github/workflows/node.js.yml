@@ -36,3 +36,4 @@ jobs:
         server: ftp.tarbiya.me
         username: ftp@tarbiya.me
         password: tarbiyaftp
+        local-dir: ./dist/
