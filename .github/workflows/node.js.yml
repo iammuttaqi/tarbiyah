@@ -29,3 +29,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     # - run: npm test
+        
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      with:
+        server: ftp.tarbiya.me
+        username: ftp@tarbiya.me
+        password: tarbiyaftp
