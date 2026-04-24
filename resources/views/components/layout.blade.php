@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="{{ csrf_token() }}" name="csrf-token" />
     <title>{{ $title ?? 'Tarbiya - Islamic learning online' }}</title>
     <meta content="{{ $description ?? 'Authentic Islamic learning for Muslim children and families' }}" name="description" />
     <meta content="{{ $keywords ?? 'tarbiya, islam, islam for children, sunnah, tawheed, online learning, ibaadah, islam for families' }}" name="keywords" />
@@ -355,6 +356,25 @@
     <button aria-label="Jump to top" class="fixed bottom-6 right-6 z-50 hidden size-12 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-gray-700" id="jump_to_top">
         <i class="ri-arrow-up-line text-lg"></i>
     </button>
+
+    <!-- Toast Notifications -->
+    <div @toast.window="add($event.detail)" class="z-110 fixed right-4 top-20 flex flex-col gap-3 md:right-6 md:top-24" x-data="{
+        toasts: [],
+        add(detail) {
+            const id = Date.now() + Math.random();
+            this.toasts.push({ id, type: detail.type || 'success', message: detail.message });
+            setTimeout(() => this.remove(id), 45000);
+        },
+        remove(id) { this.toasts = this.toasts.filter(t => t.id !== id); }
+    }">
+        <template :key="toast.id" x-for="toast in toasts">
+            <div :class="toast.type === 'error' ? 'border-red-200' : 'border-emerald-200'" class="min-w-70 flex max-w-sm items-center gap-3 rounded-2xl border bg-white px-4 py-3 shadow-xl" x-transition:enter-end="opacity-100 translate-x-0" x-transition:enter-start="opacity-0 translate-x-6" x-transition:enter="transition ease-out duration-300" x-transition:leave-end="opacity-0 translate-x-6" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-200">
+                <i :class="toast.type === 'error' ? 'ri-error-warning-fill text-red-500' : 'ri-checkbox-circle-fill text-emerald-500'" class="mt-0.5 text-xl"></i>
+                <div class="flex-1 text-sm font-medium text-gray-800" x-text="toast.message"></div>
+                <button @click="remove(toast.id)" class="text-gray-400 hover:text-gray-700" type="button"><i class="ri-close-line"></i></button>
+            </div>
+        </template>
+    </div>
 
     <!-- Legal Modal -->
     <div class="z-100 fixed inset-0 flex items-center justify-center p-4 sm:p-6" style="display: none" x-show="showLegalModal">

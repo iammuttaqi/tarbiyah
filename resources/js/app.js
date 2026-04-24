@@ -7,12 +7,14 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 // New imports for interactivity
+import collapse from '@alpinejs/collapse';
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import Alpine from "alpinejs";
 import VanillaTilt from "vanilla-tilt";
 
 window.Alpine = Alpine;
+Alpine.plugin(collapse)
 Alpine.start();
 
 // Initialize AOS (Animate On Scroll)

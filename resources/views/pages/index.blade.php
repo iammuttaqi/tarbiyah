@@ -674,13 +674,47 @@
                         <h2 class="heading-2">Be the first to know</h2>
                         <p class="text-body-lg">Join our growing community of parents who want to raise their children with Tarbiya</p>
 
-                        <form @submit="submitClicked = true; if(email !== confirmEmail) { $event.preventDefault(); }" action="https://api.web3forms.com/submit" class="space-y-3 md:space-y-4" method="POST" x-data="{ email: '', confirmEmail: '', submitClicked: false }">
-                            <input name="access_key" type="hidden" value="3e506723-16c4-4b18-95d1-1f7a6901ca53" />
-                            <!-- <input name="access_key" type="hidden" value="2b370a9f-3eda-4268-a4a3-f94092c3ff02"/> -->
-
+                        <form @submit.prevent="submit" class="space-y-3 md:space-y-4" x-data="{
+                            name: '',
+                            email: '',
+                            confirmEmail: '',
+                            submitClicked: false,
+                            loading: false,
+                            async submit() {
+                                this.submitClicked = true;
+                                if (this.email !== this.confirmEmail) return;
+                                this.loading = true;
+                                try {
+                                    const res = await fetch('{{ route('index.post') }}', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                            'Accept': 'application/json',
+                                            'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute('content'),
+                                            'X-Requested-With': 'XMLHttpRequest',
+                                        },
+                                        body: JSON.stringify({ name: this.name, email: this.email }),
+                                    });
+                                    const data = await res.json().catch(() => ({}));
+                                    if (!res.ok) {
+                                        const msg = data.errors
+                                            ? Object.values(data.errors).flat()[0]
+                                            : (data.message || 'Something went wrong.');
+                                        window.dispatchEvent(new CustomEvent('toast', { detail: { type: 'error', message: msg } }));
+                                        return;
+                                    }
+                                    window.dispatchEvent(new CustomEvent('toast', { detail: { type: 'success', message: data.message } }));
+                                    this.name = ''; this.email = ''; this.confirmEmail = ''; this.submitClicked = false;
+                                } catch (e) {
+                                    window.dispatchEvent(new CustomEvent('toast', { detail: { type: 'error', message: 'Network error. Please try again.' } }));
+                                } finally {
+                                    this.loading = false;
+                                }
+                            }
+                        }">
                             <div class="flex items-center rounded-full border border-gray-300 px-3 py-2 md:px-4">
                                 <i class="ri-user-3-line me-2 text-lg text-gray-400"></i>
-                                <input class="flex-1 bg-transparent text-xs outline-none md:text-sm" name="name" placeholder="Full Name" required type="text" />
+                                <input class="flex-1 bg-transparent text-xs outline-none md:text-sm" name="name" placeholder="Full Name" required type="text" x-model="name" />
                             </div>
 
                             <div class="flex items-center rounded-full border border-gray-300 px-4 py-2">
@@ -696,9 +730,9 @@
                                 <span class="ms-4 text-xs font-medium text-red-500" x-cloak x-show="submitClicked && email !== confirmEmail">Emails do not match</span>
                             </div>
 
-                            <button class="btn-primary w-full" type="submit">
-                                <span class="px-2 md:px-4">Join Now</span>
-                                <i class="ri-arrow-right-line flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-xl"></i>
+                            <button :disabled="loading" class="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60" type="submit">
+                                <span class="px-2 md:px-4" x-text="loading ? 'Joining...' : 'Join Now'"></span>
+                                <i :class="loading ? 'ri-loader-4-line animate-spin' : 'ri-arrow-right-line'" class="flex size-10 items-center justify-center rounded-full border border-gray-500 p-2 text-xl"></i>
                             </button>
                         </form>
 
