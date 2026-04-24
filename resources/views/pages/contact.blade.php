@@ -23,18 +23,47 @@
                         <h2 class="heading-2">Send us a message</h2>
                         <p class="text-body">Fill out the form below and we'll get back to you as soon as possible.</p>
 
-                        <form action="https://api.web3forms.com/submit" class="space-y-5" method="POST">
-                            <input name="access_key" type="hidden" value="720d7373-bfbd-471d-a6d1-f918e26f870c" />
-                            <!-- <input name="access_key" type="hidden" value="50551822-fcf7-46f8-89f6-31a15b314311"/> -->
-
-                            <!-- <input name="redirect" type="hidden" value="/thank-you.html"/> -->
-                            <input name="subject" type="hidden" value="New Contact Form Submission from Tarbiya" />
-
+                        <form @submit.prevent="submit" class="space-y-5" x-data="{
+                            name: '',
+                            email: '',
+                            subject: '',
+                            message: '',
+                            loading: false,
+                            async submit() {
+                                this.loading = true;
+                                try {
+                                    const res = await fetch('{{ route('contact.post') }}', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                            'Accept': 'application/json',
+                                            'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute('content'),
+                                            'X-Requested-With': 'XMLHttpRequest',
+                                        },
+                                        body: JSON.stringify({ name: this.name, email: this.email, subject: this.subject, message: this.message }),
+                                    });
+                                    const data = await res.json().catch(() => ({}));
+                                    if (!res.ok) {
+                                        const msg = data.errors
+                                            ? Object.values(data.errors).flat()[0]
+                                            : (data.message || 'Something went wrong.');
+                                        window.dispatchEvent(new CustomEvent('toast', { detail: { type: 'error', message: msg } }));
+                                        return;
+                                    }
+                                    window.dispatchEvent(new CustomEvent('toast', { detail: { type: 'success', message: data.message } }));
+                                    this.name = ''; this.email = ''; this.subject = ''; this.message = '';
+                                } catch (e) {
+                                    window.dispatchEvent(new CustomEvent('toast', { detail: { type: 'error', message: 'Network error. Please try again.' } }));
+                                } finally {
+                                    this.loading = false;
+                                }
+                            }
+                        }">
                             <div class="space-y-2">
                                 <label class="block text-xs font-medium text-gray-700" for="name">Full Name</label>
                                 <div class="flex items-center rounded-2xl border border-gray-300 px-4 py-3">
                                     <i class="ri-user-3-line mr-3 text-lg text-gray-400"></i>
-                                    <input class="flex-1 bg-transparent text-sm outline-none" id="name" name="name" placeholder="Your full name" required type="text" />
+                                    <input class="flex-1 bg-transparent text-sm outline-none" id="name" name="name" placeholder="Your full name" required type="text" x-model="name" />
                                 </div>
                             </div>
 
@@ -42,7 +71,7 @@
                                 <label class="block text-xs font-medium text-gray-700" for="email">Email Address</label>
                                 <div class="flex items-center rounded-2xl border border-gray-300 px-4 py-3">
                                     <i class="ri-mail-line mr-3 text-lg text-gray-400"></i>
-                                    <input class="flex-1 bg-transparent text-sm outline-none" id="email" name="email" placeholder="your.email@example.com" required type="email" />
+                                    <input class="flex-1 bg-transparent text-sm outline-none" id="email" name="email" placeholder="your.email@example.com" required type="email" x-model="email" />
                                 </div>
                             </div>
 
@@ -50,7 +79,7 @@
                                 <label class="block text-xs font-medium text-gray-700" for="subject">Subject</label>
                                 <div class="flex items-center rounded-2xl border border-gray-300 px-4 py-3">
                                     <i class="ri-chat-3-line mr-3 text-lg text-gray-400"></i>
-                                    <input class="flex-1 bg-transparent text-sm outline-none" id="subject" name="subject" placeholder="How can we help?" required type="text" />
+                                    <input class="flex-1 bg-transparent text-sm outline-none" id="subject" name="subject" placeholder="How can we help?" required type="text" x-model="subject" />
                                 </div>
                             </div>
 
@@ -58,13 +87,13 @@
                                 <label class="block text-xs font-medium text-gray-700" for="message">Message</label>
                                 <div class="flex rounded-2xl border border-gray-300 px-4 py-3">
                                     <i class="ri-message-3-line mr-3 pt-1 text-lg text-gray-400"></i>
-                                    <textarea class="flex-1 resize-none bg-transparent text-sm outline-none" id="message" name="message" placeholder="Tell us more about your inquiry..." required rows="5"></textarea>
+                                    <textarea class="flex-1 resize-none bg-transparent text-sm outline-none" id="message" name="message" placeholder="Tell us more about your inquiry..." required rows="5" x-model="message"></textarea>
                                 </div>
                             </div>
 
-                            <button class="btn-primary w-full text-base" type="submit">
-                                <span class="px-2">Send Message</span>
-                                <i class="ri-send-plane-fill ml-2 text-lg"></i>
+                            <button :disabled="loading" class="btn-primary w-full text-base disabled:cursor-not-allowed disabled:opacity-60" type="submit">
+                                <span class="px-2" x-text="loading ? 'Sending...' : 'Send Message'"></span>
+                                <i :class="loading ? 'ri-loader-4-line animate-spin' : 'ri-send-plane-fill'" class="ml-2 text-lg"></i>
                             </button>
                         </form>
                     </div>
