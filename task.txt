@@ -1,0 +1,4 @@
+cd www/tarbiya.me/public_html
+composer update --no-dev
+php artisan package:discover --ansi; php artisan filament:upgrade; php artisan log-viewer:publish;
+php artisan schedule:interrupt; php artisan queue:restart; php artisan schedule:clear-cache;
