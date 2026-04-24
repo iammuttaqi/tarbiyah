@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@tarbiyah.com',
+            'is_admin' => true,
         ]);
     }
 }

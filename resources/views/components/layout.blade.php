@@ -60,6 +60,7 @@
                     <a class="hover:text-gray-200" href="/#who-we-are">Who We Are</a>
                     <a class="hover:text-gray-200" href="/#pricing">Pricing</a>
                     <a class="hover:text-gray-200" href="/#faq">FAQ</a>
+                    <a class="hover:text-gray-200" href="{{ route('blog.index') }}">Blog</a>
                     <a class="hover:text-gray-200" href="{{ route('contact') }}">Contact</a>
                 </div>
                 <div class="flex items-center gap-2 pr-2 md:pr-0">
@@ -138,6 +139,7 @@
                 <a @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300" href="/#who-we-are">Who We Are</a>
                 <a @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300" href="/#pricing">Pricing</a>
                 <a @click="mobileMenuOpen = false" class="border-t border-gray-800 py-2 font-medium hover:text-gray-300" href="/#faq">FAQ</a>
+                <a class="border-t border-gray-800 py-2 font-medium hover:text-gray-300" href="{{ route('blog.index') }}">Blog</a>
                 <a class="border-t border-gray-800 py-2 font-medium hover:text-gray-300" href="{{ route('contact') }}">Contact</a>
                 <a @click="mobileMenuOpen = false" class="mx-auto mt-2 inline-block rounded-full bg-white px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200" href="/#newsletter-section">Join Waitlist</a>
             </div>
@@ -195,6 +197,7 @@
                             <li><a href="#">Methodology</a></li>
                             <li><a href="/#pricing">Pricing</a></li>
                             <li><a href="/#faq">FAQ</a></li>
+                            <li><a href="{{ route('blog.index') }}">Blog</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                         </ul>
                     </div>
