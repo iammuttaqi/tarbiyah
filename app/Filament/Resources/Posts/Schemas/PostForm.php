@@ -41,10 +41,16 @@ class PostForm
                     ->rows(3)
                     ->columnSpanFull(),
                 FileUpload::make('featured_image')
-                    ->image()
                     ->disk('public')
                     ->directory('posts')
+                    ->image()
                     ->imageEditor()
+                    ->imageAspectRatio('16:9')
+                    ->automaticallyOpenImageEditorForAspectRatio()
+                    ->automaticallyCropImagesToAspectRatio('16:9')
+                    ->automaticallyResizeImagesMode('cover')
+                    ->automaticallyResizeImagesToWidth('1280')
+                    ->automaticallyResizeImagesToHeight('720')
                     ->columnSpanFull(),
                 RichEditor::make('body')
                     ->required()

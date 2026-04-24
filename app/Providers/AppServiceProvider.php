@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        RichEditor::configureUsing(function (RichEditor $component): void {
+            $component->toolbarButtons([
+                ['bold', 'italic', 'underline', 'strike', 'subscript', 'superscript', 'link'],
+                ['h2', 'h3'],
+                ['alignStart', 'alignCenter', 'alignEnd'],
+                // ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
+                // ['table', 'attachFiles'],
+                ['undo', 'redo'],
+            ]);
+        });
     }
 }
