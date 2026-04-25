@@ -17,8 +17,8 @@ class HomeController extends Controller
     public function index()
     {
         // $waiting_list = WaitingList::first();
-        // return (new WaitingListSubscribed($waiting_list))->toMail($waiting_list);
         // Notification::route('mail', [$waiting_list->email => $waiting_list->name])->notify(new WaitingListSubscribed($waiting_list));
+        // return (new WaitingListSubscribed($waiting_list))->toMail($waiting_list);
 
         return view('pages.index');
     }
