@@ -24,6 +24,15 @@
                         @endif
                         <time datetime="{{ $post->published_at->toIso8601String() }}">{{ $post->published_at->format('F j, Y') }}</time>
                     </div>
+                    @if ($post->categories->isNotEmpty())
+                        <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+                            @foreach ($post->categories as $category)
+                                <a class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20" href="{{ route('blog.category', $category) }}">
+                                    {{ $category->name }}
+                                </a>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
             </div>
         </section>

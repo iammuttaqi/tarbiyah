@@ -1,41 +1,29 @@
 <?php
 
-namespace App\Filament\Resources\Posts\Tables;
+namespace App\Filament\Resources\Categories\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class PostsTable
+class CategoriesTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                ImageColumn::make('featured_image')
-                    ->disk('public')
-                    ->square(),
-                TextColumn::make('title')
-                    ->searchable()
-                    ->limit(50),
-                TextColumn::make('categories.name')
-                    ->label('Categories')
-                    ->badge()
-                    ->toggleable(),
-                TextColumn::make('author.name')
-                    ->label('Author')
+                TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-                IconColumn::make('is_published')
-                    ->label('Published')
-                    ->boolean(),
-                TextColumn::make('published_at')
-                    ->dateTime()
+                TextColumn::make('slug')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('posts_count')
+                    ->label('Posts')
+                    ->counts('posts')
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
@@ -46,7 +34,7 @@ class PostsTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->defaultSort('created_at', 'desc')
+            ->defaultSort('name')
             ->filters([
                 //
             ])

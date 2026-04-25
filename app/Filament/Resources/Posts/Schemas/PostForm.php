@@ -36,6 +36,11 @@ class PostForm
                     ->required()
                     ->searchable()
                     ->preload(),
+                Select::make('categories')
+                    ->multiple()
+                    ->relationship('categories', 'name')
+                    ->preload()
+                    ->searchable(),
                 Textarea::make('excerpt')
                     ->maxLength(500)
                     ->rows(3)
