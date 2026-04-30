@@ -64,7 +64,7 @@ class HomeController extends Controller
         Notification::route('mail', [$submission->email => $submission->name])
             ->notify(new ContactFormSubmitted($submission));
 
-        Notification::route('mail', config('mail.admin_address'))
+        Notification::route('mail', config('mail.from.address'))
             ->notify(new ContactFormAdminNotification($submission));
 
         return response()->json([
